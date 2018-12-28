@@ -1,6 +1,6 @@
 {
   "docs": {
-    "IMAC": ["intro", "get_started", "net_config", "imac_dac"],
+    "IMAC": ["intro", "get_started", "net_config", "imac_dac", "Help"],
     "Guides": ["guide_array"]
   },
   "docs-other": {
