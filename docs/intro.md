@@ -4,28 +4,53 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-INTELLIDRIVES MULTI-AXES MOTION and AUTOMATION CONTROLLER is a network based general purpose motion/automation controller with embedded intuitive IBLOCK® programming capability.
+***INTELLIDRIVES MULTI-AXES MOTION and AUTOMATION CONTROLLER*** is a network based general purpose motion/automation controller with embedded intuitive **IBLOCK®** programming capability.
 
 ## Visual Block Programming Environment
 
-IBLOCK® visual block programming environment runs in the web browser on any hardware and software platforms. IBLOCK® uses functional blocks linked together to create complex multi-axes motion control sequences of different motor types interacting with digital and analog I/O and vision systems.
+**IBLOCK®** visual block programming environment runs in the web browser on any hardware and software platforms. **IBLOCK®** uses functional blocks linked together to create complex multi-axes motion control sequences of different motor types interacting with digital and analog I/O and vision systems.
 
-![alt-text](assets/vbpi.png)
+![Visual Block Programming Environment](assets/vbpi.png "Visual Block Programming Environment")
 
-## Mauris In Code
+**IBLOCK® Visual Editor** uses graphical blocks to represent motion commands, control of the input/output devices, variables, logic expressions, math, loops and more without having to worry about complexities of the programming languages.
 
-```
-Mauris vestibulum ullamcorper nibh, ut semper purus pulvinar ut. Donec volutpat orci sit amet mauris malesuada, non pulvinar augue aliquam. Vestibulum ultricies at urna ut suscipit. Morbi iaculis, erat at imperdiet semper, ipsum nulla sodales erat, eget tincidunt justo dui quis justo. Pellentesque dictum bibendum diam at aliquet. Sed pulvinar, dolor quis finibus ornare, eros odio facilisis erat, eu rhoncus nunc dui sed ex. Nunc gravida dui massa, sed ornare arcu tincidunt sit amet. Maecenas efficitur sapien neque, a laoreet libero feugiat ut.
-```
+## Hardware
 
-## Nulla
+**IMAC** controls network of Digital Stepper and Servo **I-DRIVES™** as well as digital and analog I/O.
+**IMAC** can operate as a stand-alone system or connected to the user network or Internet.
+As a stand-alone controller, IMAC can take the place of a PC in a control system to reduce cost. 
+**IMAC** can also be configured to work in conjunction with a PC where the IMAC handles the real-time processes such as motion control and automation, and the PC is used as programming environment and GUI
 
-Nulla facilisi. Maecenas sodales nec purus eget posuere. Sed sapien quam, pretium a risus in, porttitor dapibus erat. Sed sit amet fringilla ipsum, eget iaculis augue. Integer sollicitudin tortor quis ultricies aliquam. Suspendisse fringilla nunc in tellus cursus, at placerat tellus scelerisque. Sed tempus elit a sollicitudin rhoncus. Nulla facilisi. Morbi nec dolor dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et aliquet lectus. Pellentesque sit amet eros nisi. Quisque ac sapien in sapien congue accumsan. Nullam in posuere ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin lacinia leo a nibh fringilla pharetra.
+#### Main Features:
+-	Multi-axes (up to 32 axes) motion control over distributed **INET®** network
+-	Digital and Analog I/O handling over **INET®** network
+-	Simple and Visual creation of complex machine operational sequences
+-	No programming experience necessary, just lay **IBLOCKS** in sequence
+-	Graphical HMI Designer
 
-## Orci
+![3-axes system with I/O data acquisition](assets/assembly.jpg "3-axes system with I/O data acquisition")
+3-axes system with I/O data acquisition
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin venenatis lectus dui, vel ultrices ante bibendum hendrerit. Aenean egestas feugiat dui id hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in tellus laoreet, eleifend nunc id, viverra leo. Proin vulputate non dolor vel vulputate. Curabitur pretium lobortis felis, sit amet finibus lorem suscipit ut. Sed non mollis risus. Duis sagittis, mi in euismod tincidunt, nunc mauris vestibulum urna, at euismod est elit quis erat. Phasellus accumsan vitae neque eu placerat. In elementum arcu nec tellus imperdiet, eget maximus nulla sodales. Curabitur eu sapien eget nisl sodales fermentum.
+## IDRIVES®
 
-## Phasellus
+**IDrives®** provide user with a performance edge. Advanced tuning and commutation algorithms, made possible by state-of-the-art DSP technology to maximize motor performance. **I-DRIVES®** offer a complete range of AC- and DC-powered digital drives for servo and stepper motors.
 
-Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.
+![Amplifiers](assets/group_of_amps.jpg "Amplifiers")
+
+| Motor   | Rotary Servo and Stepper Motors<br> Linear Servo and Stepper Motors<br> Direct drive motors |
+| ------- | ------------------------------------------------------------------------------------------- |
+| Input power | 100-240 VAC<br> 24-90 VDC |
+| Feedback | Incremental<br> Analog 1Vpp<br> Absolute |
+| Digital I/O | Limit sensors |
+| Analog I/O | Home sensors<br> User input sourcing nad sinking sensors<br> Opto-isolated sensors<br> Outputs<br> Relay drivers<br> A/D<br> D/A |
+
+
+## System Architecture
+
+![Standalone(No PC Required)](assets/arch_1.jpg "Standalone(No PC Required)")
+
+![Standalone PC based system(wired)](assets/arch_2.jpg "Standalone PC based system(wired)")
+
+![Standalone PC based system(wireless)](assets/arch_3.jpg "Standalone PC based system(wireless)")
+
+![Network based installation](assets/arch_4.jpg "Network based installation")

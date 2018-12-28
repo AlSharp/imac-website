@@ -11,11 +11,11 @@
 // List of projects/orgs using your project for the users page.
 const users = [
   {
-    caption: 'User1',
+    caption: 'IntelLiDrives, Inc.',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    image: '/imac-website/img/intellidrives.png',
+    infoLink: 'https://www.intellidrives.com',
     pinned: true,
   },
 ];
@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'IMAC', // Title for your website.
   tagline: 'IntelLiDrives Multi Axes Motion and Automation Controller',
   url: 'https://AlSharp.github.io', // Your website URL
-  baseUrl: '/imac/', // Base URL for your project */
+  baseUrl: '/imac-website/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -72,7 +72,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} IntelLiDrives, Inc`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -88,8 +88,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/favicon.png',
+  twitterImage: 'img/favicon.png',
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,

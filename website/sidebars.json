@@ -1,7 +1,6 @@
 {
   "docs": {
-    "IMAC": ["intro"],
-    "First Category": ["doc2"],
+    "IMAC": ["intro", "get_started", "net_config", "imac_dac"],
     "Guides": ["guide_array"]
   },
   "docs-other": {
