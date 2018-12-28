@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Get Started · IMAC</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;To start &lt;strong&gt;IMAC&lt;/strong&gt; application, open web browser (Google Chrome is recommended for &lt;strong&gt;IMAC&lt;/strong&gt;) and type &lt;code&gt;imac:5000&lt;/code&gt; in the browser address bar.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Get Started · IMAC"/><meta property="og:type" content="website"/><meta property="og:url" content="https://AlSharp.github.io/imac-website/index.html"/><meta property="og:description" content="&lt;p&gt;To start &lt;strong&gt;IMAC&lt;/strong&gt; application, open web browser (Google Chrome is recommended for &lt;strong&gt;IMAC&lt;/strong&gt;) and type &lt;code&gt;imac:5000&lt;/code&gt; in the browser address bar.&lt;/p&gt;
+"/><meta property="og:image" content="https://AlSharp.github.io/imac-website/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://AlSharp.github.io/imac-website/img/favicon.png"/><link rel="shortcut icon" href="/imac-website/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://AlSharp.github.io/imac-website/blog/atom.xml" title="IMAC Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://AlSharp.github.io/imac-website/blog/feed.xml" title="IMAC Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/imac-website/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/imac-website/"><img class="logo" src="/imac-website/img/favicon.png" alt="IMAC"/><h2 class="headerTitleWithLogo">IMAC</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/imac-website/docs/intro" target="_self">Docs</a></li><li class=""><a href="/imac-website/blog/" target="_self">Blog</a></li><li class=""><a href="/imac-website/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>IMAC</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">IMAC</h3><ul><li class="navListItem"><a class="navItem" href="/imac-website/docs/intro">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/imac-website/docs/get_started">Get Started</a></li><li class="navListItem"><a class="navItem" href="/imac-website/docs/net_config">Network configuration</a></li><li class="navListItem"><a class="navItem" href="/imac-website/docs/imac_dac">Data Acquisition</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul><li class="navListItem"><a class="navItem" href="/imac-website/docs/guide_array">Array Block</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Get Started</h1></header><article><div><span><p>To start <strong>IMAC</strong> application, open web browser (Google Chrome is recommended for <strong>IMAC</strong>) and type <code>imac:5000</code> in the browser address bar.</p>
+<h2><a class="anchor" aria-hidden="true" id="user-interface"></a><a href="#user-interface" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Interface</h2>
+<p>IMAC application contains four areas:</p>
+<ol>
+<li>Main Menu</li>
+<li>Block Palette</li>
+<li>Visual Programming Workspace</li>
+<li>Terminal</li>
+</ol>
+<p><img src="/imac-website/docs/assets/vbpi.png" alt="Visual Block Programming Environment" title="Visual Block Programming Environment"></p>
+<h2><a class="anchor" aria-hidden="true" id="block-palette"></a><a href="#block-palette" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Block Palette</h2>
+<p>Block palatte contains the following command block categories:</p>
+<ul>
+<li>Motion Blocks</li>
+<li>Time / Event Blocks</li>
+<li>I/O Blocks</li>
+<li>Control Flow Blocks</li>
+<li>Math Blocks</li>
+<li>Variable Blocks</li>
+<li>Mics. Blocks</li>
+<li>User Blocks</li>
+</ul>
+<p><img src="/imac-website/docs/assets/vbpi.png" alt="Visual Block Programming Environment" title="Visual Block Programming Environment"></p>
+<h3><a class="anchor" aria-hidden="true" id="motion-blocks"></a><a href="#motion-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Motion Blocks</h3>
+<p>Motion Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="time-event-blocks"></a><a href="#time-event-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time / Event Blocks</h3>
+<p>Time / Event Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="i-o-blocks"></a><a href="#i-o-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>I/O Blocks</h3>
+<p>I/O Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="control-flow-blocks"></a><a href="#control-flow-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Control Flow Blocks</h3>
+<p>Control Flow Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="math-blocks"></a><a href="#math-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Math Blocks</h3>
+<p>Math Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="variable-blocks"></a><a href="#variable-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variable Blocks</h3>
+<p>Variable Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="mics-blocks"></a><a href="#mics-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mics. Blocks</h3>
+<p>Mics. Blocks Here</p>
+<h3><a class="anchor" aria-hidden="true" id="user-blocks"></a><a href="#user-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Blocks</h3>
+<p>User Blocks Here</p>
+<h2><a class="anchor" aria-hidden="true" id="working-with-imac-files"></a><a href="#working-with-imac-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Working with IMAC files</h2>
+<p>There are two options available to save IMAC program:</p>
+<ol>
+<li>Save program to IMAC’s file system.</li>
+</ol>
+<p>Go to <em>Main Menu</em> =&gt; <em>File</em> and click <em>Save to IMAC</em>. Save file dialog will open.</p>
+<p><img src="/imac-website/docs/assets/save_to_imac.png" alt="Save to IMAC" title="Save to IMAC"></p>
+<p>Organize your files by creating folders. Click <em>Create folder</em> icon and additional form will appear.</p>
+<p><img src="/imac-website/docs/assets/create_folder.png" alt="Save to IMAC" title="Save to IMAC"></p>
+<p>Enter the name of file and click Save.</p>
+<ol start="2">
+<li>Save program to your PC file system or some local network shared resource.</li>
+</ol>
+<p>Go to <em>Main Menu</em> =&gt; <em>File</em> and click <em>Save to PC</em>. This is standard Windows File Explorer dialog box.</p>
+<p><img src="/imac-website/docs/assets/save_to_pc.png" alt="Save to IMAC" title="Save to IMAC"></p>
+<p>To open saved IMAC programs go to IMAC <em>Main Menu</em> =&gt; <em>File</em> and choose <em>Open from PC</em> or <em>Open from IMAC</em>. The same dialog boxes will be opened, just select desired file and click Open. The blocks saved in the opened file will be displayed on the visual programming workspace. Modify the blocks, add new ones or just run them.</p>
+<h2><a class="anchor" aria-hidden="true" id="updating-imac-software"></a><a href="#updating-imac-software" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating IMAC Software</h2>
+<p>IMAC applications are under the active development. Improvements and new features are being added. Users ask to add new blocks with custom functionality. When the new IMAC software version is available, user can update the application. There are two way to update application:</p>
+<ol>
+<li>Over the Internet</li>
+</ol>
+<p>The link of updated version will be provided. Go to <em>Main Menu</em> =&gt; <em>Update</em> and click <em>Online</em>. The dialog box will be displayed.</p>
+<p><img src="/imac-website/docs/assets/update_online.png" alt="IMAC Update Online" title="IMAC Update Online"></p>
+<p>Insert provided URL into the text field and click Update. The progress of installation can be observed in the terminal. When the installation is completed application will be reloaded. Type <code>version</code> into the terminal and press Enter to verify that application is updated successfully.</p>
+<ol start="2">
+<li>From the zipped file on the user hard drive. User will be provided with link to new version for downloading. Downloaded zip file can be saved on local PC. Go to <em>Main Menu</em> =&gt; <em>Update</em> and click Offline. The dialog box will be displayed.</li>
+</ol>
+<p><img src="/imac-website/docs/assets/update_offline.png" alt="IMAC Update Offline" title="IMAC Update Offline"></p>
+<p>Click <em>Choose File</em>. The standard Windows File Explorer window will be displayed. Navigate to the saved zip file and open it. Click Update. The progress of installation can be observed in the terminal. When the installation is completed application will be reloaded. Type <code>version</code> into the terminal and press Enter to verify that application is updated successfully.</p>
+<h2><a class="anchor" aria-hidden="true" id="sending-ascii-commands-through-the-terminal"></a><a href="#sending-ascii-commands-through-the-terminal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending ASCII commands through the terminal</h2>
+<p>User has a full control over the <strong>IDRIVES</strong> through the Terminal. Refer to the <em>ASCII Programmer’s Guide</em> for available commands and syntax. The syntax of IMAC ASCII message is:</p>
+<p>[<em>usb port</em>]:[<em>axis letter</em>][<em>command code</em>][<em>command parameters</em>]</p>
+<p>Examples:</p>
+<p>usb0: 1 g r0x70</p>
+<p>Get the value of register <code>0x70</code> at axis <code>1</code> of <strong>IDRIVE</strong> connected to USB port 0.</p>
+<p>usb0: 0 s r0xc8 0</p>
+<p>Set the trajectory generator to absolute move, trapezoidal profile</p>
+<p>usb0: t 2</p>
+<p>Execute homing.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/imac-website/docs/intro"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/imac-website/docs/net_config"><span>Network configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#user-interface">User Interface</a></li><li><a href="#block-palette">Block Palette</a><ul class="toc-headings"><li><a href="#motion-blocks">Motion Blocks</a></li><li><a href="#time-event-blocks">Time / Event Blocks</a></li><li><a href="#i-o-blocks">I/O Blocks</a></li><li><a href="#control-flow-blocks">Control Flow Blocks</a></li><li><a href="#math-blocks">Math Blocks</a></li><li><a href="#variable-blocks">Variable Blocks</a></li><li><a href="#mics-blocks">Mics. Blocks</a></li><li><a href="#user-blocks">User Blocks</a></li></ul></li><li><a href="#working-with-imac-files">Working with IMAC files</a></li><li><a href="#updating-imac-software">Updating IMAC Software</a></li><li><a href="#sending-ascii-commands-through-the-terminal">Sending ASCII commands through the terminal</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/imac-website/" class="nav-home"><img src="/imac-website/img/favicon.png" alt="IMAC" width="66" height="58"/></a><div><h5>Docs</h5><a href="/imac-website/docs/en/intro.html">Introduction</a><a href="/imac-website/docs/en/get_started.html">Get Started</a><a href="/imac-website/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/imac-website/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/imac-website/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://www.intellidrives.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/imac-website/img/favicon.png" alt="IMAC Controller" width="64" height="64"/></a><section class="copyright">Copyright © 2018 IntelLiDrives, Inc</section></footer></div></body></html>
