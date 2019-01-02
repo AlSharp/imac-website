@@ -23,6 +23,9 @@ class HomeSplash extends React.Component {
 
     const SplashContainer = props => (
       <div className="homeContainer">
+        {/* <div style={{position: 'fixed', zIndex: -99, width: '100%', height: '100%'}}>
+          <iframe width="896" height="504" src="https://www.youtube.com/embed/H6L26-ohl08?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>        */}
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
