@@ -11,7 +11,7 @@ To start **IMAC** application, open web browser (Google Chrome is recommended fo
 IMAC application contains four areas:
 
 1. Main Menu
-2. Block Palette
+2. Block palette
 3. Visual Programming Workspace
 4. Terminal
 
@@ -19,7 +19,7 @@ IMAC application contains four areas:
 
 ## Block Palette
 
-Block palatte contains the following command block categories:
+Block palette contains the following command block categories:
 
 - Motion Blocks
 - Time / Event Blocks
@@ -30,11 +30,80 @@ Block palatte contains the following command block categories:
 - Mics. Blocks
 - User Blocks
 
-![Visual Block Programming Environment](assets/vbpi.png "Visual Block Programming Environment")
-
 ### Motion Blocks
 
-Motion Blocks Here
+#### Mode
+
+Allows to set type of the motor and the mode in which motor works.
+
+![get_started_mode_1_index](assets/blocks/mode_1.png "Mode block")
+![get_started_mode_2_index](assets/blocks/mode_2.png "Mode block")
+
+Motor type:
++ Stepper
++ Servo
+
+Operating mode:
++ Position
+
+Sets the motor ***type*** to *`Stepper`* and operating ***mode*** to *`Position`* for axis `0` on the port `USB0`.
+
+#### Profile
+
+Allows to set the motion characteristics.
+
+![get_started_profile_1_index](assets/blocks/profile_1.png "Profile block")
+![get_started_profile_2_index](assets/blocks/profile_2.png "Profile block")
+![get_started_profile_3_index](assets/blocks/profile_3.png "Profile block")
+
+Profile:
++ trapezoidal
++ s-curve
+
+Velocity [*counts/sec*]
+
+Acceleration [*counts/sec^2*]
+
+Deacceleration [*counts/sec^2*]
+
+Jerk [*counts/sec^3*]
+
+Sets the motion ***profile***, ***velocity***, ***acceleration***, ***deaceleration*** and ***jerk*** for axis `0` on the port `USB0`.
+
+#### Move
+
+Allows to set the type of motion, absolute position or distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
+
+![get_started_move_1_index](assets/blocks/move_1.png "Move block")
+![get_started_move_2_index](assets/blocks/move_2.png "Move block")
+![get_started_move_3_index](assets/blocks/move_3.png "Move block")
+
+Type:
++ Absolute
+
+  Absolute motion...
+
++ Relative
+
+  Relative motion...
+
+Position [*counts*]
+
+Distance [*counts*]
+
+Direction: [*Positive / Negative*]
+
+Sets motion ***type*** to *`Absolute`* or *`Relative`*
+
+#### Homing
+
+Allows to set...
+
+![get_started_homing_1_index](assets/blocks/homing_1.png "Homing block")
+![get_started_homing_2_index](assets/blocks/homing_2.png "Homing block")
+![get_started_homing_3_index](assets/blocks/homing_3.png "homing block")
+
+Sets...
 
 ### Time / Event Blocks
 

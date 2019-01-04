@@ -10,7 +10,7 @@ sidebar_label: Introduction
 
 **IBLOCK®** visual block programming environment runs in the web browser on any hardware and software platforms. **IBLOCK®** uses functional blocks linked together to create complex multi-axes motion control sequences of different motor types interacting with digital and analog I/O and vision systems.
 
-![Visual Block Programming Environment](assets/vbpi.png "Visual Block Programming Environment")
+![Visual Block Programming Environment](assets/vbpi_1.png "Visual Block Programming Environment")
 
 **IBLOCK® Visual Editor** uses graphical blocks to represent motion commands, control of the input/output devices, variables, logic expressions, math, loops and more without having to worry about complexities of the programming languages.
 

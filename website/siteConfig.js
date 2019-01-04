@@ -36,6 +36,9 @@ const siteConfig = {
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
+  // CNAME file
+  cname: 'imac.intellidrives.com',
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'intro', label: 'Docs'},

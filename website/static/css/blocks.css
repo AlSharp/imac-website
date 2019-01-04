@@ -1,0 +1,13 @@
+img[alt="get_started_mode_1_index"],
+img[alt="get_started_mode_2_index"],
+img[alt="get_started_profile_1_index"],
+img[alt="get_started_profile_2_index"],
+img[alt="get_started_profile_3_index"],
+img[alt="get_started_move_1_index"],
+img[alt="get_started_move_2_index"],
+img[alt="get_started_move_3_index"],
+img[alt="get_started_homing_1_index"],
+img[alt="get_started_homing_2_index"],
+img[alt="get_started_homing_3_index"] {
+  display: inline-block
+}
