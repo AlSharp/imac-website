@@ -8,6 +8,17 @@ img[alt="get_started_move_2_index"],
 img[alt="get_started_move_3_index"],
 img[alt="get_started_homing_1_index"],
 img[alt="get_started_homing_2_index"],
-img[alt="get_started_homing_3_index"] {
+img[alt="get_started_homing_3_index"],
+img[alt="get_started_wait_input_1_index"],
+img[alt="get_started_wait_input_2_index"],
+img[alt="get_started_listen_to_event_1_index"],
+img[alt="get_started_listen_to_event_2_index"],
+img[alt="get_started_delay_1_index"],
+img[alt="get_started_delay_2_index"],
+img[alt="get_started_wait_until_done_1_index"],
+img[alt="get_started_wait_until_done_2_index"],
+img[alt="get_started_wait_until_done_example_index"],
+img[alt="get_started_set_output_1_index"],
+img[alt="get_started_set_output_2_index"] {
   display: inline-block
 }
