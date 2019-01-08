@@ -19,6 +19,12 @@ img[alt="get_started_wait_until_done_1_index"],
 img[alt="get_started_wait_until_done_2_index"],
 img[alt="get_started_wait_until_done_example_index"],
 img[alt="get_started_set_output_1_index"],
-img[alt="get_started_set_output_2_index"] {
+img[alt="get_started_set_output_2_index"],
+img[alt="get_started_read_input_1_index"],
+img[alt="get_started_read_input_2_index"],
+img[alt="get_started_repeat_1_index"],
+img[alt="get_started_repeat_2_index"],
+img[alt="get_started_end_repeat_1_index"],
+img[alt="get_started_end_repeat_2_index"] {
   display: inline-block
 }

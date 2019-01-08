@@ -191,9 +191,57 @@ Sets the output control register to `High` or `Low`.
 ![get_started_set_output_1_index](assets/blocks/set_output_1.png "Set digital output block")
 ![get_started_set_output_2_index](assets/blocks/set_output_2.png "Set digital output block")
 
+*Output*: [*1 - 4*]
+
+*Set to*: [*Hi / Lo*]
+
+When output is set to *Hi* output transistor is open, conducting current to the load.
+
+When output is set *Lo* output transistor is closed, no current flows to the load.
+
+#### Read digital input
+
+Reads the value of input.
+
+![get_started_read_input_1_index](assets/blocks/read_input_1.png "Read digital input block")
+![get_started_read_input_2_index](assets/blocks/read_input_2.png "Read digital input block")
+
+*Input*: [*1 - 12*]
+
+Reads the value of specified input and saves this value in the program's internal memory. The value can be used in the IF-ELSE statement. Also the value can be assigned to variable name.
+
 ### Control Flow Blocks
 
-Control Flow Blocks Here
+#### Repeat
+
+Repeat block opens the beginning of the repeated part of the sequence of blocks.
+
+![get_started_repeat_1_index](assets/blocks/repeat_1.png "Repeat block")
+![get_started_repeat_2_index](assets/blocks/repeat_2.png "Repeat block")
+
+*Id*: positive integer or word without special characters
++ should be unique. Identifies a chain of blocks that will be repeated.
+
+*Number*: positive integer
++ defines how many times blocks will be repeated.
+
+Says to IMAC interpreter that starting from the next block there is a chain of blocks ended with End Repeat block with the same `Id` and that chain of blocks should be repeated `Number` times.
+
+#### End Repeat
+
+End Repeat block defines the end of the repeated part of the sequence of blocks.
+
+![get_started_end_repeat_1_index](assets/blocks/end_repeat_1.png "End Repeat block")
+![get_started_end_repeat_2_index](assets/blocks/end_repeat_2.png "End Repeat block")
+
+*Id*: positive integer or word without special characters
++ should be matched to `Id` of Repeat block.
+
+Says to IMAC interpreter that here is the end of a chain of blocks started with Repeat block with the same `Id`.
+
+#### If
+
+
 
 ### Math Blocks
 
