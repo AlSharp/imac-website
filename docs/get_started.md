@@ -36,8 +36,10 @@ Block palette contains the following command block categories:
 
 Allows to set type of the motor and the mode in which motor works.
 
-![get_started_mode_1_index](assets/blocks/mode_1.png "Mode block")
-![get_started_mode_2_index](assets/blocks/mode_2.png "Mode block")
+<figure>
+  <img src="assets/blocks/mode_1.png" alt="Mode tile"/>
+  <img src="assets/blocks/mode_2.png" alt="Mode block"/>
+</figure>
 
 *Motor type*:
 + Stepper
@@ -52,9 +54,11 @@ Sets the motor ***type*** to *`Stepper`* and operating ***mode*** to *`Position`
 
 Allows to set the motion characteristics.
 
-![get_started_profile_1_index](assets/blocks/profile_1.png "Profile block")
-![get_started_profile_2_index](assets/blocks/profile_2.png "Profile block")
-![get_started_profile_3_index](assets/blocks/profile_3.png "Profile block")
+<figure>
+  <img src="assets/blocks/profile_1.png" alt="Profile tile"/>
+  <img src="assets/blocks/profile_2.png" alt="Profile block"/>
+  <img src="assets/blocks/profile_3.png" alt="Profile block"/>
+</figure>
 
 *Profile*:
 + trapezoidal
@@ -74,9 +78,11 @@ Sets the motion ***profile***, ***velocity***, ***acceleration***, ***deacelerat
 
 Allows to set the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
 
-![get_started_move_1_index](assets/blocks/move_1.png "Move block")
-![get_started_move_2_index](assets/blocks/move_2.png "Move block")
-![get_started_move_3_index](assets/blocks/move_3.png "Move block")
+<figure>
+  <img src="assets/blocks/move_1.png" alt="Move tile"/>
+  <img src="assets/blocks/move_2.png" alt="Move block"/>
+  <img src="assets/blocks/move_3.png" alt="Move block"/>
+</figure>
 
 *Type*:
 + Absolute
@@ -103,18 +109,20 @@ Sets motion ***type*** to *`Absolute`* or *`Relative`*, ***position*** to absolu
 
 Allows to set the homing position.
 
-![get_started_homing_1_index](assets/blocks/homing_1.png "Homing block")
-![get_started_homing_2_index](assets/blocks/homing_2.png "Homing block")
-![get_started_homing_3_index](assets/blocks/homing_3.png "homing block")
+<figure>
+  <img src="assets/blocks/homing_1.png" alt="Homing tile"/>
+  <img src="assets/blocks/homing_2.png" alt="Homing block"/>
+  <img src="assets/blocks/homing_3.png" alt="Homing block"/>
+</figure>
 
 *Method*:
 + Current position
 
-  Uses when the currect position is needed to be set as homing position.
+  Used when the currect position is needed to be set as homing position.
 
 + Limit switch
 
-  Uses when one of limits is needed to be set as homing position.
+  Used when one of limits is needed to be set as homing position.
 
 *Direction*: [*Positive / Negative*]
 
@@ -132,8 +140,10 @@ Sets homing ***method*** to *`Current position`* or *`Limit Switch`*, ***directi
 
 Waits for `High` or `Low` on digital input. The next block in the sequence will be executed only if expected value comes on given input.
 
-![get_started_wait_input_1_index](assets/blocks/wait_input_1.png "Wait digital input block")
-![get_started_wait_input_2_index](assets/blocks/wait_input_2.png "Wait digital input block")
+<figure>
+  <img src="assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
+  <img src="assets/blocks/wait_input_2.png" alt="Wait Input block"/>
+</figure>
 
 *Input*: [*1 - 12*]
 
@@ -145,8 +155,10 @@ Waits for *`Hi`* on input *`1`* for axis `0` on the port `USB0`.
 
 Listens to events. The next block in the sequence will be executed only if awaited event happens.
 
-![get_started_listen_to_event_1_index](assets/blocks/listen_event_1.png "Listen to event block")
-![get_started_listen_to_event_2_index](assets/blocks/listen_event_2.png "Listen to event block")
+<figure>
+  <img src="assets/blocks/listen_event_1.png" alt="Listen to Event tile"/>
+  <img src="assets/blocks/listen_event_2.png" alt="Listen to Event block"/>
+</figure>
 
 *Event*:
 + Positive limit switch
@@ -162,8 +174,10 @@ Awaits the positive limit switch is triggered at the axis `0` on the port `USB0`
 
 Waits for specified milliseconds.
 
-![get_started_delay_1_index](assets/blocks/delay_1.png "Delay block")
-![get_started_delay_2_index](assets/blocks/delay_2.png "Delay block")
+<figure>
+  <img src="assets/blocks/delay_1.png" alt="Delay tile"/>
+  <img src="assets/blocks/delay_2.png" alt="Delay block"/>
+</figure>
 
 *Time*: [*ms*]
 
@@ -173,12 +187,16 @@ Waits for the specified time. The next block in the sequence will be executed on
 
 Waits until the motion launched by previous block is completed.
 
-![get_started_wait_until_done_1_index](assets/blocks/wait_until_done_1.png "Wait until done block")
-![get_started_wait_until_done_2_index](assets/blocks/wait_until_done_2.png "Wait until done block")
+<figure>
+  <img src="assets/blocks/wait_until_done_1.png" alt="Wait until done tile"/>
+  <img src="assets/blocks/wait_until_done_2.png" alt="Wait until done block"/>
+</figure>
 
 Example:
 
-![get_started_wait_until_done_example_index](assets/blocks/wait_until_done_example.png "Wait until done example")
+<figure>
+  <img src="assets/blocks/wait_until_done_example.png" alt="Wait until done example"/>
+</figure>
 
 The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`. If the motion does not exist (or the motion is ended) the next block in the sequence will be allowed to run.
 
@@ -188,8 +206,10 @@ The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`
 
 Sets the output control register to `High` or `Low`.
 
-![get_started_set_output_1_index](assets/blocks/set_output_1.png "Set digital output block")
-![get_started_set_output_2_index](assets/blocks/set_output_2.png "Set digital output block")
+<figure>
+  <img src="assets/blocks/set_output_1.png" alt="Set Output tile"/>
+  <img src="assets/blocks/set_output_2.png" alt="Set Output block"/>
+</figure>
 
 *Output*: [*1 - 4*]
 
@@ -203,8 +223,10 @@ When output is set *Lo* output transistor is closed, no current flows to the loa
 
 Reads the value of input.
 
-![get_started_read_input_1_index](assets/blocks/read_input_1.png "Read digital input block")
-![get_started_read_input_2_index](assets/blocks/read_input_2.png "Read digital input block")
+<figure>
+  <img src="assets/blocks/read_input_1.png" alt="Read Input tile"/>
+  <img src="assets/blocks/read_input_2.png" alt="Read Input block"/>
+</figure>
 
 *Input*: [*1 - 12*]
 
@@ -214,10 +236,12 @@ Reads the value of specified input and saves this value in the program's interna
 
 #### Repeat
 
-Repeat block opens the beginning of the repeated part of the sequence of blocks.
+Opens the beginning of the repeated part of the sequence of blocks.
 
-![get_started_repeat_1_index](assets/blocks/repeat_1.png "Repeat block")
-![get_started_repeat_2_index](assets/blocks/repeat_2.png "Repeat block")
+<figure>
+  <img src="assets/blocks/repeat_1.png" alt="Repeat tile"/>
+  <img src="assets/blocks/repeat_2.png" alt="Repeat block"/>
+</figure>
 
 *Id*: positive integer or word without special characters
 + should be unique. Identifies a chain of blocks that will be repeated.
@@ -225,27 +249,109 @@ Repeat block opens the beginning of the repeated part of the sequence of blocks.
 *Number*: positive integer
 + defines how many times blocks will be repeated.
 
-Says to IMAC interpreter that starting from the next block there is a chain of blocks ended with End Repeat block with the same `Id` and that chain of blocks should be repeated `Number` times.
+Says to IMAC interpreter that starting from the next block there is a chain of blocks ended with *End Repeat* block with the same `Id` and that chain of blocks should be repeated `Number` times.
 
 #### End Repeat
 
-End Repeat block defines the end of the repeated part of the sequence of blocks.
+Defines the end of the repeated part of the sequence of blocks.
 
-![get_started_end_repeat_1_index](assets/blocks/end_repeat_1.png "End Repeat block")
-![get_started_end_repeat_2_index](assets/blocks/end_repeat_2.png "End Repeat block")
+<figure>
+  <img src="assets/blocks/end_repeat_1.png" alt="End Repeat tile"/>
+  <img src="assets/blocks/end_repeat_2.png" alt="End Repeat block"/>
+</figure>
 
 *Id*: positive integer or word without special characters
 + should be matched to `Id` of Repeat block.
 
-Says to IMAC interpreter that here is the end of a chain of blocks started with Repeat block with the same `Id`.
+Says to IMAC interpreter that here is the end of a chain of blocks started with *Repeat* block with the same `Id`.
 
 #### If
 
+Checks its boolean condition.
 
+<figure>
+  <img src="assets/blocks/if_1.png" alt="If tile"/>
+  <img src="assets/blocks/if_2.png" alt="If block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be unique. It is needed to find associated *Else* and *End if* blocks.
+
+*First boolean condition*:
++ Inputs [IN1 - IN12] [= , &ne;] [*Hi, Lo*]
++ [*variable*] [=, &ne;, &gt;, &ge;, &lt;, &le;] [*variable*]
+
+*Checkbox*: [*OR, AND*]
+
+*Second boolean condition*:
++ Inputs [IN1 - IN12] [= , &ne;] [*Hi, Lo*]
++ [*variable*] [=, &ne;, &gt;, &ge;, &lt;, &le;] [*variable*]
+
+If the condition is true the next blocks will be executed until IMAC interpreter meets associated *Esle* block or *End If* block. If the condiction is false the next blocks will be skipped and IMAC interpreter will look for assocciated *Else* block or *End If* block to continue execution of the blocks.
+
+##### *Sample use case*
+
+<figure>
+  <img src="assets/blocks/if_else_example_1.png" alt="If-Else example"/>
+  <img src="assets/blocks/if_else_example_2.png" alt="If-Else example"/>
+  <img src="assets/blocks/if_else_example_3.png" alt="If-Else example"/>
+</figure>
+
+If **Input 3** is `High` then move **axis 0** `10000` counts in positive direction else move **axis 0** `10000` counts in negative direction.
+
+#### Else
+
+Says to the interpreter to start the execution of the blocks *"from here"* if the boolean condition of associated *If* block is false.
+
+<figure>
+  <img src="assets/blocks/else_1.png" alt="Else tile"/>
+  <img src="assets/blocks/else_2.png" alt="Else block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be matched to associated *If* block.
+
+#### End If
+
+Says to the interpreter that this is the end of *If* or *If-Else* statement.
+
+<figure>
+  <img src="assets/blocks/end_if_1.png" alt="End If tile"/>
+  <img src="assets/blocks/end_if_2.png" alt="End If block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be matched to associated *If* block.
+
+#### Pause
+
+Pauses the execution of blocks until the `Resume` button is clicked.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/pause_1.png" alt="Pause tile"/>
+  <img src="assets/blocks/pause_2.png" alt="Pause block"/>
+</figure>
 
 ### Math Blocks
 
-Math Blocks Here
+#### Basic math
+
+Performs four basic mathematical operations: addition, subtraction, multiplication and division.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/math_1.png" alt="Math tile"/>
+  <img src="assets/blocks/math_2.png" alt="Math block"/>
+</figure>
+
+*Var.*: any word without special characters
+
+*Operand 1*: variable or value
+
+*Operator*: [*+, -, /, &times;*]
+
+*Operand 2*: variable or value
+
+Saves result of operation into the variable with specified name.
 
 ### Variable Blocks
 
