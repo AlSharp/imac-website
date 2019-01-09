@@ -14,8 +14,8 @@ const users = [
     caption: 'IntelLiDrives, Inc.',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/imac-website/img/intellidrives.png',
-    infoLink: 'https://www.intellidrives.com',
+    image: 'img/intellidrives.png',
+    infoLink: 'http://www.intellidrives.com',
     pinned: true,
   },
 ];
