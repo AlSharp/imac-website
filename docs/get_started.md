@@ -355,15 +355,87 @@ Saves result of operation into the variable with specified name.
 
 ### Variable Blocks
 
-Variable Blocks Here
+#### Value to Variable
+
+Assigns value to the variable.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/var_value_1.png" alt="Variable Value tile"/>
+  <img src="assets/blocks/var_value_2.png" alt="Variable Value block"/>
+</figure>
+
+*Name*: word without special characters
+
+*Value*: any number
+
+#### Varibale to Variable
+
+Assigns variable to another variable.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/var_var_1.png" alt="Variable Value tile"/>
+  <img src="assets/blocks/var_var_2.png" alt="Variable Value block"/>
+</figure>
+
+*Name*: word without special characters
+
+*Name*: variable name
+
+#### Parameter to Variable
+
+Assigns value of input / output / register to the variable.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/var_param_1.png" alt="Variable Parameter tile"/>
+  <img src="assets/blocks/var_param_2.png" alt="Variable Parameter block"/>
+</figure>
+
+*Name*: word without special characters
+
+*Parameter*: [*input, output, register*]
++ *Input*: [*IN1 - IN12*]
++ *Output*: [*OUT1 - OUT4*]
++ *Register*: any register
 
 ### Mics. Blocks
 
-Mics. Blocks Here
+#### Comment
+
+Adds comment to the block sequence.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/comment_1.png" alt="Comment tile"/>
+  <img src="assets/blocks/comment_2.png" alt="Comment block"/>
+</figure>
+
+Allows user to add comments by clicking on the icon inside the block.
 
 ### User Blocks
 
-User Blocks Here
+The User blocks are the blocks created by user from standard blocks or/and another user blocks. The User blocks can be deep nested. User can create user blocks from another user blocks which consist another user blocks.
+
+Here is created user block which moves the gantry system to the reference point.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/user_block_1.png" alt="User Block tile"/>
+  <img src="assets/blocks/user_block_2.png" alt="User block block"/>
+</figure>
+
+To see the inner blocks and edit them click `Unfold` in the dropdown menu.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/user_block_3.png" alt="User Block tile"/>
+</figure>
+
+To fold the user block back click `Fold`.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/user_block_4.png" alt="User Block tile"/>
+  <img src="assets/blocks/user_block_5.png" alt="User block block"/>
+  <img src="assets/blocks/user_block_6.png" alt="User block block"/>
+</figure>
+
+To learn more about User blocks please see The User Block Guide.
 
 ## Working with IMAC files
 
