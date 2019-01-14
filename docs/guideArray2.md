@@ -4,8 +4,6 @@ title: Array Block XYZ Gantry
 sidebar_label: Array Block XYZ Gantry
 ---
 
-# Albert
-
 ## Demo
 
 Click on the image to watch demo on Youtube.
