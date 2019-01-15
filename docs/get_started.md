@@ -435,7 +435,7 @@ To fold the user block back click `Fold`.
   <img src="assets/blocks/user_block_6.png" alt="User block block"/>
 </figure>
 
-To learn more about User blocks please see The User Block Guide.
+To learn more about User blocks please see [The User Block Guide](guideUserblock.md).
 
 ## Working with IMAC files
 
@@ -487,14 +487,20 @@ User has a full control over the **IDRIVES** through the Terminal. Refer to the 
 
 Examples:
 
+```js
 usb0: 1 g r0x70
+```
 
 Get the value of register `0x70` at axis `1` of **IDRIVE** connected to USB port 0.
 
+```js
 usb0: 0 s r0xc8 0
+```
 
 Set the trajectory generator to absolute move, trapezoidal profile
 
+```js
 usb0: t 2
+```
 
 Execute homing.

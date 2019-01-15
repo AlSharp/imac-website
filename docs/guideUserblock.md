@@ -32,29 +32,44 @@ Newly created user block will be appeared on the left under the User category.
 
 ## Step 3. Add user block
 
+User block can now be added to the program sequence by dropping it onto visual programming workspace. Click `Unfold` to display the inner blocks.
+
 <figure class="img-inline-align-left">
   <img src="assets/user-block-guide/userblock_4.png" alt="User block"/>
 </figure>
 
 ## Step 4. Editing user block
 
+With inner blocks displayed one can edit them, add or remove blocks. Fold blocks when finished editing by clicking `Fold`. 
+
 <figure class="img-inline-align-left">
   <img src="assets/user-block-guide/userblock_5.png" alt="User block"/>
 </figure>
+
+The blocks will be folded back.
+There are three options after editing the blocks:
++ *Save*. User block will be overwritten.
++ *Save as*. New user block will be created.
++ Do nothing. The changes will be saved only within the program sequence.
 
 <figure class="img-inline-align-left">
   <img src="assets/user-block-guide/userblock_4.png" alt="User block"/>
 </figure>
 
-## Step 5. Save or Save as new user block
+## Step 5. Save as new user block
+
+Click `Save as` to create new user block. The dialog box shown below will appear on the screen. Choose new names and color. 
 
 <figure class="img-inline-align-left">
   <img src="assets/user-block-guide/userblock_6.png" alt="User block"/>
 </figure>
 
+Click `Save as` and newly created user block will be displayed on the left.
+
 <figure class="img-inline-align-left">
   <img src="assets/user-block-guide/userblock_7.png" alt="User block"/>
 </figure>
 
+We done!
 
 
