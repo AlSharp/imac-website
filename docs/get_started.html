@@ -333,7 +333,7 @@
   <img src="assets/blocks/user_block_5.png" alt="User block block"/>
   <img src="assets/blocks/user_block_6.png" alt="User block block"/>
 </figure>
-<p>To learn more about User blocks please see The User Block Guide.</p>
+<p>To learn more about User blocks please see <a href="/docs/guideuserblock">The User Block Guide</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="working-with-imac-files"></a><a href="#working-with-imac-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Working with IMAC files</h2>
 <p>There are two options available to save IMAC program:</p>
 <ol>
@@ -367,10 +367,13 @@
 <p>User has a full control over the <strong>IDRIVES</strong> through the Terminal. Refer to the <em>ASCII Programmer’s Guide</em> for available commands and syntax. The syntax of IMAC ASCII message is:</p>
 <p>[<em>usb port</em>]:[<em>axis letter</em>][<em>command code</em>][<em>command parameters</em>]</p>
 <p>Examples:</p>
-<p>usb0: 1 g r0x70</p>
+<pre><code class="hljs css language-js">usb0: <span class="hljs-number">1</span> g r0x70
+</code></pre>
 <p>Get the value of register <code>0x70</code> at axis <code>1</code> of <strong>IDRIVE</strong> connected to USB port 0.</p>
-<p>usb0: 0 s r0xc8 0</p>
+<pre><code class="hljs css language-js">usb0: <span class="hljs-number">0</span> s r0xc8 <span class="hljs-number">0</span>
+</code></pre>
 <p>Set the trajectory generator to absolute move, trapezoidal profile</p>
-<p>usb0: t 2</p>
+<pre><code class="hljs css language-js">usb0: t <span class="hljs-number">2</span>
+</code></pre>
 <p>Execute homing.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/intro"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/net_config"><span>Network configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#user-interface">User Interface</a></li><li><a href="#block-palette">Block Palette</a><ul class="toc-headings"><li><a href="#motion-blocks">Motion Blocks</a></li><li><a href="#time-event-blocks">Time / Event Blocks</a></li><li><a href="#i-o-blocks">I/O Blocks</a></li><li><a href="#control-flow-blocks">Control Flow Blocks</a></li><li><a href="#math-blocks">Math Blocks</a></li><li><a href="#variable-blocks">Variable Blocks</a></li><li><a href="#mics-blocks">Mics. Blocks</a></li><li><a href="#user-blocks">User Blocks</a></li></ul></li><li><a href="#working-with-imac-files">Working with IMAC files</a></li><li><a href="#updating-imac-software">Updating IMAC Software</a></li><li><a href="#sending-ascii-commands-through-the-terminal">Sending ASCII commands through the terminal</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="IMAC" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro.html">Introduction</a><a href="/docs/en/get_started.html">Get Started</a><a href="/docs/en/guide_array.html">Guides</a></div></section><a href="https://www.intellidrives.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/favicon.png" alt="IMAC Controller" width="64" height="64"/></a><section class="copyright">Copyright © 2019 IntelLiDrives, Inc</section></footer></div></body></html>

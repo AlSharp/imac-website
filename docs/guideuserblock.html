@@ -28,5 +28,49 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">User Block</h1></header><article><div><span><p>Sequence of blocks can be assembled into the user block.</p>
-<p>Creating user blocks helps making program sequence short and readable. Here are the steps how to create user blocks and use them:</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/imac_dac"><span class="arrow-prev">← </span><span>Data Acquisition</span></a><a class="docs-next button" href="/docs/guideArray1"><span>Array Block</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="IMAC" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro.html">Introduction</a><a href="/docs/en/get_started.html">Get Started</a><a href="/docs/en/guide_array.html">Guides</a></div></section><a href="https://www.intellidrives.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/favicon.png" alt="IMAC Controller" width="64" height="64"/></a><section class="copyright">Copyright © 2019 IntelLiDrives, Inc</section></footer></div></body></html>
+<p>Creating user blocks helps making program sequence short and readable. Assume that we have to configure the motors of XY table. To do this we need four blocks: Mode and Profile for each axis. We will create single user block which does the same but occupies less room on the visual programming workspace.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-1-selecting-blocks"></a><a href="#step-1-selecting-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1. Selecting blocks</h2>
+<p>Use <code>CTRL</code> or <code>SHIFT</code> + <code>MOUSE LEFT CLICK</code> to select blocks. Selected blocks will be highlighted. Click the button as shown on the picture to open user block dialog. The user block dialog will pop up.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_1.png" alt="Selecting blocks"/>
+</figure>
+<h2><a class="anchor" aria-hidden="true" id="step-2-creating-user-block"></a><a href="#step-2-creating-user-block" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 2. Creating user block</h2>
+<p>Give the names and pick up the color. There are two fields for names. The first field is the actual name of the block and the second name is for additional information. Both names will be displayed on the block.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_2.png" alt="Creating user block"/>
+</figure>
+<p>Newly created user block will be appeared on the left under the User category.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_3.png" alt="User block"/>
+</figure>
+<h2><a class="anchor" aria-hidden="true" id="step-3-add-user-block"></a><a href="#step-3-add-user-block" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 3. Add user block</h2>
+<p>User block can now be added to the program sequence by dropping it onto visual programming workspace. Click <code>Unfold</code> to display the inner blocks.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_4.png" alt="User block"/>
+</figure>
+<h2><a class="anchor" aria-hidden="true" id="step-4-editing-user-block"></a><a href="#step-4-editing-user-block" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 4. Editing user block</h2>
+<p>With inner blocks displayed one can edit them, add or remove blocks. Fold blocks when finished editing by clicking <code>Fold</code>.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_5.png" alt="User block"/>
+</figure>
+<p>The blocks will be folded back.
+There are three options after editing the blocks:</p>
+<ul>
+<li><em>Save</em>. User block will be overwritten.</li>
+<li><em>Save as</em>. New user block will be created.</li>
+<li>Do nothing. The changes will be saved only within the program sequence.</li>
+</ul>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_4.png" alt="User block"/>
+</figure>
+<h2><a class="anchor" aria-hidden="true" id="step-5-save-as-new-user-block"></a><a href="#step-5-save-as-new-user-block" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5. Save as new user block</h2>
+<p>Click <code>Save as</code> to create new user block. The dialog box shown below will appear on the screen. Choose new names and color.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_6.png" alt="User block"/>
+</figure>
+<p>Click <code>Save as</code> and newly created user block will be displayed on the left.</p>
+<figure class="img-inline-align-left">
+  <img src="assets/user-block-guide/userblock_7.png" alt="User block"/>
+</figure>
+<p>We done!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/imac_dac"><span class="arrow-prev">← </span><span>Data Acquisition</span></a><a class="docs-next button" href="/docs/guideArray1"><span>Array Block</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#step-1-selecting-blocks">Step 1. Selecting blocks</a></li><li><a href="#step-2-creating-user-block">Step 2. Creating user block</a></li><li><a href="#step-3-add-user-block">Step 3. Add user block</a></li><li><a href="#step-4-editing-user-block">Step 4. Editing user block</a></li><li><a href="#step-5-save-as-new-user-block">Step 5. Save as new user block</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="IMAC" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro.html">Introduction</a><a href="/docs/en/get_started.html">Get Started</a><a href="/docs/en/guide_array.html">Guides</a></div></section><a href="https://www.intellidrives.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/favicon.png" alt="IMAC Controller" width="64" height="64"/></a><section class="copyright">Copyright © 2019 IntelLiDrives, Inc</section></footer></div></body></html>
