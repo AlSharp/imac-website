@@ -11,5 +11,5 @@ website/yarn.lock
 website/node_modules
 website/i18n/*
 
-website/pages/en/google4e27d62555c202c1.html
-website/pages/en/google913f7f3e8eec7c28.html
+website/pages/google4e27d62555c202c1.html
+website/pages/google913f7f3e8eec7c28.html
