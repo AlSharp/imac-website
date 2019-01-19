@@ -11,7 +11,7 @@ To start **IMAC** application, open web browser (Google Chrome is recommended fo
 IMAC application contains four areas:
 
 1. Main Menu
-2. Block Palette
+2. Block palette
 3. Visual Programming Workspace
 4. Terminal
 
@@ -19,7 +19,7 @@ IMAC application contains four areas:
 
 ## Block Palette
 
-Block palatte contains the following command block categories:
+Block palette contains the following command block categories:
 
 - Motion Blocks
 - Time / Event Blocks
@@ -30,39 +30,412 @@ Block palatte contains the following command block categories:
 - Mics. Blocks
 - User Blocks
 
-![Visual Block Programming Environment](assets/vbpi.png "Visual Block Programming Environment")
-
 ### Motion Blocks
 
-Motion Blocks Here
+#### Mode
+
+Allows to set type of the motor and the mode in which motor works.
+
+<figure>
+  <img src="assets/blocks/mode_1.png" alt="Mode tile"/>
+  <img src="assets/blocks/mode_2.png" alt="Mode block"/>
+</figure>
+
+*Motor type*:
++ Stepper
++ Servo
+
+*Operating mode*:
++ Position
+
+Sets the motor ***type*** to *`Stepper`* and operating ***mode*** to *`Position`* for axis `0` on the port `USB0`.
+
+#### Profile
+
+Allows to set the motion characteristics.
+
+<figure>
+  <img src="assets/blocks/profile_1.png" alt="Profile tile"/>
+  <img src="assets/blocks/profile_2.png" alt="Profile block"/>
+  <img src="assets/blocks/profile_3.png" alt="Profile block"/>
+</figure>
+
+*Profile*:
++ trapezoidal
++ s-curve
+
+*Velocity*: positive integer [*counts/sec*]
+
+*Acceleration*: positive integer [*counts/sec^2*]
+
+*Deacceleration*: positive integer [*counts/sec^2*]
+
+*Jerk*: positive integer [*counts/sec^3*]
+
+Sets the motion ***profile***, ***velocity***, ***acceleration***, ***deaceleration*** and ***jerk*** for axis `0` on the port `USB0`.
+
+#### Move
+
+Allows to set the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
+
+<figure>
+  <img src="assets/blocks/move_1.png" alt="Move tile"/>
+  <img src="assets/blocks/move_2.png" alt="Move block"/>
+  <img src="assets/blocks/move_3.png" alt="Move block"/>
+</figure>
+
+*Type*:
++ Absolute
+
+  Uses when you need to move the axis relative to current homing position.
+
++ Relative
+
+  Uses when you need to move the axis relative to current position.
+
+*Position*: positive or negative integer [*counts*]
+
+*Distance*: positive or negative integer [*counts*]
+
+*Direction*: [*Positive / Negative*]
+
+Multiplies the value of ***position*** or ***distance*** by `1` if Positive, and `-1` if Negative.
+
+*Wait until done*: [*True / False*]
+
+Sets motion ***type*** to *`Absolute`* or *`Relative`*, ***position*** to absolute position in counts, ***direction*** to positive or negative, ***distance*** to relative position in counts, ***wait until done*** to *`True`* or *`False`* for axis `0` on the port `USB0`.
+
+#### Homing
+
+Allows to set the homing position.
+
+<figure>
+  <img src="assets/blocks/homing_1.png" alt="Homing tile"/>
+  <img src="assets/blocks/homing_2.png" alt="Homing block"/>
+  <img src="assets/blocks/homing_3.png" alt="Homing block"/>
+</figure>
+
+*Method*:
++ Current position
+
+  Used when the currect position is needed to be set as homing position.
+
++ Limit switch
+
+  Used when one of limits is needed to be set as homing position.
+
+*Direction*: [*Positive / Negative*]
+
+Works only with *`Limit switch`* method. Indicates that ***positive*** or ***negative*** limit switch is selected to be a homing position.
+
+*Wait until referenced*: [*True / False*]
+
+Waits for axis completes the homing positioning.
+
+Sets homing ***method*** to *`Current position`* or *`Limit Switch`*, ***direction*** to positive or negative, ***wait until referenced*** to *`True`* or *`False`* for axis `0` on the port `USB0`.
 
 ### Time / Event Blocks
 
-Time / Event Blocks Here
+#### Wait for digital input
+
+Waits for `High` or `Low` on digital input. The next block in the sequence will be executed only if expected value comes on given input.
+
+<figure>
+  <img src="assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
+  <img src="assets/blocks/wait_input_2.png" alt="Wait Input block"/>
+</figure>
+
+*Input*: [*1 - 12*]
+
+*Wait for*: [*Hi / Lo*]
+
+Waits for *`Hi`* on input *`1`* for axis `0` on the port `USB0`.
+
+#### Listen to event
+
+Listens to events. The next block in the sequence will be executed only if awaited event happens.
+
+<figure>
+  <img src="assets/blocks/listen_event_1.png" alt="Listen to Event tile"/>
+  <img src="assets/blocks/listen_event_2.png" alt="Listen to Event block"/>
+</figure>
+
+*Event*:
++ Positive limit switch
++ Negative limit switch
+
+*Timeout*: [*ms*]
+
+If during the specified time the event is not occurred, the error will be thrown and the further processing of the sequence of blocks will be stopped.
+
+Awaits the positive limit switch is triggered at the axis `0` on the port `USB0`.
+
+#### Delay
+
+Waits for specified milliseconds.
+
+<figure>
+  <img src="assets/blocks/delay_1.png" alt="Delay tile"/>
+  <img src="assets/blocks/delay_2.png" alt="Delay block"/>
+</figure>
+
+*Time*: [*ms*]
+
+Waits for the specified time. The next block in the sequence will be executed only after the time is expired.
+
+#### Wait until done
+
+Waits until the motion launched by previous block is completed.
+
+<figure>
+  <img src="assets/blocks/wait_until_done_1.png" alt="Wait until done tile"/>
+  <img src="assets/blocks/wait_until_done_2.png" alt="Wait until done block"/>
+</figure>
+
+Example:
+
+<figure>
+  <img src="assets/blocks/wait_until_done_example.png" alt="Wait until done example"/>
+</figure>
+
+The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`. If the motion does not exist (or the motion is ended) the next block in the sequence will be allowed to run.
 
 ### I/O Blocks
 
-I/O Blocks Here
+#### Set digital output
+
+Sets the output control register to `High` or `Low`.
+
+<figure>
+  <img src="assets/blocks/set_output_1.png" alt="Set Output tile"/>
+  <img src="assets/blocks/set_output_2.png" alt="Set Output block"/>
+</figure>
+
+*Output*: [*1 - 4*]
+
+*Set to*: [*Hi / Lo*]
+
+When output is set to *Hi* output transistor is open, conducting current to the load.
+
+When output is set *Lo* output transistor is closed, no current flows to the load.
+
+#### Read digital input
+
+Reads the value of input.
+
+<figure>
+  <img src="assets/blocks/read_input_1.png" alt="Read Input tile"/>
+  <img src="assets/blocks/read_input_2.png" alt="Read Input block"/>
+</figure>
+
+*Input*: [*1 - 12*]
+
+Reads the value of specified input and saves this value in the program's internal memory. The value can be used in the IF-ELSE statement. Also the value can be assigned to variable name.
 
 ### Control Flow Blocks
 
-Control Flow Blocks Here
+#### Repeat
+
+Opens the beginning of the repeated part of the sequence of blocks.
+
+<figure>
+  <img src="assets/blocks/repeat_1.png" alt="Repeat tile"/>
+  <img src="assets/blocks/repeat_2.png" alt="Repeat block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be unique. Identifies a chain of blocks that will be repeated.
+
+*Number*: positive integer
++ defines how many times blocks will be repeated.
+
+Says to IMAC interpreter that starting from the next block there is a chain of blocks ended with *End Repeat* block with the same `Id` and that chain of blocks should be repeated `Number` times.
+
+#### End Repeat
+
+Defines the end of the repeated part of the sequence of blocks.
+
+<figure>
+  <img src="assets/blocks/end_repeat_1.png" alt="End Repeat tile"/>
+  <img src="assets/blocks/end_repeat_2.png" alt="End Repeat block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be matched to `Id` of Repeat block.
+
+Says to IMAC interpreter that here is the end of a chain of blocks started with *Repeat* block with the same `Id`.
+
+#### If
+
+Checks its boolean condition.
+
+<figure>
+  <img src="assets/blocks/if_1.png" alt="If tile"/>
+  <img src="assets/blocks/if_2.png" alt="If block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be unique. It is needed to find associated *Else* and *End if* blocks.
+
+*First boolean condition*:
++ Inputs [IN1 - IN12] [= , &ne;] [*Hi, Lo*]
++ [*variable*] [=, &ne;, &gt;, &ge;, &lt;, &le;] [*variable*]
+
+*Checkbox*: [*OR, AND*]
+
+*Second boolean condition*:
++ Inputs [IN1 - IN12] [= , &ne;] [*Hi, Lo*]
++ [*variable*] [=, &ne;, &gt;, &ge;, &lt;, &le;] [*variable*]
+
+If the condition is true the next blocks will be executed until IMAC interpreter meets associated *Esle* block or *End If* block. If the condiction is false the next blocks will be skipped and IMAC interpreter will look for assocciated *Else* block or *End If* block to continue execution of the blocks.
+
+##### *Sample use case*
+
+<figure>
+  <img src="assets/blocks/if_else_example_1.png" alt="If-Else example"/>
+  <img src="assets/blocks/if_else_example_2.png" alt="If-Else example"/>
+  <img src="assets/blocks/if_else_example_3.png" alt="If-Else example"/>
+</figure>
+
+If **Input 3** is `High` then move **axis 0** `10000` counts in positive direction else move **axis 0** `10000` counts in negative direction.
+
+#### Else
+
+Says to the interpreter to start the execution of the blocks *"from here"* if the boolean condition of associated *If* block is false.
+
+<figure>
+  <img src="assets/blocks/else_1.png" alt="Else tile"/>
+  <img src="assets/blocks/else_2.png" alt="Else block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be matched to associated *If* block.
+
+#### End If
+
+Says to the interpreter that this is the end of *If* or *If-Else* statement.
+
+<figure>
+  <img src="assets/blocks/end_if_1.png" alt="End If tile"/>
+  <img src="assets/blocks/end_if_2.png" alt="End If block"/>
+</figure>
+
+*Id*: positive integer or word without special characters
++ should be matched to associated *If* block.
+
+#### Pause
+
+Pauses the execution of blocks until the `Resume` button is clicked.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/pause_1.png" alt="Pause tile"/>
+  <img src="assets/blocks/pause_2.png" alt="Pause block"/>
+</figure>
 
 ### Math Blocks
 
-Math Blocks Here
+#### Basic math
+
+Performs four basic mathematical operations: addition, subtraction, multiplication and division.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/math_1.png" alt="Math tile"/>
+  <img src="assets/blocks/math_2.png" alt="Math block"/>
+</figure>
+
+*Var.*: any word without special characters
+
+*Operand 1*: variable or value
+
+*Operator*: [*+, -, /, &times;*]
+
+*Operand 2*: variable or value
+
+Saves result of operation into the variable with specified name.
 
 ### Variable Blocks
 
-Variable Blocks Here
+#### Value to Variable
+
+Assigns value to the variable.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/var_value_1.png" alt="Variable Value tile"/>
+  <img src="assets/blocks/var_value_2.png" alt="Variable Value block"/>
+</figure>
+
+*Name*: word without special characters
+
+*Value*: any number
+
+#### Varibale to Variable
+
+Assigns variable to another variable.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/var_var_1.png" alt="Variable Value tile"/>
+  <img src="assets/blocks/var_var_2.png" alt="Variable Value block"/>
+</figure>
+
+*Name*: word without special characters
+
+*Name*: variable name
+
+#### Parameter to Variable
+
+Assigns value of input / output / register to the variable.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/var_param_1.png" alt="Variable Parameter tile"/>
+  <img src="assets/blocks/var_param_2.png" alt="Variable Parameter block"/>
+</figure>
+
+*Name*: word without special characters
+
+*Parameter*: [*input, output, register*]
++ *Input*: [*IN1 - IN12*]
++ *Output*: [*OUT1 - OUT4*]
++ *Register*: any register
 
 ### Mics. Blocks
 
-Mics. Blocks Here
+#### Comment
+
+Adds comment to the block sequence.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/comment_1.png" alt="Comment tile"/>
+  <img src="assets/blocks/comment_2.png" alt="Comment block"/>
+</figure>
+
+Allows user to add comments by clicking on the icon inside the block.
 
 ### User Blocks
 
-User Blocks Here
+The User blocks are the blocks created by user from standard blocks or/and another user blocks. The User blocks can be deep nested. User can create user blocks from another user blocks which consist another user blocks.
+
+Here is created user block which moves the gantry system to the reference point.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/user_block_1.png" alt="User Block tile"/>
+  <img src="assets/blocks/user_block_2.png" alt="User block block"/>
+</figure>
+
+To see the inner blocks and edit them click `Unfold` in the dropdown menu.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/user_block_3.png" alt="User Block tile"/>
+</figure>
+
+To fold the user block back click `Fold`.
+
+<figure class="img-inline-align-left">
+  <img src="assets/blocks/user_block_4.png" alt="User Block tile"/>
+  <img src="assets/blocks/user_block_5.png" alt="User block block"/>
+  <img src="assets/blocks/user_block_6.png" alt="User block block"/>
+</figure>
+
+To learn more about User blocks please see [The User Block Guide](guideUserblock.md).
 
 ## Working with IMAC files
 
@@ -114,14 +487,20 @@ User has a full control over the **IDRIVES** through the Terminal. Refer to the 
 
 Examples:
 
+```js
 usb0: 1 g r0x70
+```
 
 Get the value of register `0x70` at axis `1` of **IDRIVE** connected to USB port 0.
 
+```js
 usb0: 0 s r0xc8 0
+```
 
 Set the trajectory generator to absolute move, trapezoidal profile
 
+```js
 usb0: t 2
+```
 
 Execute homing.

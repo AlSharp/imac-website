@@ -14,17 +14,17 @@ const users = [
     caption: 'IntelLiDrives, Inc.',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/imac-website/img/intellidrives.png',
-    infoLink: 'https://www.intellidrives.com',
+    image: 'img/intellidrives.png',
+    infoLink: 'http://www.intellidrives.com',
     pinned: true,
   },
 ];
 
 const siteConfig = {
   title: 'IMAC', // Title for your website.
-  tagline: 'IntelLiDrives Multi Axes Motion and Automation Controller',
-  url: 'https://AlSharp.github.io', // Your website URL
-  baseUrl: '/imac-website/', // Base URL for your project */
+  tagline: 'IntelLiDrives Multi-Axis Motion and Automation Controller',
+  url: 'https://AlSharp.github.io/imac-website', // Your website URL
+  baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -35,6 +35,9 @@ const siteConfig = {
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
+
+  // CNAME file
+  cname: 'imac.intellidrives.com',
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [

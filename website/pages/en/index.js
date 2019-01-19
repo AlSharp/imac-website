@@ -23,6 +23,9 @@ class HomeSplash extends React.Component {
 
     const SplashContainer = props => (
       <div className="homeContainer">
+        {/* <div style={{position: 'fixed', zIndex: -99, width: '100%', height: '100%'}}>
+          <iframe width="896" height="504" src="https://www.youtube.com/embed/H6L26-ohl08?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>        */}
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
@@ -105,7 +108,7 @@ class Index extends React.Component {
         {[
           {
             content: 'Talk about trying this out',
-            image: `${baseUrl}img/docusaurus.svg`,
+            image: `${baseUrl}img/favicon.png`,
             imageAlign: 'left',
             title: 'Try it Out',
           },
@@ -119,7 +122,7 @@ class Index extends React.Component {
           {
             content:
               'This is another description of how this project is useful',
-            image: `${baseUrl}img/docusaurus.svg`,
+            image: `${baseUrl}img/favicon.png`,
             imageAlign: 'right',
             title: 'Description',
           },
@@ -132,7 +135,7 @@ class Index extends React.Component {
         {[
           {
             content: 'Talk about learning how to use this',
-            image: `${baseUrl}img/docusaurus.svg`,
+            image: `${baseUrl}img/favicon.png`,
             imageAlign: 'right',
             title: 'Learn How',
           },
@@ -145,13 +148,13 @@ class Index extends React.Component {
         {[
           {
             content: 'This is the content of my feature',
-            image: `${baseUrl}img/docusaurus.svg`,
+            image: `${baseUrl}img/favicon.png`,
             imageAlign: 'top',
             title: 'Feature One',
           },
           {
             content: 'The content of my second feature',
-            image: `${baseUrl}img/docusaurus.svg`,
+            image: `${baseUrl}img/favicon.png`,
             imageAlign: 'top',
             title: 'Feature Two',
           },

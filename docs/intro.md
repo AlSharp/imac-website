@@ -4,13 +4,13 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-***INTELLIDRIVES MULTI-AXES MOTION and AUTOMATION CONTROLLER*** is a network based general purpose motion/automation controller with embedded intuitive **IBLOCK®** programming capability.
+***INTELLIDRIVES MULTI-AXIS MOTION and AUTOMATION CONTROLLER*** is a network based general purpose motion/automation controller with embedded intuitive **IBLOCK®** programming capability.
 
 ## Visual Block Programming Environment
 
-**IBLOCK®** visual block programming environment runs in the web browser on any hardware and software platforms. **IBLOCK®** uses functional blocks linked together to create complex multi-axes motion control sequences of different motor types interacting with digital and analog I/O and vision systems.
+**IBLOCK®** visual block programming environment runs in the web browser on any hardware and software platforms. **IBLOCK®** uses functional blocks linked together to create complex multi-axis motion control sequences of different motor types interacting with digital and analog I/O and vision systems.
 
-![Visual Block Programming Environment](assets/vbpi.png "Visual Block Programming Environment")
+![Visual Block Programming Environment](assets/vbpi_1.png "Visual Block Programming Environment")
 
 **IBLOCK® Visual Editor** uses graphical blocks to represent motion commands, control of the input/output devices, variables, logic expressions, math, loops and more without having to worry about complexities of the programming languages.
 
@@ -22,14 +22,14 @@ As a stand-alone controller, IMAC can take the place of a PC in a control system
 **IMAC** can also be configured to work in conjunction with a PC where the IMAC handles the real-time processes such as motion control and automation, and the PC is used as programming environment and GUI
 
 #### Main Features:
--	Multi-axes (up to 32 axes) motion control over distributed **INET®** network
+-	Multi-axis (up to 32 axes) motion control over distributed **INET®** network
 -	Digital and Analog I/O handling over **INET®** network
 -	Simple and Visual creation of complex machine operational sequences
 -	No programming experience necessary, just lay **IBLOCKS** in sequence
 -	Graphical HMI Designer
 
-![3-axes system with I/O data acquisition](assets/assembly.jpg "3-axes system with I/O data acquisition")
-3-axes system with I/O data acquisition
+![3-axis system with I/O data acquisition](assets/assembly.jpg "3-axis system with I/O data acquisition")
+3-axis system with I/O data acquisition
 
 ## IDRIVES®
 
