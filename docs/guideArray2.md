@@ -14,7 +14,7 @@ Click on the image to watch demo on Youtube.
 
 ### Step 1. Configuring Mode and Profile blocks
 
-Drag and drop Mode and Profile blocks onto the visual programming workspace for X, Y and Z axes. Define the motor type, motion mode, profile, velocity, acceleration and deacceleration.
+Drag and drop Mode and Profile blocks onto the visual programming workspace for X, Y and Z axes. Define the motor type, motion mode, profile, velocity, acceleration and deceleration.
 
 > Note: 0 is X; 1 is Y; 2 is Z.
 

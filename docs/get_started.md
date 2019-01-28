@@ -68,7 +68,7 @@ Allows to set the motion characteristics.
 
 *Acceleration*: positive integer [*counts/sec^2*]
 
-*Deacceleration*: positive integer [*counts/sec^2*]
+*Deceleration*: positive integer [*counts/sec^2*]
 
 *Jerk*: positive integer [*counts/sec^3*]
 
