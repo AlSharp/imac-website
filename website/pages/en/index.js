@@ -23,20 +23,17 @@ class HomeSplash extends React.Component {
 
     const SplashContainer = props => (
       <div className="homeContainer">
-        {/* <div style={{position: 'fixed', zIndex: -99, width: '100%', height: '100%'}}>
-          <iframe width="896" height="504" src="https://www.youtube.com/embed/H6L26-ohl08?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>        */}
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
       </div>
     );
 
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
+    const BackgroundImage = props => (
+      <div className="homeWrapperBgImg">
+        <img src={props.img_src} alt="Home Wrapper Image"/>
       </div>
-    );
+    )
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
@@ -66,10 +63,11 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Demo</Button>
-            <Button href={docUrl('intro.html')}>Introduction</Button>
-            <Button href="http://www.intellidrives.com/">IntelLiDrives</Button>
+            <Button href="/blog/">Tutorials</Button>
+            <Button href={docUrl('intro.html')}>Manual</Button>
+            <Button href="http://www.intellidrives.com/">intellidrives.com</Button>
           </PromoSection>
+          <BackgroundImage img_src="/img/imac-background-img-edited.jpg" />
         </div>
       </SplashContainer>
     );
@@ -92,15 +90,6 @@ class Index extends React.Component {
           layout={props.layout}
         />
       </Container>
-    );
-
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
     );
 
     const TryOut = () => (
@@ -157,7 +146,7 @@ class Index extends React.Component {
             image: `${baseUrl}img/favicon.png`,
             imageAlign: 'top',
             title: 'Feature Two',
-          },
+          }
         ]}
       </Block>
     );
@@ -196,7 +185,6 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
           <LearnHow />
           <TryOut />
           <Description />

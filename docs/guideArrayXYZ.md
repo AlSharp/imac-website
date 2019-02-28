@@ -1,14 +1,12 @@
 ---
-id: guideArray2
+id: guideArrayXYZ
 title: Array Block XYZ Gantry
 sidebar_label: Array Block XYZ Gantry
 ---
 
 ## Demo
 
-Click on the image to watch demo on Youtube.
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ebHxsyUTJYk/0.jpg)](https://www.youtube.com/watch?v=ebHxsyUTJYk)
+<iframe class="tutorial-video" width="784" height="441" src="https://www.youtube.com/embed/ebHxsyUTJYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Motors setup for X, Y and Z axes
 

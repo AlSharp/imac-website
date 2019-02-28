@@ -1,6 +1,18 @@
 /* your custom css */
+.mainContainer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .tutorial-video {
   margin: 0;
+}
+
+.homeWrapperBgImg {
+}
+
+.fbOpenSource {
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {

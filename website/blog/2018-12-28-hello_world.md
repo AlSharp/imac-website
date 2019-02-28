@@ -5,4 +5,6 @@ authorURL: https://github.com/AlSharp
 authorFBID: 100000692527876
 ---
 
-Hello! This the first post in the blog.
+![Blocks](/img/cubs-line-up.jpg "Blocks")
+
+<iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cnlVry2UYLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
