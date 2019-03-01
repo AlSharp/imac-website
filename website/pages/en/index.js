@@ -13,6 +13,51 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+const VideoGridBlock = props => (
+  <div className="gridBlock">
+    <div
+      className="blockElement alignLeft imageAlignSide imageAlignRight twoByGridBlock"
+    >
+      <div className="blockContent">
+        {
+          [
+            props.title ?
+            <h2 key="h2">
+              <div>
+                <span>
+                  <p>
+                    {props.title}
+                  </p>
+                </span>
+              </div>
+            </h2> :
+            null,
+            <div key="div">
+              <span>
+                {
+                  props.questions.map((question, index) =>
+                    <p
+                      key={index}
+                      style={{marginBottom: 20}}
+                    >
+                      {question}
+                    </p>  
+                  )
+                }
+              </span>
+            </div>
+          ]
+        }
+      </div>
+      <div
+        className="blockImage"
+      >
+        <iframe width="672" height="378" className="resp-iframe" src={props.video_src} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+    </div>
+  </div>
+)
+
 class HomeSplash extends React.Component {
   render() {
     const {siteConfig, language = ''} = this.props;
@@ -31,7 +76,15 @@ class HomeSplash extends React.Component {
 
     const BackgroundImage = props => (
       <div className="homeWrapperBgImg">
-        <img src={props.img_src} alt="Home Wrapper Image"/>
+        <img
+          src={props.img_src} alt="Home Wrapper Image"
+        />
+      </div>
+    )
+
+    const YoutubeVideo = props => (
+      <div className="youtube-video">
+        <iframe width="560px" height="315px" src={props.video_src} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
     )
 
@@ -67,7 +120,12 @@ class HomeSplash extends React.Component {
             <Button href={docUrl('intro.html')}>Manual</Button>
             <Button href="http://www.intellidrives.com/">intellidrives.com</Button>
           </PromoSection>
-          <BackgroundImage img_src="/img/imac-background-img-edited.jpg" />
+          <BackgroundImage
+            img_src="/img/imac-background-img-edited.jpg"
+          />
+          {/* <YoutubeVideo
+            video_src="https://www.youtube.com/embed/cnlVry2UYLw"
+          /> */}
         </div>
       </SplashContainer>
     );
@@ -91,6 +149,20 @@ class Index extends React.Component {
         />
       </Container>
     );
+
+    const VideoBlock = props => (
+      <Container
+        padding={['bottom', 'top']}
+        id={props.id}
+        background={props.background}
+      >
+        <VideoGridBlock
+          title={props.title}
+          questions={props.questions}
+          video_src={props.video_src}
+        />
+      </Container>
+    )
 
     const TryOut = () => (
       <Block id="try">
@@ -119,17 +191,19 @@ class Index extends React.Component {
       </Block>
     );
 
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content: 'Talk about learning how to use this',
-            image: `${baseUrl}img/favicon.png`,
-            imageAlign: 'right',
-            title: 'Learn How',
-          },
+    const WhatIsIMAC = () => (
+      <VideoBlock
+        id="learnMore"
+        background="light"
+        video_src="https://www.youtube.com/embed/cnlVry2UYLw"
+        title="Why IMAC?"
+        questions={[
+          "Have you been tasked to create motion control and automation project?",
+          "Concerned about complexity of the project?",
+          "Lacking motion control expertise, software knowledge or programming resourses?",
+          "Consider IMAC!"
         ]}
-      </Block>
+      />
     );
 
     const Features = () => (
@@ -184,11 +258,11 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
+          {/* <Features /> */}
+          <WhatIsIMAC />
+          {/* <TryOut />
+          <Description /> */}
+          {/* <Showcase /> */}
         </div>
       </div>
     );

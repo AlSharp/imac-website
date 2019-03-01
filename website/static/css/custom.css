@@ -8,24 +8,51 @@
   margin: 0;
 }
 
-.homeWrapperBgImg {
-}
-
 .fbOpenSource {
   text-align: center;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  .homeWrapperBgImg img {
+    width: 340px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .imageAlignSide .blockImage {
+      display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+  .homeWrapperBgImg img {
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
+  .homeWrapperBgImg img {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .homeWrapperBgImg img {
+    width: 500px;
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
+  .homeWrapperBgImg img {
+    width: 600px;
+    margin-top: -20px;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
+  .homeWrapperBgImg img {
+    width: 600px;
+    margin-top: -20px;
+  }
 }

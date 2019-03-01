@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'IMAC', // Title for your website.
-  tagline: 'IntelLiDrives Multi-Axis Motion and Automation Controller',
+  tagline: 'IntelLiDrives Multi-Axis Motion and Automation Controller with Visual Programming',
   url: 'https://AlSharp.github.io/imac-website', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
