@@ -1,7 +1,7 @@
 ---
 id: get_started
-title: Get Started
-sidebar_label: Get Started
+title: Getting Started
+sidebar_label: Getting Started
 ---
 
 To start **IMAC** application, open web browser (Google Chrome is recommended for **IMAC**) and type `imac:5000` in the browser address bar.

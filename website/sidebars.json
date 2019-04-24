@@ -2,7 +2,8 @@
   "docs": {
     "IMAC": ["intro", "get_started", "net_config", "imac_dac"],
     "Guides": ["guideuserblock","guideArrayXYZ"],
-    "Tutorial videos": ["tutorial_1", "tutorial_2", "tutorial_3", "tutorial_4"]
+    "Tutorial videos": ["tutorial_1", "tutorial_2", "tutorial_3", "tutorial_4"],
+    "Ethernet Motion Server": ["motion-server-getting-started", "motion-server-sample-codes"] 
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
