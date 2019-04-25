@@ -28,7 +28,7 @@ def main():
     for command in commands:
       sock.send(bytes('{0}\r'.format(command), encoding="utf-8"))
       data = sock.recv(1024)
-      print('Received data: ', data.decode('ascii'))
+      print('{}: {}'.format(command, data.decode('ascii')))
 
     sock.close()
 
@@ -38,15 +38,7 @@ main()
 ```js
 const net = require('net')
 
-console.log('run');
-
-const socket = net.createConnection(5000, '10.1.10.65', () => {
-  console.log('connected to IMAC.ETH');
-})
-
-socket.on('end', () => {
-  console.log('disconnected from IMAC.ETH')
-})
+const socket = net.createConnection(5000, '10.1.10.65');
 
 const commands = [
   's r0x70 2 0',
@@ -59,7 +51,7 @@ const commands = [
   't 1'
 ]
 
-const writeOne = (socket, command) => new Promise((resolve, reject) => {
+const writeOne = command => new Promise((resolve, reject) => {
   let timeout;
   let errorHandler, responseHandler;
   errorHandler = error => {
@@ -70,7 +62,7 @@ const writeOne = (socket, command) => new Promise((resolve, reject) => {
   responseHandler = res => {
     socket.removeListener('error', errorHandler);
     let response = res.toString('utf8');
-    console.log('RESPONSE: ', response);
+    console.log(`${command}: ${response}`);
     clearTimeout(timeout);
     if (response.slice(0, 1) === 'v') {
       resolve(response.slice(2));
@@ -94,13 +86,13 @@ const writeOne = (socket, command) => new Promise((resolve, reject) => {
   socket.once('data', responseHandler);
 })
 
-const write = async (socket, commands) => {
+const run = async commands => {
   for (let i = 0; i < commands.length; i++) {
-    await writeOne(socket, commands[i]);
+    await writeOne(commands[i]);
   }
 }
 
-write(socket, commands)
+run(commands)
   .then(() => {
     socket.end();
   })
@@ -111,7 +103,81 @@ write(socket, commands)
 ```
 <!--C-->
 ```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
+#include <sys/socket.h>
+#include <sys/types.h>
+
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#define PORT 5000
+#define IP_ADDR "10.1.10.65"
+
+int main() {
+  // create a socket
+  int client, ret;
+
+  struct sockaddr_in server_addr;
+
+  client = socket(AF_INET, SOCK_STREAM, 0);
+
+  memset(&server_addr, '\0', sizeof(server_addr));
+
+  server_addr.sin_family = AF_INET;
+  server_addr.sin_port = htons(PORT);
+  server_addr.sin_addr.s_addr = inet_addr(IP_ADDR);
+
+  ret = connect(client, (struct sockaddr*) &server_addr, sizeof(server_addr));
+  if (ret < 0) {
+    printf("Connection failed, code %d\n", ret);
+    return ret;
+  }
+
+  char commands[][256] = {
+    "s r0x70 2 0",
+    "s r0xc8 256",
+    "s r0xca -200000",
+    "s r0xcb 1000000",
+    "s r0xcc 2000000",
+    "s r0xcd 2000000",
+    "s r0x24 31",
+    "t 1"
+  };
+
+  size_t i;
+  for (i = 0; i < sizeof(commands) / sizeof(commands[0]); i++) {
+    printf("%s: ", commands[i]);
+    strcat(commands[i], "\r");
+    size_t len = strlen(commands[i]);
+    char * shorten_command = (char *) malloc(len);
+    memcpy(shorten_command, commands[i], len);
+    ret = send(client, shorten_command, len, 0);
+    if (ret < 0) {
+      printf("failed, code %d\n", ret);
+      return ret;
+    }
+
+    char response[256];
+    ret = recv(client, &response, sizeof(response), 0);
+    if (ret < 0) {
+      printf("failed, code %d\n", ret);
+      return ret;
+    }
+    printf("%s\n", response);
+  }
+
+  ret = close(client);
+  if (ret < 0) {
+    printf("Disconnection failed, code %d\n", ret);
+    return ret;
+  }
+
+  return 0;
+}
 ```
 
 <!--C#-->

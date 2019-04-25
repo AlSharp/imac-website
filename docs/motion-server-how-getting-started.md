@@ -1,12 +1,12 @@
 ---
 id: motion-server-getting-started
-title: Ethernet Motion Server
+title: IMAC Ethernet Motion Server
 sidebar_label: Getting Started
 ---
 
 ## Getting Started with IMAC.ETH
 
-bla-bla-bla
+
 
 ## Installation
 
@@ -45,5 +45,5 @@ Open File menu and click connect. The second window will appear. Specify port an
   <img src="assets/eth/connection.jpg" alt="IMAC ETHERNET MOTION SERVER CONNECTION" />
 </figure>
 
-Enable motor, change the baud rate, move, jog and send ASCII commmands.
+Enable motor, change the baud rate, move, jog and send ASCII commands.
 Before closing application disable motor, be sure that the motor does not hold a payload and turning motor off is safe.
