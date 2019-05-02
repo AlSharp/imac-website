@@ -1,12 +1,10 @@
 ---
 id: motion-server-getting-started
-title: IMAC Ethernet Motion Server
+title: Getting Started with IMAC Ethernet Motion Server
 sidebar_label: Getting Started
 ---
 
-## Getting Started with IMAC.ETH
-
-
+## Introduction
 
 ## Installation
 
@@ -16,7 +14,9 @@ sidebar_label: Getting Started
 
 3. Obtain MAC address from the label on the device bottom panel.
 
-4. Run MS-DOS command prompt as Administrator and execute `arp -s [IP addr] [MAC addr]`. Example: *arp -s 10.1.10.65 00-90-E8-72-98-24*
+4. Run MS-DOS command prompt as Administrator and execute `netsh interface ipv4 add neighbors "[Interface]" [IP addr] [MAC addr]`. Example: *netsh interface ipv4 add neighbors "Ethernet" 10.1.10.65 00-90-E8-72-98-24*
+
+    To find the name of the interface execute the following command: *netsh interface ipv4 show interfaces*
 
 5. Execute a special telnet command `telnet [IP addr] 6000`.
 Example: *telnet 10.1.10.65 6000*
@@ -46,4 +46,4 @@ Open File menu and click connect. The second window will appear. Specify port an
 </figure>
 
 Enable motor, change the baud rate, move, jog and send ASCII commands.
-Before closing application disable motor, be sure that the motor does not hold a payload and turning motor off is safe.
+Disable motor before closing application , be sure that the motor does not hold a payload and turning motor off is safe.

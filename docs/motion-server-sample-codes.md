@@ -4,7 +4,7 @@ title: Ethernet Motion Server Sample Codes
 sidebar_label: Sample Codes
 ---
 
-## How to write multiple ASCII commands
+## Sending multiple ASCII commands to motor drives
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Python-->
 ```py
@@ -182,7 +182,70 @@ int main() {
 
 <!--C#-->
 ```CNET
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net;
+using System.Net.Sockets;
 
+namespace TCPSocketClient
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string ipAddrString = "10.1.10.65";
+            int port = 5000;
+            IPAddress ipAddr = IPAddress.Parse(ipAddrString);
+            IPEndPoint nPortEndPoint = new IPEndPoint(ipAddr, port);
+
+            Socket client = new Socket(
+                ipAddr.AddressFamily,
+                SocketType.Stream,
+                ProtocolType.Tcp
+            );
+
+            client.Connect(nPortEndPoint);
+
+            Console.WriteLine("Connected to {0}", client.RemoteEndPoint.ToString());
+
+            string[] commands = new string[]
+            {
+                "s r0x70 2 0",
+                "s r0xc8 256",
+                "s r0xca -200000",
+                "s r0xcb 1000000",
+                "s r0xcc 2000000",
+                "s r0xcd 2000000",
+                "s r0x24 31",
+                "t 1"
+            };
+
+            for (int i = 0; i < commands.Length; i++)
+            {
+                byte[] command = Encoding.ASCII.GetBytes(commands[i] + "\r");
+                int byteSent = client.Send(command);
+
+                byte[] response = new byte[512];
+                int byteRecv = client.Receive(response);
+
+                Console.WriteLine(
+                    "{0}: {1}",
+                    commands[i],
+                    Encoding.ASCII.GetString(response, 0, byteRecv)
+                );
+            }
+
+            client.Shutdown(SocketShutdown.Both);
+            client.Close();
+
+            Console.Write("Press any key to exit");
+            Console.ReadLine();
+        }
+    }
+}
 ```
 <!--VB.NET-->
 ```VBNET
