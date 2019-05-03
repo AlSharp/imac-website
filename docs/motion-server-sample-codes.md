@@ -199,7 +199,7 @@ namespace TCPSocketClient
             string ipAddrString = "10.1.10.65";
             int port = 5000;
             IPAddress ipAddr = IPAddress.Parse(ipAddrString);
-            IPEndPoint nPortEndPoint = new IPEndPoint(ipAddr, port);
+            IPEndPoint imacETHEndPoint = new IPEndPoint(ipAddr, port);
 
             Socket client = new Socket(
                 ipAddr.AddressFamily,
@@ -207,7 +207,7 @@ namespace TCPSocketClient
                 ProtocolType.Tcp
             );
 
-            client.Connect(nPortEndPoint);
+            client.Connect(imacETHEndPoint);
 
             Console.WriteLine("Connected to {0}", client.RemoteEndPoint.ToString());
 
