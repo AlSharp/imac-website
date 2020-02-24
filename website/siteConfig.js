@@ -41,6 +41,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {href: "https://imacdemolive.ngrok.io", label: 'Try it now!'},
     {doc: 'tutorial_1', label: 'Tutorial videos'},
     {doc: 'intro', label: 'Manual'},
     {blog: true, label: 'Blog'},

@@ -127,6 +127,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
+            <Button href="https://imacdemolive.ngrok.io" target="_blank">Try it now!</Button>
             <Button href="/blog/">Tutorials</Button>
             <Button href={docUrl('intro.html')}>Manual</Button>
             <Button href="http://www.intellidrives.com/">intellidrives.com</Button>
