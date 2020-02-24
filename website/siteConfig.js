@@ -85,7 +85,10 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://raw.githubusercontent.com/AlSharp/imac-website/master/edit_external_link.js'
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
