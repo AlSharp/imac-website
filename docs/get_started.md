@@ -4,18 +4,19 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-To start **IMAC** application, open web browser (Google Chrome is recommended for **IMAC**) and type `imac:5000` in the browser address bar.
+To start **IMAC Editor**, open web browser (Google Chrome is recommended for **IMAC**) and type `imac:5000` in the browser address bar.
 
-## User Interface
-
-IMAC application contains four areas:
+IMAC Editor contains four areas:
 
 1. Main Menu
 2. Block palette
 3. Visual Programming Workspace
+4. Device control panel
 4. Terminal
 
-![Visual Block Programming Environment](assets/vbpi.png "Visual Block Programming Environment")
+![Visual Block Programming Environment](assets/editor_1.png "Visual Block Programming Environment")
+
+## Main menu
 
 ## Block Palette
 

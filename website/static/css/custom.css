@@ -1,4 +1,9 @@
 /* your custom css */
+.wrapper {
+  margin: 0px;
+  max-width: 100%;
+}
+
 .tutorial-video {
   margin: 0;
 }
@@ -6,6 +11,12 @@
 .fbOpenSource {
   text-align: center;
 }
+
+@media only screen and (min-width: 1024px) {
+  .separateOnPageNav .wrapper,
+  .separateOnPageNav .headerWrapper.wrapper {
+    max-width: 100%;
+  }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
   .homeWrapperBgImg img {
