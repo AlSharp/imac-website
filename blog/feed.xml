@@ -5,8 +5,8 @@
         <link>https://AlSharp.github.io/imac-website/blog</link>
         <description>The best place to stay up-to-date with the latest IMAC news and events.</description>
         <lastBuildDate>Thu, 28 Feb 2019 06:00:00 GMT</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>https://github.com/jpmonette/feed</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
         <image>
             <title>IMAC Blog</title>
             <url>https://AlSharp.github.io/imac-website/img/favicon.png</url>
