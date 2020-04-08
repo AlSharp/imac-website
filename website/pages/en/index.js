@@ -16,10 +16,9 @@ const GridBlock = CompLibrary.GridBlock;
 const VideoGridBlock = props => (
   <div className="gridBlock">
     <div
-      // className="blockElement alignLeft imageAlignSide imageAlignRight twoByGridBlock"
-      className="blockElement alignLeft imageAlignSide imageAlignRight"
+      className="blockElement alignLeft imageAlignSide imageAlignRight twoByGridBlock"
     >
-      <div className="blockContent">
+      <div className="blockContent" style={{minWidth: 300, marginRight: 30}}>
         {
           [
             props.title ?
@@ -51,14 +50,9 @@ const VideoGridBlock = props => (
         }
       </div>
       <div
-        className="blockImage"
-        style={{
-          maxWidth: 730
-        }}
+        className="youtube-wrapper"
       >
         <iframe
-          width="672"
-          height="378"
           src={props.video_src}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

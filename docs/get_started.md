@@ -14,7 +14,9 @@ IMAC Editor contains four areas:
 4. Device control panel
 4. Terminal
 
-![Visual Block Programming Environment](assets/editor_1.png "Visual Block Programming Environment")
+<figure>
+  <img src="assets/editor_2.png" alt="Visual Block Programming Environment"/>
+</figure>
 
 ## Main menu
 

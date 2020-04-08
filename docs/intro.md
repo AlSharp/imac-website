@@ -10,7 +10,9 @@ sidebar_label: Introduction
 
 **IMAC Editor** is software application that runs in the web browser and uses graphical blocks to create complex sequences for controlling different stepper and servo motors, digital and analog I/O and vision systems.
 
-![Visual Block Programming Environment](assets/vbpi_1.png "Visual Block Programming Environment")
+<figure>
+  <img src="assets/editor_1.png" alt="Visual Block Programming Environment"/>
+</figure>
 
 Graphical blocks represent motion commands, control of the input/output devices, variables, logic expressions, math, loops and more. User doesn't have to worry about complexities of the programming languages.
 
@@ -28,15 +30,22 @@ As a stand-alone controller, IMAC can take the place of a PC in a control system
 -	No programming experience necessary, just lay graphical blocks in sequence
 -	Graphical HMI Designer
 
-![3-axis system with I/O data acquisition](assets/assembly.jpg "3-axis system with I/O data acquisition")
+<figure>
+  <img src="assets/assembly.jpg" alt="3-axis system with I/O data acquisition"/>
+</figure>
+
 3-axis system with I/O data acquisition
 
 ## System Architecture
 
-![Standalone(No PC Required)](assets/arch_1.jpg "Standalone(No PC Required)")
+<figure>
+  <img src="assets/arch_2.jpg" alt="Standalone PC based system(wired)"/>
+</figure>
 
-![Standalone PC based system(wired)](assets/arch_2.jpg "Standalone PC based system(wired)")
+<figure>
+  <img src="assets/arch_3.jpg" alt="Standalone PC based system(wireless)"/>
+</figure>
 
-![Standalone PC based system(wireless)](assets/arch_3.jpg "Standalone PC based system(wireless)")
-
-![Network based installation](assets/arch_4.jpg "Network based installation")
+<figure>
+  <img src="assets/arch_4.jpg" alt="Network based installation"/>
+</figure>
