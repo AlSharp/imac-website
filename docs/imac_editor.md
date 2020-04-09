@@ -99,9 +99,9 @@ Sets the type of the motor and the mode in which motor works.
 *Operating mode*:
 + Position
 
-Shown block sets the motor ***type*** to *`Stepper`* and operating ***mode*** to *`Position`* for axis `X` on the port name `XYZ`.
+>Shown block sets the motor type to *`Stepper`* and operating mode to *`Position`* for axis `X` on the port name `XYZ`.
 
-#### Profile
+#### __Profile__
 
 Sets motion characteristics.
 
@@ -115,15 +115,15 @@ Sets motion characteristics.
 + trapezoidal
 + s-curve
 
-*Velocity*: positive integer [*counts/sec*]
+*Velocity*: positive integer or [variable] (units: counts/sec)
 
-*Acceleration*: positive integer [*counts/sec^2*]
+*Acceleration*: positive integer or [variable] (units: counts/sec^2)
 
-*Deceleration*: positive integer [*counts/sec^2*]
+*Deceleration*: positive integer or [variable] (units: counts/sec^2)
 
-*Jerk*: positive integer [*counts/sec^3*]
+*Jerk*: positive integer or [variable] (units: counts/sec^3)
 
-Sets the motion ***profile***, ***velocity***, ***acceleration***, ***deaceleration*** and ***jerk*** for axis `X` on the port name `XYZ`.
+>Sets the motion profile, velocity, acceleration, deaceleration and jerk for axis `X` on the port name `XYZ`.
 
 #### Move
 
@@ -149,17 +149,17 @@ Sets the type of motion, absolute position or relative distance, direction of th
 
   Uses when you need to move the axis at a constant velocity in the selected direction.
 
-*Position*: positive or negative integer [*counts*]
+*Position*: positive or negative integer or [variable] (units: counts)
 
-*Distance*: positive or negative integer [*counts*]
+*Distance*: positive or negative integer or [variable] (units: counts)
 
 *Direction*: [*Positive / Negative*]
 
-Multiplies the value of ***position*** or ***distance*** by `1` if Positive, and `-1` if Negative.
+>Multiplies the value of position or distance by `1` if Positive, and `-1` if Negative.
 
 *Wait until done*: [*True / False*]
 
-Sets motion ***type*** to *`Absolute`* or *`Relative`* or *`Velocity`*, ***position*** to absolute position in counts, ***direction*** to positive or negative, ***distance*** to relative position in counts, ***wait until done*** to *`True`* or *`False`* for axis `X` on the port name `XYZ`.
+>Sets motion type to *`Absolute`* or *`Relative`* or *`Velocity`*, moves to absolute position in counts if motion type is *`Absolute`*, moves given counts if motion type is relative, sets direction of motion to positive or negative, sets option "wait until done" to *`True`* or *`False`* for axis `X` on the port name `XYZ`.
 
 #### Homing
 
@@ -187,7 +187,7 @@ Sets the homing position.
 
 *Direction*: [*Positive / Negative*]
 
-Works only with *`Limit switch`* and *`Home switch`* methods.
+>Works only with *`Limit switch`* and *`Home switch`* methods.
 If Limit switch method is elected, indicates that ***positive*** or ***negative*** limit switch is selected to be a homing position.
 If Home switch is selected, indicates the direction the axis should move in to get to the home switch.
 
@@ -195,24 +195,24 @@ If Home switch is selected, indicates the direction the axis should move in to g
 
 Waits for axis completes the homing positioning.
 
-Sets homing ***method*** to *`Current position`* or *`Limit Switch`* or *`Home Switch`*, ***direction*** to positive or negative, ***wait until referenced*** to *`True`* for axis `X` on the port `XYZ`.
+> Sets homing method to *`Current position`* or *`Limit Switch`* or *`Home Switch`*, sets direction of homing positioning to positive or negative for axis `X` on the port `XYZ`. Always waits until referenced.
 
 ### Time / Event Blocks
 
 #### Wait for digital input
 
-Waits for `High` or `Low` on digital input. The next block in the sequence will be executed only if expected value comes on given input.
+Waits for `High` or `Low` on selected digital input. The next block in the sequence will be executed only if expected value comes on given input.
 
 <figure>
   <img src="assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
   <img src="assets/blocks/wait_input_2.png" alt="Wait Input block"/>
 </figure>
 
-*Input*: [*1 - 12*]
+*Input*: number of input or [variable] (units: positive integer)
 
-*Wait for*: [*Hi / Lo*]
+*Wait for*: input state or [variable] (units: Hi / Lo or 1 / 0)
 
-Waits for *`Hi`* on input *`1`* for axis `0` on the port `USB0`.
+> Waits for *`Hi`* on input *`3`* for axis `X` on the port `XYZ`.
 
 #### Listen to event
 

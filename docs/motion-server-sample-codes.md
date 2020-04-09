@@ -5,8 +5,10 @@ sidebar_label: Sample Codes
 ---
 
 ## Sending multiple ASCII commands to motor drives
+
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Python-->
+
 ```py
 import socket
 
@@ -35,6 +37,7 @@ def main():
 main()
 ```
 <!--JavaScript-->
+
 ```js
 const net = require('net')
 
@@ -102,6 +105,7 @@ run(commands)
   })
 ```
 <!--C-->
+
 ```C
 #include <stdio.h>
 #include <stdlib.h>
@@ -179,8 +183,8 @@ int main() {
   return 0;
 }
 ```
-
 <!--C#-->
+
 ```CNET
 using System;
 using System.Collections.Generic;
@@ -246,10 +250,6 @@ namespace TCPSocketClient
         }
     }
 }
-```
-<!--VB.NET-->
-```VBNET
-
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
