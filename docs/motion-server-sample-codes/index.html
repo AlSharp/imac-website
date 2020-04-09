@@ -30,33 +30,34 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Ethernet Motion Server Sample Codes</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="sending-multiple-ascii-commands-to-motor-drives"></a><a href="#sending-multiple-ascii-commands-to-motor-drives" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending multiple ASCII commands to motor drives</h2>
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Python-->
-```py
-import socket
-<p>def main():
-host = '10.1.10.65'
-port = 5000
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((host, port))
-commands = [
-'s r0x70 2 0',
-'s r0xc8 256',
-'s r0xca 200000',
-'s r0xcb 1000000',
-'s r0xcc 2000000',
-'s r0xcd 2000000',
-'s r0x24 31',
-'t 1'
-]
-for command in commands:
-sock.send(bytes('{0}\r'.format(command), encoding=&quot;utf-8&quot;))
-data = sock.recv(1024)
-print('{}: {}'.format(command, data.decode('ascii')))</p>
-<pre><code class="hljs">sock.close()
+<pre><code class="hljs css language-py"><span class="hljs-keyword">import</span> socket
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    host = <span class="hljs-string">'10.1.10.65'</span>
+    port = <span class="hljs-number">5000</span>
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((host, port))
+    commands = [
+      <span class="hljs-string">'s r0x70 2 0'</span>,
+      <span class="hljs-string">'s r0xc8 256'</span>,
+      <span class="hljs-string">'s r0xca 200000'</span>,
+      <span class="hljs-string">'s r0xcb 1000000'</span>,
+      <span class="hljs-string">'s r0xcc 2000000'</span>,
+      <span class="hljs-string">'s r0xcd 2000000'</span>,
+      <span class="hljs-string">'s r0x24 31'</span>,
+      <span class="hljs-string">'t 1'</span>
+    ]
+    <span class="hljs-keyword">for</span> command <span class="hljs-keyword">in</span> commands:
+      sock.send(bytes(<span class="hljs-string">'{0}\r'</span>.format(command), encoding=<span class="hljs-string">"utf-8"</span>))
+      data = sock.recv(<span class="hljs-number">1024</span>)
+      print(<span class="hljs-string">'{}: {}'</span>.format(command, data.decode(<span class="hljs-string">'ascii'</span>)))
+
+    sock.close()
+
+main()
 </code></pre>
-<p>main()</p>
-<pre><code class="hljs">&lt;!--JavaScript--&gt;
-```<span class="javascript">js
-<span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>)
+<!--JavaScript-->
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">'net'</span>)
 
 <span class="hljs-keyword">const</span> socket = net.createConnection(<span class="hljs-number">5000</span>, <span class="hljs-string">'10.1.10.65'</span>);
 
@@ -120,75 +121,86 @@ run(commands)
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'CATCH ERROR: '</span>, error);
     socket.end();
   })
-</span></code></pre>
-<!--C-->
-```C
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-<p>#include &lt;sys/socket.h&gt;
-#include &lt;sys/types.h&gt;</p>
-<p>#include &lt;netinet/in.h&gt;
-#include &lt;arpa/inet.h&gt;</p>
-<p>#define PORT 5000
-#define IP_ADDR &quot;10.1.10.65&quot;</p>
-<p>int main() {
-// create a socket
-int client, ret;</p>
-<p>struct sockaddr_in server_addr;</p>
-<p>client = socket(AF_INET, SOCK_STREAM, 0);</p>
-<p>memset(&amp;server_addr, '\0', sizeof(server_addr));</p>
-<p>server_addr.sin_family = AF_INET;
-server_addr.sin_port = htons(PORT);
-server_addr.sin_addr.s_addr = inet_addr(IP_ADDR);</p>
-<p>ret = connect(client, (struct sockaddr*) &amp;server_addr, sizeof(server_addr));
-if (ret &lt; 0) {
-printf(&quot;Connection failed, code %d\n&quot;, ret);
-return ret;
-}</p>
-<p>char commands[][256] = {
-&quot;s r0x70 2 0&quot;,
-&quot;s r0xc8 256&quot;,
-&quot;s r0xca -200000&quot;,
-&quot;s r0xcb 1000000&quot;,
-&quot;s r0xcc 2000000&quot;,
-&quot;s r0xcd 2000000&quot;,
-&quot;s r0x24 31&quot;,
-&quot;t 1&quot;
-};</p>
-<p>size_t i;
-for (i = 0; i &lt; sizeof(commands) / sizeof(commands[0]); i++) {
-printf(&quot;%s: &quot;, commands[i]);
-strcat(commands[i], &quot;\r&quot;);
-size_t len = strlen(commands[i]);
-char * shorten_command = (char *) malloc(len);
-memcpy(shorten_command, commands[i], len);
-ret = send(client, shorten_command, len, 0);
-if (ret &lt; 0) {
-printf(&quot;failed, code %d\n&quot;, ret);
-return ret;
-}</p>
-<pre><code class="hljs">char response[256];
-ret = recv(client, &amp;response, sizeof(response), 0);
-if (ret &lt; 0) {
-  printf(&quot;failed, code %d\n&quot;, ret);
-  return ret;
-}
-printf(&quot;%s\n&quot;, response);
 </code></pre>
-<p>}</p>
-<p>ret = close(client);
-if (ret &lt; 0) {
-printf(&quot;Disconnection failed, code %d\n&quot;, ret);
-return ret;
-}</p>
-<p>return 0;
-}</p>
-<pre><code class="hljs">
-&lt;!--C<span class="hljs-comment">#--&gt;</span>
-```CNET
-using System<span class="hljs-comment">;</span>
+<!--C-->
+<pre><code class="hljs css language-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/socket.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;netinet/in.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;arpa/inet.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PORT 5000</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IP_ADDR <span class="hljs-meta-string">"10.1.10.65"</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// create a socket</span>
+  <span class="hljs-keyword">int</span> client, ret;
+
+  <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">sockaddr_in</span> <span class="hljs-title">server_addr</span>;</span>
+
+  client = socket(AF_INET, SOCK_STREAM, <span class="hljs-number">0</span>);
+
+  <span class="hljs-built_in">memset</span>(&amp;server_addr, <span class="hljs-string">'\0'</span>, <span class="hljs-keyword">sizeof</span>(server_addr));
+
+  server_addr.sin_family = AF_INET;
+  server_addr.sin_port = htons(PORT);
+  server_addr.sin_addr.s_addr = inet_addr(IP_ADDR);
+
+  ret = connect(client, (struct sockaddr*) &amp;server_addr, <span class="hljs-keyword">sizeof</span>(server_addr));
+  <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Connection failed, code %d\n"</span>, ret);
+    <span class="hljs-keyword">return</span> ret;
+  }
+
+  <span class="hljs-keyword">char</span> commands[][<span class="hljs-number">256</span>] = {
+    <span class="hljs-string">"s r0x70 2 0"</span>,
+    <span class="hljs-string">"s r0xc8 256"</span>,
+    <span class="hljs-string">"s r0xca -200000"</span>,
+    <span class="hljs-string">"s r0xcb 1000000"</span>,
+    <span class="hljs-string">"s r0xcc 2000000"</span>,
+    <span class="hljs-string">"s r0xcd 2000000"</span>,
+    <span class="hljs-string">"s r0x24 31"</span>,
+    <span class="hljs-string">"t 1"</span>
+  };
+
+  <span class="hljs-keyword">size_t</span> i;
+  <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">sizeof</span>(commands) / <span class="hljs-keyword">sizeof</span>(commands[<span class="hljs-number">0</span>]); i++) {
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s: "</span>, commands[i]);
+    <span class="hljs-built_in">strcat</span>(commands[i], <span class="hljs-string">"\r"</span>);
+    <span class="hljs-keyword">size_t</span> len = <span class="hljs-built_in">strlen</span>(commands[i]);
+    <span class="hljs-keyword">char</span> * shorten_command = (<span class="hljs-keyword">char</span> *) <span class="hljs-built_in">malloc</span>(len);
+    <span class="hljs-built_in">memcpy</span>(shorten_command, commands[i], len);
+    ret = send(client, shorten_command, len, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">"failed, code %d\n"</span>, ret);
+      <span class="hljs-keyword">return</span> ret;
+    }
+
+    <span class="hljs-keyword">char</span> response[<span class="hljs-number">256</span>];
+    ret = recv(client, &amp;response, <span class="hljs-keyword">sizeof</span>(response), <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">"failed, code %d\n"</span>, ret);
+      <span class="hljs-keyword">return</span> ret;
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%s\n"</span>, response);
+  }
+
+  ret = close(client);
+  <span class="hljs-keyword">if</span> (ret &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Disconnection failed, code %d\n"</span>, ret);
+    <span class="hljs-keyword">return</span> ret;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<!--C#-->
+<pre><code class="hljs css language-CNET">using System<span class="hljs-comment">;</span>
 using System.Collections.Generic<span class="hljs-comment">;</span>
 using System.Linq<span class="hljs-comment">;</span>
 using System<span class="hljs-meta">.Text</span><span class="hljs-comment">;</span>
@@ -253,9 +265,5 @@ namespace TCPSocketClient
     }
 }
 </code></pre>
-<!--VB.NET-->
-```VBNET
-<pre><code class="hljs">
-<span class="hljs-comment">&lt;!--END_DOCUSAURUS_CODE_TABS--&gt;</span>
-</code></pre>
+<!--END_DOCUSAURUS_CODE_TABS-->
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/motion-server-getting-started"><span class="arrow-prev">← </span><span>Getting Started</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sending-multiple-ascii-commands-to-motor-drives">Sending multiple ASCII commands to motor drives</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="IMAC" width="66" height="58"/></a><div><h5>Manual</h5><a href="/docs/en/intro.html">Introduction</a><a href="/docs/en/get_started.html">Get Started</a><a href="/docs/en/guideuserblock.html">Guides</a><a href="/docs/en/tutorial_1.html">Tutorial videos</a></div></section><a href="https://www.intellidrives.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/favicon.png" alt="IMAC Controller" width="64" height="64"/></a><section class="copyright">Copyright © 2020 IntelLiDrives, Inc</section></footer></div></body></html>

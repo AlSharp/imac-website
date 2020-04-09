@@ -98,8 +98,10 @@
 <ul>
 <li>Position</li>
 </ul>
-<p>Shown block sets the motor <strong><em>type</em></strong> to <em><code>Stepper</code></em> and operating <strong><em>mode</em></strong> to <em><code>Position</code></em> for axis <code>X</code> on the port name <code>XYZ</code>.</p>
-<h4><a class="anchor" aria-hidden="true" id="profile"></a><a href="#profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Profile</h4>
+<blockquote>
+<p>Shown block sets the motor type to <em><code>Stepper</code></em> and operating mode to <em><code>Position</code></em> for axis <code>X</code> on the port name <code>XYZ</code>.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="profile"></a><a href="#profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Profile</strong></h4>
 <p>Sets motion characteristics.</p>
 <figure>
   <img src="assets/blocks/profile_1.png" alt="Profile tile"/>
@@ -111,11 +113,13 @@
 <li>trapezoidal</li>
 <li>s-curve</li>
 </ul>
-<p><em>Velocity</em>: positive integer [<em>counts/sec</em>]</p>
-<p><em>Acceleration</em>: positive integer [<em>counts/sec^2</em>]</p>
-<p><em>Deceleration</em>: positive integer [<em>counts/sec^2</em>]</p>
-<p><em>Jerk</em>: positive integer [<em>counts/sec^3</em>]</p>
-<p>Sets the motion <strong><em>profile</em></strong>, <strong><em>velocity</em></strong>, <strong><em>acceleration</em></strong>, <strong><em>deaceleration</em></strong> and <strong><em>jerk</em></strong> for axis <code>X</code> on the port name <code>XYZ</code>.</p>
+<p><em>Velocity</em>: positive integer or [variable] (units: counts/sec)</p>
+<p><em>Acceleration</em>: positive integer or [variable] (units: counts/sec^2)</p>
+<p><em>Deceleration</em>: positive integer or [variable] (units: counts/sec^2)</p>
+<p><em>Jerk</em>: positive integer or [variable] (units: counts/sec^3)</p>
+<blockquote>
+<p>Sets the motion profile, velocity, acceleration, deaceleration and jerk for axis <code>X</code> on the port name <code>XYZ</code>.</p>
+</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="move"></a><a href="#move" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Move</h4>
 <p>Sets the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox <code>Wait until done</code> is checked and that means that next block in the sequence will not be executed until the motion is completed.</p>
 <figure>
@@ -133,12 +137,16 @@
 <li><p>Velocity</p>
 <p>Uses when you need to move the axis at a constant velocity in the selected direction.</p></li>
 </ul>
-<p><em>Position</em>: positive or negative integer [<em>counts</em>]</p>
-<p><em>Distance</em>: positive or negative integer [<em>counts</em>]</p>
+<p><em>Position</em>: positive or negative integer or [variable] (units: counts)</p>
+<p><em>Distance</em>: positive or negative integer or [variable] (units: counts)</p>
 <p><em>Direction</em>: [<em>Positive / Negative</em>]</p>
-<p>Multiplies the value of <strong><em>position</em></strong> or <strong><em>distance</em></strong> by <code>1</code> if Positive, and <code>-1</code> if Negative.</p>
+<blockquote>
+<p>Multiplies the value of position or distance by <code>1</code> if Positive, and <code>-1</code> if Negative.</p>
+</blockquote>
 <p><em>Wait until done</em>: [<em>True / False</em>]</p>
-<p>Sets motion <strong><em>type</em></strong> to <em><code>Absolute</code></em> or <em><code>Relative</code></em> or <em><code>Velocity</code></em>, <strong><em>position</em></strong> to absolute position in counts, <strong><em>direction</em></strong> to positive or negative, <strong><em>distance</em></strong> to relative position in counts, <strong><em>wait until done</em></strong> to <em><code>True</code></em> or <em><code>False</code></em> for axis <code>X</code> on the port name <code>XYZ</code>.</p>
+<blockquote>
+<p>Sets motion type to <em><code>Absolute</code></em> or <em><code>Relative</code></em> or <em><code>Velocity</code></em>, moves to absolute position in counts if motion type is <em><code>Absolute</code></em>, moves given counts if motion type is relative, sets direction of motion to positive or negative, sets option &quot;wait until done&quot; to <em><code>True</code></em> or <em><code>False</code></em> for axis <code>X</code> on the port name <code>XYZ</code>.</p>
+</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="homing"></a><a href="#homing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Homing</h4>
 <p>Sets the homing position.</p>
 <figure>
@@ -157,22 +165,28 @@
 <p>Use when home switch is needed to be set as homing position.</p></li>
 </ul>
 <p><em>Direction</em>: [<em>Positive / Negative</em>]</p>
+<blockquote>
 <p>Works only with <em><code>Limit switch</code></em> and <em><code>Home switch</code></em> methods.
 If Limit switch method is elected, indicates that <strong><em>positive</em></strong> or <strong><em>negative</em></strong> limit switch is selected to be a homing position.
 If Home switch is selected, indicates the direction the axis should move in to get to the home switch.</p>
+</blockquote>
 <p><em>Wait until referenced</em>: [<em>Always true</em>]</p>
 <p>Waits for axis completes the homing positioning.</p>
-<p>Sets homing <strong><em>method</em></strong> to <em><code>Current position</code></em> or <em><code>Limit Switch</code></em> or <em><code>Home Switch</code></em>, <strong><em>direction</em></strong> to positive or negative, <strong><em>wait until referenced</em></strong> to <em><code>True</code></em> for axis <code>X</code> on the port <code>XYZ</code>.</p>
+<blockquote>
+<p>Sets homing method to <em><code>Current position</code></em> or <em><code>Limit Switch</code></em> or <em><code>Home Switch</code></em>, sets direction of homing positioning to positive or negative for axis <code>X</code> on the port <code>XYZ</code>. Always waits until referenced.</p>
+</blockquote>
 <h3><a class="anchor" aria-hidden="true" id="time-event-blocks"></a><a href="#time-event-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Time / Event Blocks</h3>
 <h4><a class="anchor" aria-hidden="true" id="wait-for-digital-input"></a><a href="#wait-for-digital-input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wait for digital input</h4>
-<p>Waits for <code>High</code> or <code>Low</code> on digital input. The next block in the sequence will be executed only if expected value comes on given input.</p>
+<p>Waits for <code>High</code> or <code>Low</code> on selected digital input. The next block in the sequence will be executed only if expected value comes on given input.</p>
 <figure>
   <img src="assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
   <img src="assets/blocks/wait_input_2.png" alt="Wait Input block"/>
 </figure>
-<p><em>Input</em>: [<em>1 - 12</em>]</p>
-<p><em>Wait for</em>: [<em>Hi / Lo</em>]</p>
-<p>Waits for <em><code>Hi</code></em> on input <em><code>1</code></em> for axis <code>0</code> on the port <code>USB0</code>.</p>
+<p><em>Input</em>: number of input or [variable] (units: positive integer)</p>
+<p><em>Wait for</em>: input state or [variable] (units: Hi / Lo or 1 / 0)</p>
+<blockquote>
+<p>Waits for <em><code>Hi</code></em> on input <em><code>3</code></em> for axis <code>X</code> on the port <code>XYZ</code>.</p>
+</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="listen-to-event"></a><a href="#listen-to-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listen to event</h4>
 <p>Listens to events. The next block in the sequence will be executed only if awaited event happens.</p>
 <figure>
