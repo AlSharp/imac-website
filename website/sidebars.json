@@ -2,10 +2,12 @@
   "docs": {
     "IMAC": [
       "intro",
-      "get_started",
       "supported_devices",
       "net_config",
       "imac_dac"
+    ],
+    "Getting Started": [
+      "imac_editor"
     ],
     "Guides": ["guideuserblock","guideArrayXYZ"],
     "Tutorial videos": ["tutorial_1", "tutorial_2", "tutorial_3", "tutorial_4"],

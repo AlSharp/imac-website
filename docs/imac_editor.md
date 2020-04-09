@@ -1,24 +1,72 @@
 ---
-id: get_started
-title: Getting Started
-sidebar_label: Getting Started
+id: imac_editor
+title: IMAC Editor
+sidebar_label: IMAC Editor
 ---
 
 To start **IMAC Editor**, open web browser (Google Chrome is recommended for **IMAC**) and type `imac:5000` in the browser address bar.
 
-IMAC Editor contains four areas:
+IMAC Editor contains five areas:
 
 1. Main Menu
 2. Block palette
 3. Visual Programming Workspace
 4. Device control panel
-4. Terminal
+5. Terminal
 
 <figure>
   <img src="assets/editor_2.png" alt="Visual Block Programming Environment"/>
 </figure>
 
 ## Main menu
+
+Main menu contains File drop-down menu and drop-down menus for each device connected to IMAC.
+
+### File
+
+IMAC editor has two options available for opening and saving IMAC programs:
+
+<figure style="margin-bottom: 20px">
+  <img src="assets/editor_file_menu_1.png" alt="File drop-down menu"/>
+</figure>
+
+__1. Using IMAC’s file system__
+
+Click on `Open from IMAC` and the following dialog box appears. Select file and click `Open` button. Blocks saved in that file will be loaded into visual programming workspace.
+
+<figure>
+  <img src="assets/open_from_imac.png" alt="Open from IMAC"/>
+</figure>
+
+Click on `Save to IMAC`, give a file a name, click `Save` button and blocks that are displayed on the visual programming workspace will be stored in the file.
+
+<figure>
+  <img src="assets/save_to_imac.png" alt="Save to IMAC"/>
+</figure>
+
+Organize your files by creating folders. Click _Create folder_ icon and additional form will appear.
+
+<figure style="margin-bottom: 20px">
+  <img src="assets/create_folder.png" alt="Create folder"/>
+</figure>
+
+__2. Using User's PC file system or local network shared resource__
+
+Click on `Open from PC` and the standard Windows File Explorer dialog box appears. Select file and click `Open` button. Blocks saved in that file will be loaded into visual programming workspace.
+
+<figure>
+  <img src="assets/open_from_pc.png" alt="Open from PC"/>
+</figure>
+
+Click on `Save to PC`. Give a file a name, click `Save` button and blocks that are displayed on the visual programming workspace will be stored in the file.
+
+<figure>
+  <img src="assets/save_to_pc.png" alt="Save to PC"/>
+</figure>
+
+### Devices
+
+Coming soon
 
 ## Block Palette
 
@@ -37,7 +85,7 @@ Block palette contains the following command block categories:
 
 #### Mode
 
-Allows to set type of the motor and the mode in which motor works.
+Sets the type of the motor and the mode in which motor works.
 
 <figure>
   <img src="assets/blocks/mode_1.png" alt="Mode tile"/>
@@ -51,11 +99,11 @@ Allows to set type of the motor and the mode in which motor works.
 *Operating mode*:
 + Position
 
-Sets the motor ***type*** to *`Stepper`* and operating ***mode*** to *`Position`* for axis `0` on the port `USB0`.
+Shown block sets the motor ***type*** to *`Stepper`* and operating ***mode*** to *`Position`* for axis `X` on the port name `XYZ`.
 
 #### Profile
 
-Allows to set the motion characteristics.
+Sets motion characteristics.
 
 <figure>
   <img src="assets/blocks/profile_1.png" alt="Profile tile"/>
@@ -75,16 +123,17 @@ Allows to set the motion characteristics.
 
 *Jerk*: positive integer [*counts/sec^3*]
 
-Sets the motion ***profile***, ***velocity***, ***acceleration***, ***deaceleration*** and ***jerk*** for axis `0` on the port `USB0`.
+Sets the motion ***profile***, ***velocity***, ***acceleration***, ***deaceleration*** and ***jerk*** for axis `X` on the port name `XYZ`.
 
 #### Move
 
-Allows to set the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
+Sets the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
 
 <figure>
   <img src="assets/blocks/move_1.png" alt="Move tile"/>
   <img src="assets/blocks/move_2.png" alt="Move block"/>
   <img src="assets/blocks/move_3.png" alt="Move block"/>
+  <img src="assets/blocks/move_4.png" alt="Move block"/>
 </figure>
 
 *Type*:
@@ -96,6 +145,10 @@ Allows to set the type of motion, absolute position or relative distance, direct
 
   Uses when you need to move the axis relative to current position.
 
++ Velocity
+
+  Uses when you need to move the axis at a constant velocity in the selected direction.
+
 *Position*: positive or negative integer [*counts*]
 
 *Distance*: positive or negative integer [*counts*]
@@ -106,36 +159,43 @@ Multiplies the value of ***position*** or ***distance*** by `1` if Positive, and
 
 *Wait until done*: [*True / False*]
 
-Sets motion ***type*** to *`Absolute`* or *`Relative`*, ***position*** to absolute position in counts, ***direction*** to positive or negative, ***distance*** to relative position in counts, ***wait until done*** to *`True`* or *`False`* for axis `0` on the port `USB0`.
+Sets motion ***type*** to *`Absolute`* or *`Relative`* or *`Velocity`*, ***position*** to absolute position in counts, ***direction*** to positive or negative, ***distance*** to relative position in counts, ***wait until done*** to *`True`* or *`False`* for axis `X` on the port name `XYZ`.
 
 #### Homing
 
-Allows to set the homing position.
+Sets the homing position.
 
 <figure>
   <img src="assets/blocks/homing_1.png" alt="Homing tile"/>
   <img src="assets/blocks/homing_2.png" alt="Homing block"/>
   <img src="assets/blocks/homing_3.png" alt="Homing block"/>
+  <img src="assets/blocks/homing_4.png" alt="Homing block"/>
 </figure>
 
 *Method*:
 + Current position
 
-  Used when the currect position is needed to be set as homing position.
+  Use when the currect position is needed to be set as homing position.
 
 + Limit switch
 
-  Used when one of limits is needed to be set as homing position.
+  Use when one of limits is needed to be set as homing position.
+
++ Home switch
+
+  Use when home switch is needed to be set as homing position.
 
 *Direction*: [*Positive / Negative*]
 
-Works only with *`Limit switch`* method. Indicates that ***positive*** or ***negative*** limit switch is selected to be a homing position.
+Works only with *`Limit switch`* and *`Home switch`* methods.
+If Limit switch method is elected, indicates that ***positive*** or ***negative*** limit switch is selected to be a homing position.
+If Home switch is selected, indicates the direction the axis should move in to get to the home switch.
 
-*Wait until referenced*: [*True / False*]
+*Wait until referenced*: [*Always true*]
 
 Waits for axis completes the homing positioning.
 
-Sets homing ***method*** to *`Current position`* or *`Limit Switch`*, ***direction*** to positive or negative, ***wait until referenced*** to *`True`* or *`False`* for axis `0` on the port `USB0`.
+Sets homing ***method*** to *`Current position`* or *`Limit Switch`* or *`Home Switch`*, ***direction*** to positive or negative, ***wait until referenced*** to *`True`* for axis `X` on the port `XYZ`.
 
 ### Time / Event Blocks
 
@@ -439,30 +499,6 @@ To fold the user block back click `Fold`.
 </figure>
 
 To learn more about User blocks please see [The User Block Guide](guideUserblock.md).
-
-## Working with IMAC files
-
-There are two options available to save IMAC program:
-
-1.	Save program to IMAC’s file system.
-
-Go to _Main Menu_ => _File_ and click _Save to IMAC_. Save file dialog will open.
-
-![Save to IMAC](assets/save_to_imac.png "Save to IMAC")
-
-Organize your files by creating folders. Click _Create folder_ icon and additional form will appear.
-
-![Save to IMAC](assets/create_folder.png "Save to IMAC")
-
-Enter the name of file and click Save.
-
-2.	Save program to your PC file system or some local network shared resource.
-
-Go to _Main Menu_ => _File_ and click _Save to PC_. This is standard Windows File Explorer dialog box.
-
-![Save to IMAC](assets/save_to_pc.png "Save to IMAC")
-
-To open saved IMAC programs go to IMAC _Main Menu_ => _File_ and choose _Open from PC_ or _Open from IMAC_. The same dialog boxes will be opened, just select desired file and click Open. The blocks saved in the opened file will be displayed on the visual programming workspace. Modify the blocks, add new ones or just run them.
 
 ## Updating IMAC Software
 
