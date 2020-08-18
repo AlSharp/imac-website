@@ -44,16 +44,18 @@ Also IMAC can be used in isolated networks where IMAC and user computer are conn
 
 To get IMAC working in isolated network follow instructions below:
 
-1. On user computer with Windows operating system go to Control Panel -> Network and Internet -> Network Connections
+1. On user computer with Windows operating system navigate to Network Connections
+
+Here is [5 Ways to Open Network Connections from CMD and Windows 10 GUI](https://wifi-settings.com/windows-10-networking/open-network-connections-from-cmd-windows-10/)
 
 ![Windows: network connections](assets/net_config_win_1.png "Windows: network connections")
 
-2. Right click on Ethernet connection and select Properties.
+2. Right click on USB-to-Ethernet connection and select Properties.
 
 ![Windows: Ethernet Properties](assets/net_config_win_2.png "Windows: Ethernet Properties")
 
-3. Scroll down, select TCP/IPv4 and click Properties
+3. Scroll down, select TCP/IPv4 and click Properties. Fill out as shown below.
 
 ![Windows: TCP/IPv4 Properties](assets/net_config_win_3.png "Windows: TCP/IPv4 Properties")
 
-4. Apply changes and close dialog windows. IMAC comes preconfigured with IP address 192.168.99.1 for isolated network. Now you can open Chrome browser and go to `imac:5000` to start working.
+4. Apply changes and close dialog windows. IMAC comes preconfigured with IP address 192.168.99.1 for isolated network. Now you can open Chrome browser and go to `imac-yourcompanyname:5000` to start working. For example: `imac-amazon:5000`.
