@@ -72,7 +72,7 @@ Now IMAC.ETH is configured and ready to communicate with IDRIVES.
 
 ## Testing with Demo Application
 
-[Click here to download](https://onedrive.live.com/download?cid=F106C188C03C5E38&resid=F106C188C03C5E38%2168225&authkey=AE1XX1_wFInIfFE)
+[Click here to download](https://onedrive.live.com/embed?cid=F106C188C03C5E38&resid=F106C188C03C5E38%2168261&authkey=AIGwTg9A4VsYclA)
 
 Run downloaded file and go through the simple installation process.
 
