@@ -5,14 +5,14 @@
         <link>https://AlSharp.github.io/imac-website/blog</link>
         <description>The best place to stay up-to-date with the latest IMAC news and events.</description>
         <lastBuildDate>Thu, 28 Feb 2019 06:00:00 GMT</lastBuildDate>
-        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-        <generator>Feed for Node.js</generator>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>IMAC Blog</title>
             <url>https://AlSharp.github.io/imac-website/img/favicon.png</url>
             <link>https://AlSharp.github.io/imac-website/blog</link>
         </image>
-        <copyright>Copyright © 2020 IntelLiDrives, Inc</copyright>
+        <copyright>Copyright © 2021 IntelLiDrives, Inc</copyright>
         <item>
             <title><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part IV.]]></title>
             <link>https://AlSharp.github.io/imac-website/blog/2019/02/28/intro2.html</link>
