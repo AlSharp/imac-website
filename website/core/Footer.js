@@ -24,36 +24,8 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="nav-footer" id="footer">
-        <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
-              <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
-              />
-            )}
-          </a>
-          <div>
-            <h5>Manual</h5>
-            <a href={this.docUrl('intro.html', this.props.language)}>
-              Introduction
-            </a>
-            <a href={this.docUrl('get_started.html', this.props.language)}>
-              Get Started
-            </a>
-            <a href={this.docUrl('guideuserblock.html', this.props.language)}>
-              Guides
-            </a>
-            <a href={this.docUrl('tutorial_1.html', this.props.language)}>
-              Tutorial videos
-            </a>
-          </div>
-        </section>
-
         <a
-          href="https://www.intellidrives.com"
+          href="https://imac.intellidrives.com"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
