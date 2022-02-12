@@ -82,7 +82,9 @@ Connect IDrive to USB over USB-to-RS232 adapter or directly to COM port.
 
 3.1 **Download and install**
 
-[Click here to download](https://onedrive.live.com/embed?cid=F106C188C03C5E38&resid=F106C188C03C5E38%2168261&authkey=AIGwTg9A4VsYclA)
+[Click here to download v.1.1.0](https://onedrive.live.com/download?cid=F106C188C03C5E38&resid=F106C188C03C5E38%2168261&authkey=AIGwTg9A4VsYclA)
+
+[Click here to download v.1.2.0](https://onedrive.live.com/download?cid=F106C188C03C5E38&resid=F106C188C03C5E38%2168793&authkey=ACOloRbYC8KW2Co)
 
 Run downloaded file and go through the simple installation process.
 
