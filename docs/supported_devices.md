@@ -22,3 +22,7 @@ sidebar_label: Supported devices
 ## I/O devices
 
 ### SeaDAC
+
+#### Models: SeaDAC-8111, SeaDAC-8112
+
+IMAC controls SeaDAC IO via USB connection. SeaDAC provides four optically isolated inputs and four dry-contact Reed relay outputs. Inputs can range from 5-30VDC and provide 3500VDC (2500VAC RMS) isolation to ground, while the Reed relays provide long-life switch closures well suited to low-current devices. Each Reed relay has a discrete common and each pair of inputs share a common. Status LEDS display I/O activity and field wiring is simplified via 3.5mm removable terminal blocks. ***[Learn more](https://www.sealevel.com/product/8111-usb-to-4-optically-isolated-inputs-4-reed-relay-digital-interface-adapter/)***

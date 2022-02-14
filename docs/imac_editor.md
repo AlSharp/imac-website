@@ -9,10 +9,11 @@ To start **IMAC Editor**, open web browser (Google Chrome is recommended for **I
 IMAC Editor contains five areas:
 
 1. Main Menu
-2. Block palette
-3. Visual Programming Workspace
-4. Device control panel
-5. Terminal
+2. Tabs of sequences
+3. Palette of blocks
+4. Visual Programming Workspace
+5. Control panel
+6. Terminal
 
 <figure>
   <img src="assets/editor_2.png" alt="Visual Block Programming Environment"/>
@@ -64,9 +65,11 @@ Click on `Save to PC`. Give a file a name, click `Save` button and blocks that a
   <img src="assets/save_to_pc.png" alt="Save to PC"/>
 </figure>
 
-### Devices
+## Tabs of Sequences
 
-Coming soon
+IMAC programs can consist of multiple sequences. Main sequence is where the program starts. Additional sequences can be added and used as ordinary functions or event handlers. Additional sequences are invokable from main sequence or another additional sequences.
+
+[How to use additional sequence as event handler](imac_editor.md#event-listener)
 
 ## Block Palette
 
@@ -262,6 +265,8 @@ Example:
 </figure>
 
 The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`. If the motion does not exist (or the motion is ended) the next block in the sequence will be allowed to run.
+
+#### Event Listener
 
 ### I/O Blocks
 

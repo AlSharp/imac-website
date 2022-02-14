@@ -63,17 +63,35 @@ const VideoGridBlock = props => (
 
 const DemoSection = () => {
   return (
-    <div className="demo-section-container">
-      <video autoPlay muted loop id="imac-video">
-        <source src="video/imac-demo-1.mp4" type="video/mp4" />
-      </video>
+    <div id="demo-section-container" className="demo-section-container">
       <script
         dangerouslySetInnerHTML={{
           __html: `window.onresize = function() {
-            const videoWidth = 754;
+            const videoWidth = 1544;
             const htmlWidth = document.documentElement.clientWidth;
             const el = document.getElementById('imac-video');
-            console.log('html width: ', htmlWidth);
+            if (htmlWidth - videoWidth < 0) {
+              el.setAttribute('width', htmlWidth);
+            } else {
+              el.setAttribute('width', videoWidth);
+            }
+          }
+          window.onload = function() {
+            const container = document.getElementById('demo-section-container');
+            const videoEl = document.createElement('video');
+            videoEl.setAttribute('autoPlay', true);
+            videoEl.setAttribute('muted', true);
+            videoEl.setAttribute('loop', true);
+            videoEl.id = 'imac-video';
+            const sourceEl = document.createElement('source');
+            sourceEl.src = 'video/imac-demo-1.mp4';
+            sourceEl.setAttribute('type', 'video/mp4');
+            videoEl.appendChild(sourceEl);
+            container.appendChild(videoEl);
+
+            const videoWidth = 1544;
+            const htmlWidth = document.documentElement.clientWidth;
+            const el = document.getElementById('imac-video');
             if (htmlWidth - videoWidth < 0) {
               el.setAttribute('width', htmlWidth);
             } else {
