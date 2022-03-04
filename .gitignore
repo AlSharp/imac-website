@@ -5,6 +5,7 @@ node_modules
 lib/core/metadata.js
 lib/core/MetadataBlog.js
 
+#v-1
 website/translated_docs
 website/build/
 website/yarn.lock
@@ -13,3 +14,25 @@ website/i18n/*
 website/yarn-error.log
 
 */**/*.db
+
+#v-2
+# dependencies
+website-v2/node_modules
+
+# production
+website-v2/build
+
+# generated files
+website-v2/.docusaurus
+website-v2/.cache-loader
+
+# misc
+website-v2/.env.local
+website-v2/.env.development.local
+website-v2/.env.test.local
+website-v2/.env.production.local
+
+website-v2/npm-debug.log*
+website-v2/yarn-debug.log*
+website-v2/yarn-error.log*
+website-v2/yarn.lock

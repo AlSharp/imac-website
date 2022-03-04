@@ -12,12 +12,12 @@ sidebar_label: Supported devices
 
 ![Amplifiers](assets/group_of_amps.jpg "Amplifiers")
 
-| Motor   | Rotary Servo and Stepper Motors<br> Linear Servo and Stepper Motors<br> Direct drive motors |
+| Motor   | Rotary Servo and Stepper Motors Linear Servo and Stepper Motors Direct drive motors |
 | ------- | ------------------------------------------------------------------------------------------- |
-| Input power | 100-240 VAC<br> 24-90 VDC |
-| Feedback | Incremental<br> Analog 1Vpp<br> Absolute |
+| Input power | 100-240 VAC 24-90 VDC |
+| Feedback | Incremental Analog 1Vpp Absolute |
 | Digital I/O | Limit sensors |
-| Analog I/O | Home sensors<br> User input sourcing nad sinking sensors<br> Opto-isolated sensors<br> Outputs<br> Relay drivers<br> A/D<br> D/A |
+| Analog I/O | Home sensors User input sourcing nad sinking sensors Opto-isolated sensors Outputs Relay drivers A/D D/A |
 
 ## I/O devices
 

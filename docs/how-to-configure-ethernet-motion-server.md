@@ -1,7 +1,7 @@
 ---
-id: 
+id: ""
 title: How to configure Ethernet Motion Server
-sidebar_label:
+sidebar_label: ""
 ---
 
 ## How to install, configure and use Ethernet Motion Server
