@@ -6,4 +6,142 @@
   --ifm-color-primary-dark: #29784C;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205D3B;
+  --ifm-h1-extra-font-size: 3rem;
+}
+
+/* your custom css */
+
+.navbar {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+}
+
+.navbar__brand {
+  color: var(--ifm-color-white);
+}
+
+.navbar__item {
+  color: var(--ifm-color-white);
+}
+
+.toggle_node_modules-\@docusaurus-theme-classic-lib-next-theme-ColorModeToggle-styles-module {
+  display: none;
+}
+
+.home-top-container {
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+}
+
+.project-title-wrapper {
+  margin-top: 1em;
+}
+
+.project-title {
+  font-size: var(--ifm-h1-extra-font-size);
+  color: var(--ifm-color-primary);
+}
+
+.project-title-sub {
+  color: var(--ifm-color-primary);
+}
+
+.promo-section {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 99;
+  position: relative;
+}
+
+.wrapper {
+  margin: 0px;
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  max-width: 730px;
+  max-height: 410px;
+  width: 730px;
+  height: 410px;
+  margin: 0 0 1.45rem 0;
+}
+
+.youtube-wrapper > iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.tutorial-video {
+  margin: 0;
+}
+
+.demo-section-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .separateOnPageNav .wrapper,
+  .separateOnPageNav .headerWrapper.wrapper {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+  .homeWrapperBgImg img {
+    width: 340px;
+  }
+}
+
+@media (max-width: 780px) {
+  .imageAlignSide .youtube-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 56.25%;
+  }
+  .imageAlignSide .youtube-wrapper > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .homeWrapperBgImg img {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .homeWrapperBgImg img {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .homeWrapperBgImg img {
+    width: 500px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .homeWrapperBgImg img {
+    width: 600px;
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .homeWrapperBgImg img {
+    width: 600px;
+    margin-top: -20px;
+  }
 }
