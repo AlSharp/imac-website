@@ -70,11 +70,6 @@ module.exports={
           "label": "Blog",
           "position": "left"
         },
-        {
-          "to": "/help",
-          "label": "Help",
-          "position": "left"
-        }
       ]
     },
     "image": "img/favicon.png",
