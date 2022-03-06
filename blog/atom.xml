@@ -37,7 +37,7 @@
         <link href="https://AlSharp.github.io/imac-website/blog/2018/12/28/hello_world"/>
         <updated>2018-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Blocks]]></summary>
-        <content type="html"><![CDATA[<p><img loading="lazy" alt="Blocks" src="/imac-website/assets/images/cubs-line-up-832a9ff63a76146492b251bf8b2ae201.jpg" title="Blocks" width="792" height="236"></p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cnlVry2UYLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
+        <content type="html"><![CDATA[<p><img loading="lazy" alt="Blocks" src="/assets/images/cubs-line-up-832a9ff63a76146492b251bf8b2ae201.jpg" title="Blocks" width="792" height="236"></p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cnlVry2UYLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
         <author>
             <name>Albert Sharapov</name>
             <uri>https://github.com/AlSharp</uri>
