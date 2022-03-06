@@ -4,6 +4,8 @@ title: Getting Started with IMAC Ethernet Motion Server
 sidebar_label: Getting Started
 ---
 
+import Image from '@site/src/components/Image';
+
 ## Introduction
 
 ## Installation
@@ -23,9 +25,8 @@ Usually it's some ip address in your network which is not being used by any othe
     3. Hover the mouse over the cmd program and right-click.
     4. Select "Run as administator"
 
-    <figure>
-      <img src="assets/eth/cmd_search.jpg" alt="CMD_AS_ADMIN" />
-    </figure>
+    <Image src="/assets/eth/cmd_search.jpg" alt="CMD_AS_ADMIN" />
+    
 
 4. **Execute `netsh interface ipv4 add neighbors "[Interface]" [IP addr] [MAC addr]`**. 
 
@@ -33,9 +34,7 @@ Example: *netsh interface ipv4 add neighbors "Ethernet" 10.1.10.65 00-90-E8-72-9
 
 To find the name of the interface execute the following command: *netsh interface ipv4 show interfaces*
 
-<figure>
-  <img src="assets/eth/netsh1.jpg" alt="NETWORK_INTERFACES" />
-</figure>
+  <Image src="/assets/eth/netsh1.jpg" alt="NETWORK_INTERFACES" />
 
 In the example above computer is connected to two networks: "Wi-fi" and "Ethernet 2".
 Choose a network which is used to connect IMAC.ETH to the computer.
@@ -88,9 +87,8 @@ Now IMAC.ETH is configured and ready to communicate with IDRIVES.
 
 Download, install and run Demo Application. The following window appears.
 
-<figure>
-  <img src="assets/eth/imac-ethernet-motion-server.jpg" alt="IMAC ETHERNET MOTION SERVER" />
-</figure>
+<Image src="/assets/eth/imac-ethernet-motion-server.jpg" alt="IMAC ETHERNET MOTION SERVER" />
+
 
 You can communicate with motor drive over Ethernet or USB.
 If you use IMAC.ETH specify IP and port of IMAC.ETH and click Connect.

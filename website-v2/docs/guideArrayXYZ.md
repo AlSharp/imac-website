@@ -16,17 +16,17 @@ Drag and drop Mode and Profile blocks onto the visual programming workspace for 
 
 > Note: 0 is X; 1 is Y; 2 is Z.
 
-![Mode and Profile](assets/guide_xyz_array_01.png "Mode and Profile")
+![Mode and Profile](/assets/guide_xyz_array_01.png "Mode and Profile")
 
 ### Step 2. Create the user block
 
 Using `CTRL + Left Mouse button` select all six blocks and click `Create user block` button as shown. Give a name to the user block, pick the color and click `Create`.
 
-![Create user block](assets/guide_xyz_array_02.png "Create user block")
+![Create user block](/assets/guide_xyz_array_02.png "Create user block")
 
 The created user block will appear under the category `User`. Remove six blocks and replace them with just created user block.
 
-![User block Setup Axes](assets/guide_xyz_array_03.png "User block Setup Axis")
+![User block Setup Axes](/assets/guide_xyz_array_03.png "User block Setup Axis")
 
 ## Homing position
 
@@ -34,13 +34,13 @@ The created user block will appear under the category `User`. Remove six blocks 
 
 Drag and drop Homing blocks. Select method `Limit switch` and direction `Negative`.
 
-![User block Homing](assets/guide_xyz_array_04.png "User block Homing")
+![User block Homing](/assets/guide_xyz_array_04.png "User block Homing")
 
 ### Step 4. Create the user block
 
 Using `CTRL + Left Mouse button` select three added blocks and click `Create user block`. Give a name to the user block, pick the color and click `Create`. The user block will be added to category `User`. Replace homing blocks with the created user block.
 
-![User block Homing](assets/guide_xyz_array_05.png "User block Homing")
+![User block Homing](/assets/guide_xyz_array_05.png "User block Homing")
 
 ## Setting the reference point for an array
 
@@ -48,21 +48,21 @@ Using `CTRL + Left Mouse button` select three added blocks and click `Create use
 
 Set the reference position for an array. Drag and drop three Move blocks onto the visual programming workspace. Configure them as shown below.
 
-![User block Reference point](assets/guide_xyz_array_06.png "User block Reference point")
+![User block Reference point](/assets/guide_xyz_array_06.png "User block Reference point")
 
 Create the user block. Replace `Move` blocks with created user block.
 
-![User block Reference point](assets/guide_xyz_array_07.png "User block Reference point")
+![User block Reference point](/assets/guide_xyz_array_07.png "User block Reference point")
 
 ### Step 6. Set the reference position as homing position.
 
 Drag and drop three `Homing` blocks onto the visual programming workspace and configure the blocks as shown below.
 
-![User block Homing current](assets/guide_xyz_array_08.png "User block Homing current")
+![User block Homing current](/assets/guide_xyz_array_08.png "User block Homing current")
 
 Create the user block. Replace `Homing` blocks with created user block.
 
-![User block Homing current](assets/guide_xyz_array_09.png "User block Homing current")
+![User block Homing current](/assets/guide_xyz_array_09.png "User block Homing current")
 
 ## Creating array
 
@@ -72,7 +72,7 @@ Our goal is moving the marker from point to point and draw the dots. We will cre
 
 Drag and drop `Array` and `End Array` blocks onto the visual programming workspace and configure them as shown below.
 
-![Array blocks](assets/guide_xyz_array_10.png "Array blocks")
+![Array blocks](/assets/guide_xyz_array_10.png "Array blocks")
 
 ### Step 8. Editing Array table
 
@@ -82,11 +82,11 @@ There is only one point now with coordinates `{X: 0, Y: 0}` in the table. We are
 
 Additionally we will add a property called `Delay` to each point in the array. Delay is a time in `[ms]` the marker will wait for when it touches the surface of the paper. Just notice that you can add whatever property you want to the elements of the array and use this property in any appropriate block between the `Array` and `End Array` blocks.
 
-![Edit Array table](assets/guide_xyz_array_11.png "Edit Array table")
+![Edit Array table](/assets/guide_xyz_array_11.png "Edit Array table")
 
 Below is table with points.
 
-![Table with points](assets/guide_xyz_array_12.png "Table with points")
+![Table with points](/assets/guide_xyz_array_12.png "Table with points")
 
 Click `Save` button to save points into the `Array` block.
 
@@ -98,7 +98,7 @@ Add two `Move` blocks as shown below. Type `"point.Y"` and `"point.X"` (in doubl
 
 > `"<elementname>.<columnname>"`, where `point` is `<elementname>` and `X`, `Y` and `Delay` are `<columnname>`.
 
-![Motion X Y](assets/guide_xyz_array_13.png "Motion X Y")
+![Motion X Y](/assets/guide_xyz_array_13.png "Motion X Y")
 
 ### Step 10. Add motion along Z axis
 
@@ -108,7 +108,7 @@ The `Z` axis will move 100000 counts in positive direction, the marker will touc
 
 > We suppose that there are 100000 counts between the surface of paper and the marker at its starting position.
 
-![Motion Z](assets/guide_xyz_array_14.png "Motion Z")
+![Motion Z](/assets/guide_xyz_array_14.png "Motion Z")
 
 ## Putting Array's blocks into the repeat and adding the Homing method at the end of program
 
@@ -116,6 +116,6 @@ The `Z` axis will move 100000 counts in positive direction, the marker will touc
 
 Add `Repeat` and `End Repeat` blocks, put `Array` blocks between Repeat and End Repeat blocks. The `Ids` of Repeat and End Repeat blocks should be matched. Enter the number of repeats (`2`) into the `Number` field of `Repeat` block. Add previously saved user block `Homing Negative limits` to return gantry system to the starting position.
 
-![Repeat and Return](assets/guide_xyz_array_15.png "Repeat and Return")
+![Repeat and Return](/assets/guide_xyz_array_15.png "Repeat and Return")
 
 We Done! Thank you.

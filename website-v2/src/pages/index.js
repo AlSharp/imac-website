@@ -106,69 +106,55 @@ const DemoSection = () => {
   )
 }
 
-const VideoGridBlock = props => (
-  <div className="gridBlock">
-    <div
-      className="blockElement alignLeft imageAlignSide imageAlignRight twoByGridBlock"
-    >
-      <div className="blockContent" style={{minWidth: 300, marginRight: 30}}>
-        {
-          [
-            props.title ?
-            <h2 key="h2">
-              <div>
-                <span>
-                  <p>
-                    {props.title}
-                  </p>
-                </span>
-              </div>
-            </h2> :
-            null,
-            <div key="div">
+const YoutubeVideoSection = props => (
+  <div className="youtube-video-section">
+    <div className="youtube-video-section-content">
+      {
+        [
+          props.title ?
+          <h2 key="h2">
+            <div>
               <span>
-                {
-                  props.questions.map((question, index) =>
-                    <p
-                      key={index}
-                      style={{marginBottom: 20}}
-                    >
-                      {question}
-                    </p>  
-                  )
-                }
+                <p>
+                  {props.title}
+                </p>
               </span>
             </div>
-          ]
-        }
-      </div>
-      <div
-        className="youtube-wrapper"
-      >
-        <iframe
-          src={props.video_src}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+          </h2> :
+          null,
+          <div key="div">
+            <span>
+              {
+                props.questions.map((question, index) =>
+                  <p
+                    key={index}
+                    style={{marginBottom: 20}}
+                  >
+                    {question}
+                  </p>  
+                )
+              }
+            </span>
+          </div>
+        ]
+      }
+    </div>
+    <div
+      className="youtube-wrapper"
+    >
+      <iframe
+        src={props.video_src}
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   </div>
 )
 
-const VideoBlock = props => (
-  <div>
-    <VideoGridBlock
-      title={props.title}
-      questions={props.questions}
-      video_src={props.video_src}
-    />
-  </div>
-)
-
 const WhatIsIMAC = () => (
-  <div className="mainContainer" style={{padding: 0}}>
-    <VideoBlock
+  <div className="why-imac-container">
+    <YoutubeVideoSection
       id="learnMore"
       background="light"
       video_src="https://www.youtube.com/embed/cnlVry2UYLw"

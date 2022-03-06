@@ -6,7 +6,7 @@ sidebar_label: Data Acquisition
 
 Intro
 
-![IMAC Data Acquisition](assets/arch_5.jpg "IMAC Data Acquisition")
+![IMAC Data Acquisition](/assets/arch_5.jpg "IMAC Data Acquisition")
 
 ## Non-Optoisolated I/O
 

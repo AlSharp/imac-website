@@ -4,10 +4,13 @@ title: Ethernet Motion Server Sample Codes
 sidebar_label: Sample Codes
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Sending multiple ASCII commands to motor drives
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Python-->
+<Tabs>
+<TabItem value="py" label="Python">
 
 ```py
 import socket
@@ -36,7 +39,9 @@ def main():
 
 main()
 ```
-<!--JavaScript-->
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
 
 ```js
 const net = require('net')
@@ -104,7 +109,9 @@ run(commands)
     socket.end();
   })
 ```
-<!--C-->
+
+</TabItem>
+<TabItem value="c" label="C">
 
 ```C
 #include <stdio.h>
@@ -183,7 +190,9 @@ int main() {
   return 0;
 }
 ```
-<!--C#-->
+
+</TabItem>
+<TabItem value="csharp" label="C#">
 
 ```CNET
 using System;
@@ -251,4 +260,6 @@ namespace TCPSocketClient
     }
 }
 ```
-<!--END_DOCUSAURUS_CODE_TABS-->
+
+</TabItem>
+</Tabs>

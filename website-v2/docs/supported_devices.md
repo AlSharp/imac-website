@@ -10,7 +10,7 @@ sidebar_label: Supported devices
 
 **IDrives®** provide user with a performance edge. Advanced tuning and commutation algorithms, made possible by state-of-the-art DSP technology to maximize motor performance. **I-DRIVES®** offer a complete range of AC- and DC-powered digital drives for servo and stepper motors.
 
-![Amplifiers](assets/group_of_amps.jpg "Amplifiers")
+![Amplifiers](/assets/group_of_amps.jpg "Amplifiers")
 
 | Motor   | Rotary Servo and Stepper Motors Linear Servo and Stepper Motors Direct drive motors |
 | ------- | ------------------------------------------------------------------------------------------- |

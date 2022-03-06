@@ -14,25 +14,25 @@ If your company network works with static IP addresses you have to set up static
 
 1.	Connect keyboard, mouse and HDMI monitor to IMAC. Power it up and wait OS loading is completed.
 
-![IMAC plus monitor, keyboard and mouse](assets/net_config_1.jpg "IMAC plus monitor, keyboard and mouse")
+![IMAC plus monitor, keyboard and mouse](/assets/net_config_1.jpg "IMAC plus monitor, keyboard and mouse")
 
 2.	Right click on the icon as shown and left click Wireless & Wired Network Settings.
 
-![Wireless & Wired Network Settings](assets/net_config_2.png "Wireless & Wired Network Settings")
+![Wireless & Wired Network Settings](/assets/net_config_2.png "Wireless & Wired Network Settings")
 
 3.	Select the interface. Select `eth0` for wired or `wlan0` for wireless. Obtain IP address from your network administator from the range your company's network is working. For example, type `192.168.0.3` to assign `192.168.0.3` IP address to **IMAC**. Assign the IP address of your router – `192.168.0.1`. Assign the address of DNS server - `192.168.0.1`. Click Apply. In case you are configuring wireless connection the additional step is required.
 
-![Wired Network Settings](assets/net_config_3_eth0.png "Wired Network Settings")
+![Wired Network Settings](/assets/net_config_3_eth0.png "Wired Network Settings")
 
-![Wireless Network Settings](assets/net_config_3_wlan0.png "Wireless Network Settings")
+![Wireless Network Settings](/assets/net_config_3_wlan0.png "Wireless Network Settings")
 
 4. Additional step: if you are configuring wireless connection you need to open the terminal.
 
-![Open Terminal](assets/net_config_4.png "Open Terminal")
+![Open Terminal](/assets/net_config_4.png "Open Terminal")
 
 In the terminal type `sudo raspi-config`. The textual menu will be opened.
 
-![Raspi config](assets/net_config_5.png "Raspi config")
+![Raspi config](/assets/net_config_5.png "Raspi config")
 
 Select Network Options. You will be asked for Country, Wifi network’s name and password. When you complete press Finish.
 
@@ -48,14 +48,14 @@ To get IMAC working in isolated network follow instructions below:
 
 Here is [5 Ways to Open Network Connections from CMD and Windows 10 GUI](https://wifi-settings.com/windows-10-networking/open-network-connections-from-cmd-windows-10/)
 
-![Windows: network connections](assets/net_config_win_1.png "Windows: network connections")
+![Windows: network connections](/assets/net_config_win_1.png "Windows: network connections")
 
 2. Right click on USB-to-Ethernet connection and select Properties.
 
-![Windows: Ethernet Properties](assets/net_config_win_2.png "Windows: Ethernet Properties")
+![Windows: Ethernet Properties](/assets/net_config_win_2.png "Windows: Ethernet Properties")
 
 3. Scroll down, select TCP/IPv4 and click Properties. Fill out as shown below.
 
-![Windows: TCP/IPv4 Properties](assets/net_config_win_3.png "Windows: TCP/IPv4 Properties")
+![Windows: TCP/IPv4 Properties](/assets/net_config_win_3.png "Windows: TCP/IPv4 Properties")
 
 4. Apply changes and close dialog windows. IMAC comes preconfigured with IP address 192.168.99.1 for isolated network. Now you can open Chrome browser and go to `imac-yourcompanyname:5000` to start working. For example: `imac-amazon:5000`.

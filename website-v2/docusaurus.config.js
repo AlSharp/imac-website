@@ -1,8 +1,9 @@
 module.exports={
   "title": "IMAC",
   "tagline": "IntelLiDrives Multi-Axis Motion and Automation Controller with Visual Programming",
-  "url": "https://AlSharp.github.io/",
+  "url": "https://AlSharp.github.io/website-v2/",
   "baseUrl": "/",
+  "staticDirectories": ['static'],
   "organizationName": "AlSharp",
   "projectName": "imac-website",
   "scripts": [
@@ -65,6 +66,11 @@ module.exports={
           "position": "left"
         },
         {
+          "to": "blog",
+          "label": "Blog",
+          "position": "left"
+        },
+        {
           "to": "/help",
           "label": "Help",
           "position": "left"
@@ -78,6 +84,9 @@ module.exports={
       "logo": {
         "src": "img/favicon.png"
       }
+    },
+    "prism": {
+      "additionalLanguages": ['csharp']
     }
   }
 }
