@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>IMAC Blog</title>
-        <link>https://AlSharp.github.io/website-v2/blog</link>
+        <link>https://AlSharp.github.io/imac-website/blog</link>
         <description>IMAC Blog</description>
         <lastBuildDate>Thu, 28 Feb 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part IV.]]></title>
-            <link>https://AlSharp.github.io/website-v2/blog/2019/02/28/intro2</link>
+            <link>https://AlSharp.github.io/imac-website/blog/2019/02/28/intro2</link>
             <guid>/2019/02/28/intro2</guid>
             <pubDate>Thu, 28 Feb 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[In this tutorial video we talk about Array block. Array block allows user to automate sequencing through elements of array as coordinate points. We show how Array block can be used in the applications like pick and place assembly and pipepetting in lab automation.]]></description>
@@ -17,7 +17,7 @@
         </item>
         <item>
             <title><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part I, II, III.]]></title>
-            <link>https://AlSharp.github.io/website-v2/blog/2019/02/21/intro1</link>
+            <link>https://AlSharp.github.io/imac-website/blog/2019/02/21/intro1</link>
             <guid>/2019/02/21/intro1</guid>
             <pubDate>Thu, 21 Feb 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Hello! In this tutorials we covered mode, profile, homing, move, wait digital input, delay, repeat and user blocks.]]></description>
@@ -25,7 +25,7 @@
         </item>
         <item>
             <title><![CDATA[Hello World!]]></title>
-            <link>https://AlSharp.github.io/website-v2/blog/2018/12/28/hello_world</link>
+            <link>https://AlSharp.github.io/imac-website/blog/2018/12/28/hello_world</link>
             <guid>/2018/12/28/hello_world</guid>
             <pubDate>Fri, 28 Dec 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[Blocks]]></description>
