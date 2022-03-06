@@ -82,6 +82,12 @@ module.exports={
     },
     "prism": {
       "additionalLanguages": ['csharp']
-    }
+    },
+    "metadata": [
+      {
+        name: "keywords",
+        content: "motion control, motor controller, low code, no code, visual programming language"
+      }
+    ]
   }
 }
