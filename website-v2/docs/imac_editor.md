@@ -18,7 +18,7 @@ IMAC Editor contains five areas:
 6. Terminal
 
 
-<Image src="/assets/editor_2.png" alt="Visual Block Programming Environment"/>
+<Image src="../assets/editor_2.png" alt="Visual Block Programming Environment"/>
 
 
 ## Main menu
@@ -30,7 +30,7 @@ Main menu contains File drop-down menu and drop-down menus for each device conne
 IMAC editor has two options available for opening and saving IMAC programs:
 
 <div style={{marginBottom: 20}}>
-  <Image src="/assets/editor_file_menu_1.png" alt="File drop-down menu"/>
+  <Image src="../assets/editor_file_menu_1.png" alt="File drop-down menu"/>
 </div>
 
 __1. Using IMAC’s file system__
@@ -38,19 +38,19 @@ __1. Using IMAC’s file system__
 Click on `Open from IMAC` and the following dialog box appears. Select file and click `Open` button. Blocks saved in that file will be loaded into visual programming workspace.
 
 <div>
-  <Image src="/assets/open_from_imac.png" alt="Open from IMAC"/>
+  <Image src="../assets/open_from_imac.png" alt="Open from IMAC"/>
 </div>
 
 Click on `Save to IMAC`, give a file a name, click `Save` button and blocks that are displayed on the visual programming workspace will be stored in the file.
 
 <div>
-  <Image src="/assets/save_to_imac.png" alt="Save to IMAC"/>
+  <Image src="../assets/save_to_imac.png" alt="Save to IMAC"/>
 </div>
 
 Organize your files by creating folders. Click _Create folder_ icon and additional form will appear.
 
 <div style={{marginBottom: 20}}>
-  <Image src="/assets/create_folder.png" alt="Create folder"/>
+  <Image src="../assets/create_folder.png" alt="Create folder"/>
 </div>
 
 __2. Using User's PC file system or local network shared resource__
@@ -58,13 +58,13 @@ __2. Using User's PC file system or local network shared resource__
 Click on `Open from PC` and the standard Windows File Explorer dialog box appears. Select file and click `Open` button. Blocks saved in that file will be loaded into visual programming workspace.
 
 <div>
-  <Image src="/assets/open_from_pc.png" alt="Open from PC"/>
+  <Image src="../assets/open_from_pc.png" alt="Open from PC"/>
 </div>
 
 Click on `Save to PC`. Give a file a name, click `Save` button and blocks that are displayed on the visual programming workspace will be stored in the file.
 
 <div>
-  <Image src="/assets/save_to_pc.png" alt="Save to PC"/>
+  <Image src="../assets/save_to_pc.png" alt="Save to PC"/>
 </div>
 
 ## Tabs of Sequences
@@ -93,8 +93,8 @@ Block palette contains the following command block categories:
 Sets the type of the motor and the mode in which motor works.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/mode_1.png" alt="Mode tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/mode_2.png" alt="Mode block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/mode_1.png" alt="Mode tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/mode_2.png" alt="Mode block"/>
 </div>
 
 *Motor type*:
@@ -111,9 +111,9 @@ Sets the type of the motor and the mode in which motor works.
 Sets motion characteristics.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/profile_1.png" alt="Profile tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/profile_2.png" alt="Profile block"/>
-  <Image className="margin-right--xs" src="/assets/blocks/profile_3.png" alt="Profile block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/profile_1.png" alt="Profile tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/profile_2.png" alt="Profile block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/profile_3.png" alt="Profile block"/>
 </div>
 
 *Profile*:
@@ -135,10 +135,10 @@ Sets motion characteristics.
 Sets the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/move_1.png" alt="Move tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/move_2.png" alt="Move block"/>
-  <Image className="margin-right--xs" src="/assets/blocks/move_3.png" alt="Move block"/>
-  <Image className="margin-right--xs" src="/assets/blocks/move_4.png" alt="Move block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/move_1.png" alt="Move tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/move_2.png" alt="Move block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/move_3.png" alt="Move block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/move_4.png" alt="Move block"/>
 </div>
 
 *Type*:
@@ -171,10 +171,10 @@ Sets the type of motion, absolute position or relative distance, direction of th
 Sets the homing position.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/homing_1.png" alt="Homing tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/homing_2.png" alt="Homing block"/>
-  <Image className="margin-right--xs" src="/assets/blocks/homing_3.png" alt="Homing block"/>
-  <Image className="margin-right--xs" src="/assets/blocks/homing_4.png" alt="Homing block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/homing_1.png" alt="Homing tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/homing_2.png" alt="Homing block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/homing_3.png" alt="Homing block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/homing_4.png" alt="Homing block"/>
 </div>
 
 *Method*:
@@ -209,8 +209,8 @@ Waits for axis completes the homing positioning.
 Waits for `High` or `Low` on selected digital input. The next block in the sequence will be executed only if expected value comes on given input.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/wait_input_2.png" alt="Wait Input block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/wait_input_2.png" alt="Wait Input block"/>
 </div>
 
 *Input*: number of input or [variable] (units: positive integer)
@@ -224,8 +224,8 @@ Waits for `High` or `Low` on selected digital input. The next block in the seque
 Listens to events. The next block in the sequence will be executed only if awaited event happens.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/listen_event_1.png" alt="Listen to Event tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/listen_event_2.png" alt="Listen to Event block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/listen_event_1.png" alt="Listen to Event tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/listen_event_2.png" alt="Listen to Event block"/>
 </div>
 
 *Event*:
@@ -243,8 +243,8 @@ Awaits the positive limit switch is triggered at the axis `0` on the port `USB0`
 Waits for specified milliseconds.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/delay_1.png" alt="Delay tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/delay_2.png" alt="Delay block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/delay_1.png" alt="Delay tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/delay_2.png" alt="Delay block"/>
 </div>
 
 *Time*: [*ms*]
@@ -256,14 +256,14 @@ Waits for the specified time. The next block in the sequence will be executed on
 Waits until the motion launched by previous block is completed.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/wait_until_done_1.png" alt="Wait until done tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/wait_until_done_2.png" alt="Wait until done block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_1.png" alt="Wait until done tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_2.png" alt="Wait until done block"/>
 </div>
 
 Example:
 
 <div>
-  <Image src="/assets/blocks/wait_until_done_example.png" alt="Wait until done example"/>
+  <Image src="../assets/blocks/wait_until_done_example.png" alt="Wait until done example"/>
 </div>
 
 The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`. If the motion does not exist (or the motion is ended) the next block in the sequence will be allowed to run.
@@ -277,8 +277,8 @@ The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`
 Sets the output control register to `High` or `Low`.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/set_output_1.png" alt="Set Output tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/set_output_2.png" alt="Set Output block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/set_output_1.png" alt="Set Output tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/set_output_2.png" alt="Set Output block"/>
 </div>
 
 *Output*: [*1 - 4*]
@@ -294,8 +294,8 @@ When output is set *Lo* output transistor is closed, no current flows to the loa
 Reads the value of input.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/read_input_1.png" alt="Read Input tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/read_input_2.png" alt="Read Input block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/read_input_1.png" alt="Read Input tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/read_input_2.png" alt="Read Input block"/>
 </div>
 
 *Input*: [*1 - 12*]
@@ -309,8 +309,8 @@ Reads the value of specified input and saves this value in the program's interna
 Opens the beginning of the repeated part of the sequence of blocks.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/repeat_1.png" alt="Repeat tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/repeat_2.png" alt="Repeat block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/repeat_1.png" alt="Repeat tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/repeat_2.png" alt="Repeat block"/>
 </div>
 
 *Id*: positive integer or word without special characters
@@ -326,8 +326,8 @@ Says to IMAC interpreter that starting from the next block there is a chain of b
 Defines the end of the repeated part of the sequence of blocks.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/end_repeat_1.png" alt="End Repeat tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/end_repeat_2.png" alt="End Repeat block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_repeat_1.png" alt="End Repeat tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_repeat_2.png" alt="End Repeat block"/>
 </div>
 
 *Id*: positive integer or word without special characters
@@ -340,8 +340,8 @@ Says to IMAC interpreter that here is the end of a chain of blocks started with 
 Checks its boolean condition.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/if_1.png" alt="If tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/if_2.png" alt="If block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_1.png" alt="If tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_2.png" alt="If block"/>
 </div>
 
 *Id*: positive integer or word without special characters
@@ -362,9 +362,9 @@ If the condition is true the next blocks will be executed until IMAC interpreter
 ##### *Sample use case*
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/if_else_example_1.png" alt="If-Else example"/>
-  <Image className="margin-right--xs" src="/assets/blocks/if_else_example_2.png" alt="If-Else example"/>
-  <Image className="margin-right--xs" src="/assets/blocks/if_else_example_3.png" alt="If-Else example"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_1.png" alt="If-Else example"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_2.png" alt="If-Else example"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_3.png" alt="If-Else example"/>
 </div>
 
 If **Input 3** is `High` then move **axis 0** `10000` counts in positive direction else move **axis 0** `10000` counts in negative direction.
@@ -374,8 +374,8 @@ If **Input 3** is `High` then move **axis 0** `10000` counts in positive directi
 Says to the interpreter to start the execution of the blocks *"from here"* if the boolean condition of associated *If* block is false.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/else_1.png" alt="Else tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/else_2.png" alt="Else block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/else_1.png" alt="Else tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/else_2.png" alt="Else block"/>
 </div>
 
 *Id*: positive integer or word without special characters
@@ -386,8 +386,8 @@ Says to the interpreter to start the execution of the blocks *"from here"* if th
 Says to the interpreter that this is the end of *If* or *If-Else* statement.
 
 <div className="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/end_if_1.png" alt="End If tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/end_if_2.png" alt="End If block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_if_1.png" alt="End If tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_if_2.png" alt="End If block"/>
 </div>
 
 *Id*: positive integer or word without special characters
@@ -398,8 +398,8 @@ Says to the interpreter that this is the end of *If* or *If-Else* statement.
 Pauses the execution of blocks until the `Resume` button is clicked.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/pause_1.png" alt="Pause tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/pause_2.png" alt="Pause block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/pause_1.png" alt="Pause tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/pause_2.png" alt="Pause block"/>
 </div>
 
 ### Math Blocks
@@ -409,8 +409,8 @@ Pauses the execution of blocks until the `Resume` button is clicked.
 Performs four basic mathematical operations: addition, subtraction, multiplication and division.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/math_1.png" alt="Math tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/math_2.png" alt="Math block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/math_1.png" alt="Math tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/math_2.png" alt="Math block"/>
 </div>
 
 *Var.*: any word without special characters
@@ -430,8 +430,8 @@ Saves result of operation into the variable with specified name.
 Assigns value to the variable.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/var_value_1.png" alt="Variable Value tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/var_value_2.png" alt="Variable Value block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/var_value_1.png" alt="Variable Value tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/var_value_2.png" alt="Variable Value block"/>
 </div>
 
 *Name*: word without special characters
@@ -443,8 +443,8 @@ Assigns value to the variable.
 Assigns variable to another variable.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/var_var_1.png" alt="Variable Value tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/var_var_2.png" alt="Variable Value block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/var_var_1.png" alt="Variable Value tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/var_var_2.png" alt="Variable Value block"/>
 </div>
 
 *Name*: word without special characters
@@ -456,8 +456,8 @@ Assigns variable to another variable.
 Assigns value of input / output / register to the variable.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/var_param_1.png" alt="Variable Parameter tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/var_param_2.png" alt="Variable Parameter block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/var_param_1.png" alt="Variable Parameter tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/var_param_2.png" alt="Variable Parameter block"/>
 </div>
 
 *Name*: word without special characters
@@ -474,8 +474,8 @@ Assigns value of input / output / register to the variable.
 Adds comment to the block sequence.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/comment_1.png" alt="Comment tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/comment_2.png" alt="Comment block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/comment_1.png" alt="Comment tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/comment_2.png" alt="Comment block"/>
 </div>
 
 Allows user to add comments by clicking on the icon inside the block.
@@ -487,22 +487,22 @@ The User blocks are the blocks created by user from standard blocks or/and anoth
 Here is created user block which moves the gantry system to the reference point.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/user_block_1.png" alt="User Block tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/user_block_2.png" alt="User block block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/user_block_1.png" alt="User Block tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/user_block_2.png" alt="User block block"/>
 </div>
 
 To see the inner blocks and edit them click `Unfold` in the dropdown menu.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/user_block_3.png" alt="User Block tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/user_block_3.png" alt="User Block tile"/>
 </div>
 
 To fold the user block back click `Fold`.
 
 <div class="d--flex">
-  <Image className="margin-right--xs" src="/assets/blocks/user_block_4.png" alt="User Block tile"/>
-  <Image className="margin-right--xs" src="/assets/blocks/user_block_5.png" alt="User block block"/>
-  <Image className="margin-right--xs" src="/assets/blocks/user_block_6.png" alt="User block block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/user_block_4.png" alt="User Block tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/user_block_5.png" alt="User block block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/user_block_6.png" alt="User block block"/>
 </div>
 
 To learn more about User blocks please see [The User Block Guide](guideUserblock.md).

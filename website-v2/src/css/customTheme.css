@@ -33,7 +33,7 @@
   color: var(--ifm-color-white);
 }
 
-.toggle_node_modules-\@docusaurus-theme-classic-lib-next-theme-ColorModeToggle-styles-module {
+.navbar__items.navbar__items--right {
   display: none;
 }
 

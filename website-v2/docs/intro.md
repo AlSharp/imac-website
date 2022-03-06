@@ -12,7 +12,7 @@ import Image from '@site/src/components/Image';
 
 **IMAC Editor** is software application that runs in the web browser and uses graphical blocks to create complex sequences for controlling different stepper and servo motors, digital and analog I/O and vision systems.
 
-<Image src="/assets/editor_1.png" alt="Visual Block Programming Environment"/>
+<Image src="../assets/editor_1.png" alt="Visual Block Programming Environment"/>
 
 Graphical blocks represent motion commands, control of the input/output devices, variables, logic expressions, math, loops and more. User doesn't have to worry about complexities of the programming languages.
 
@@ -31,15 +31,15 @@ As a stand-alone controller, IMAC can take the place of a PC in a control system
 -	Graphical HMI Designer
 
 
-<Image src="/assets/assembly.jpg" alt="3-axis system with I/O data acquisition"/>
+<Image src="../assets/assembly.jpg" alt="3-axis system with I/O data acquisition"/>
 
 3-axis system with I/O data acquisition
 
 ## System Architecture
 
 
-<Image src="/assets/arch_2.jpg" alt="Standalone PC based system(wired)"/>
+<Image src="../assets/arch_2.jpg" alt="Standalone PC based system(wired)"/>
 
-<Image src="/assets/arch_3.jpg" alt="Standalone PC based system(wireless)"/>
+<Image src="../assets/arch_3.jpg" alt="Standalone PC based system(wireless)"/>
 
-<Image src="/assets/arch_4.jpg" alt="Network based installation"/>
+<Image src="../assets/arch_4.jpg" alt="Network based installation"/>
