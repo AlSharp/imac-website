@@ -38,7 +38,7 @@
 }
 
 .container {
-  max-width: none;
+  max-width: none !important;
 }
 
 .home-top-container {
