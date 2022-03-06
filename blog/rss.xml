@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>IMAC Blog</title>
+        <link>https://AlSharp.github.io/website-v2/blog</link>
+        <description>IMAC Blog</description>
+        <lastBuildDate>Thu, 28 Feb 2019 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part IV.]]></title>
+            <link>https://AlSharp.github.io/website-v2/blog/2019/02/28/intro2</link>
+            <guid>/2019/02/28/intro2</guid>
+            <pubDate>Thu, 28 Feb 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[In this tutorial video we talk about Array block. Array block allows user to automate sequencing through elements of array as coordinate points. We show how Array block can be used in the applications like pick and place assembly and pipepetting in lab automation.]]></description>
+            <content:encoded><![CDATA[<p>In this tutorial video we talk about Array block. Array block allows user to automate sequencing through elements of array as coordinate points. We show how Array block can be used in the applications like pick and place assembly and pipepetting in lab automation.</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/w7soyK0SRGU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part I, II, III.]]></title>
+            <link>https://AlSharp.github.io/website-v2/blog/2019/02/21/intro1</link>
+            <guid>/2019/02/21/intro1</guid>
+            <pubDate>Thu, 21 Feb 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hello! In this tutorials we covered mode, profile, homing, move, wait digital input, delay, repeat and user blocks.]]></description>
+            <content:encoded><![CDATA[<p>Hello! In this tutorials we covered mode, profile, homing, move, wait digital input, delay, repeat and user blocks.</p><p></p><p>Part 1. Mode, Profile, Move and Homing</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/q8J_58GvuGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><p></p><p>Part 2. Wait digital input, Delay, Repeat and End Repeat</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/xO0w3vmkdn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><p></p><p>Part 3. How to create user blocks</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cqb3JvvJYyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Hello World!]]></title>
+            <link>https://AlSharp.github.io/website-v2/blog/2018/12/28/hello_world</link>
+            <guid>/2018/12/28/hello_world</guid>
+            <pubDate>Fri, 28 Dec 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blocks]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="Blocks" src="/assets/images/cubs-line-up-832a9ff63a76146492b251bf8b2ae201.jpg" title="Blocks" width="792" height="236"></p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cnlVry2UYLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
