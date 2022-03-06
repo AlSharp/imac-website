@@ -6,6 +6,7 @@ module.exports={
   "staticDirectories": ['static'],
   "organizationName": "AlSharp",
   "projectName": "imac-website",
+  "trailingSlash": false,
   "scripts": [
     "https://buttons.github.io/buttons.js",
     "https://alsharp.github.io/imac-website-scripts/edit_external_links.js"

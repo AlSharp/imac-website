@@ -51,7 +51,7 @@ class HomeTopContainer extends React.Component {
         <PromoSection>
           <Button href="https://imacdemolive.ngrok.io" target="_blank">Try it now!</Button>
           <Button href="/blog/">Tutorials</Button>
-          <Button href={docUrl('intro.html')}>Manual</Button>
+          <Button href={docUrl('docs/intro')}>Manual</Button>
           <Button href="http://www.intellidrives.com/">intellidrives.com</Button>
         </PromoSection>
         <BackgroundImage
