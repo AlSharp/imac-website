@@ -25,13 +25,15 @@ IMAC Editor contains five areas:
 
 Main menu contains File drop-down menu and drop-down menus for each device connected to IMAC.
 
-### File
+### Manage IMAC program files
 
-IMAC editor has two options available for opening and saving IMAC programs:
-
-<div style={{marginBottom: 20}}>
-  <Image src="../assets/editor_file_menu_1.png" alt="File drop-down menu"/>
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_file_menu_1.png" alt="File drop-down menu 1"/>
+  <Image className="margin-right--sm" src="../assets/editor_file_menu_2.png" alt="File drop-down menu 2"/>
+  <Image className="margin-right--sm" src="../assets/editor_file_menu_3.png" alt="File drop-down menu 3"/>
 </div>
+
+IMAC editor has two options available for opening or saving IMAC programs:
 
 __1. Using IMAC’s file system__
 
@@ -67,13 +69,65 @@ Click on `Save to PC`. Give a file a name, click `Save` button and blocks that a
   <Image src="../assets/save_to_pc.png" alt="Save to PC"/>
 </div>
 
+If you nead to open last saved file then click on `Last saved file`.
+
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_file_menu_2.png" alt="Last saved file"/>
+</div>
+
+### Manage IMAC config files
+
+IMAC allows to save device settings into config files for later use.
+
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_file_menu_3.png" alt="File drop-down menu 3"/>
+</div>
+
+You can select a config file for the current session by clicking on `Set active config`. The following dialog window will be opened. Select config file and click on `Set` button. 
+
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_config_file_menu_1.png" alt="Set active config"/>
+</div>
+
+If you need to make changes to device settings, but you want to keep previous settings, then you need to create a new config file. Click on `Save active config as` to save current settings into new file. The following dialog window will be open.
+
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_config_file_menu_2.png" alt="Save active config as"/>
+</div>
+
+Enter a config file name with .cfg extension and click `Save` button. You need to select a new file as active config file. Click on `Set active config` and select new config file.
+
+:::caution
+All changes to device settings are being automatically saved into active config file.
+:::
+
+IMAC allows to download or upload config files from user's computer.
+
+If you need to send config file to someone, click on `Download config to PC`, select file and click `Download` button.
+
+If you need to use config file you received from someone, click on `Upload config from PC`, select file and save it. After that you can set uploaded file as active config.
+
 ## Tabs of Sequences
 
 IMAC programs can consist of multiple sequences. Main sequence is where the program starts. Additional sequences can be added and used as ordinary functions or event handlers. Additional sequences are invokable from main sequence or another additional sequences.
 
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_tabs_1.png" alt="main tab"/>
+</div>
+
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_tabs_2.png" alt="additional tab"/>
+</div>
+
 [How to use additional sequence as event handler](imac_editor.md#event-listener)
 
-## Block Palette
+## Blocks
+
+Here is an example of block:
+
+<div className="d--flex margin-bottom--lg">
+  <Image className="margin-right--sm" src="../assets/editor_block_example.png" alt="block example"/>
+</div>
 
 Block palette contains the following command block categories:
 
@@ -88,7 +142,7 @@ Block palette contains the following command block categories:
 
 ### Motion Blocks
 
-#### Mode
+#### 1. Mode
 
 Sets the type of the motor and the mode in which motor works.
 
@@ -97,6 +151,8 @@ Sets the type of the motor and the mode in which motor works.
   <Image className="margin-right--xs" src="../assets/blocks/mode_2.png" alt="Mode block"/>
 </div>
 
+:::note Block Arguments
+
 *Motor type*:
 + Stepper
 + Servo
@@ -104,9 +160,14 @@ Sets the type of the motor and the mode in which motor works.
 *Operating mode*:
 + Position
 
->Shown block sets the motor type to *`Stepper`* and operating mode to *`Position`* for axis `X` on the port name `XYZ`.
+:::
+:::info Action
 
-#### __Profile__
+Sets the motor type to *`Stepper`* and operating mode to *`Position`* for axis `X` on the port name `XYZ`.
+
+:::
+
+#### 2. Profile
 
 Sets motion characteristics.
 
@@ -116,19 +177,35 @@ Sets motion characteristics.
   <Image className="margin-right--xs" src="../assets/blocks/profile_3.png" alt="Profile block"/>
 </div>
 
+:::note Block Arguments
+
 *Profile*:
 + trapezoidal
 + s-curve
 
-*Velocity*: positive integer or [variable] (units: counts/sec)
+*Velocity*: (units: counts/sec)
++ positive integer
++ [variable]
 
-*Acceleration*: positive integer or [variable] (units: counts/sec^2)
+*Acceleration*: (units: counts/sec^2)
++ positive integer
++ [variable]
 
-*Deceleration*: positive integer or [variable] (units: counts/sec^2)
+*Deceleration*: (units: counts/sec^2)
++ positive integer
++ [variable]
 
-*Jerk*: positive integer or [variable] (units: counts/sec^3)
+*Jerk*: (units: counts/sec^3)
++ positive integer
++ [variable]
 
->Sets the motion profile, velocity, acceleration, deaceleration and jerk for axis `X` on the port name `XYZ`.
+:::
+:::info Action
+
+1. Sets the motion profile to `trapezoidal`, velocity, acceleration, deaceleration for axis `X` on the port name `XYR`.
+1. Sets the motion profile to `s-curve`, velocity, acceleration, jerk for axis `X` on the port name `XYR`.
+
+:::
 
 #### Move
 
