@@ -151,7 +151,7 @@ Sets the type of the motor and the mode in which motor works.
   <Image className="margin-right--xs" src="../assets/blocks/mode_2.png" alt="Mode block"/>
 </div>
 
-:::note Block Arguments
+:::note Arguments
 
 *Motor type*:
 + Stepper
@@ -163,7 +163,7 @@ Sets the type of the motor and the mode in which motor works.
 :::
 :::info Action
 
-Sets the motor type to *`Stepper`* and operating mode to *`Position`* for axis `X` on the port name `XYZ`.
+Sets the motor type to *`Stepper`* and operating mode to *`Position`* for axis `X` on device `XYZ`.
 
 :::
 
@@ -177,7 +177,7 @@ Sets motion characteristics.
   <Image className="margin-right--xs" src="../assets/blocks/profile_3.png" alt="Profile block"/>
 </div>
 
-:::note Block Arguments
+:::note Arguments
 
 *Profile*:
 + trapezoidal
@@ -187,29 +187,29 @@ Sets motion characteristics.
 + positive integer
 + [variable]
 
-*Acceleration*: (units: counts/sec^2)
+*Acceleration*: (units: counts/sec<sup>2</sup>)
 + positive integer
 + [variable]
 
-*Deceleration*: (units: counts/sec^2)
+*Deceleration*: (units: counts/sec<sup>2</sup>)
 + positive integer
 + [variable]
 
-*Jerk*: (units: counts/sec^3)
+*Jerk*: (units: counts/sec<sup>3</sup>)
 + positive integer
 + [variable]
 
 :::
 :::info Action
 
-1. Sets the motion profile to `trapezoidal`, velocity, acceleration, deaceleration for axis `X` on the port name `XYR`.
-1. Sets the motion profile to `s-curve`, velocity, acceleration, jerk for axis `X` on the port name `XYR`.
+1. Sets the motion profile to `trapezoidal`, velocity, acceleration, deaceleration for axis `X` on device `XYR`.
+1. Sets the motion profile to `s-curve`, velocity, acceleration, jerk for axis `X` on device `XYR`.
 
 :::
 
-#### Move
+#### 3. Move
 
-Sets the type of motion, absolute position or relative distance, direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence will not be executed until the motion is completed.
+Execute motion with specified parameters
 
 <div className="d--flex">
   <Image className="margin-right--xs" src="../assets/blocks/move_1.png" alt="Move tile"/>
@@ -218,34 +218,72 @@ Sets the type of motion, absolute position or relative distance, direction of th
   <Image className="margin-right--xs" src="../assets/blocks/move_4.png" alt="Move block"/>
 </div>
 
+:::note Arguments
+
 *Type*:
 + Absolute
 
-  Uses when you need to move the axis relative to current homing position.
+  Use when you need to move the axis relative to current homing position.
 
 + Relative
 
-  Uses when you need to move the axis relative to current position.
+  Use when you need to move the axis relative to current position.
 
 + Velocity
 
-  Uses when you need to move the axis at a constant velocity in the selected direction.
+  Use when you need to move the axis at a constant velocity in the selected direction.
 
-*Position*: positive or negative integer or [variable] (units: counts)
+*Position*: (units: counts)
++ positive or negative integer 
++ [variable]
 
-*Distance*: positive or negative integer or [variable] (units: counts)
+*Distance*: (units: counts)
++ positive or negative integer
++ [variable]
 
-*Direction*: [*Positive / Negative*]
+*Direction*:
++ Positive
++ Negative
 
 >Multiplies the value of position or distance by `1` if Positive, and `-1` if Negative.
 
-*Wait until done*: [*True / False*]
+*Wait until done*:
++ True (checked)
++ False (unchecked)
 
->Sets motion type to *`Absolute`* or *`Relative`* or *`Velocity`*, moves to absolute position in counts if motion type is *`Absolute`*, moves given counts if motion type is relative, sets direction of motion to positive or negative, sets option "wait until done" to *`True`* or *`False`* for axis `X` on the port name `XYZ`.
+:::
+:::info Action
 
-#### Homing
+Sets the type and direction of the motion. By default the checkbox `Wait until done` is checked and that means that next block in the sequence is not being executed until the current motion is completed.
 
-Sets the homing position.
+If absolute motion is selected, axis moves to absolute position in counts.
+
+If relative motion is selected, axis moves given counts.
+
+If velocity motion is selected, axis moves infinitely in the selected direction.
+
+Sets motion for axis `X` on device `XYZ`.
+
+:::
+
+#### 4. Home
+
+Execute pre-configured (default) home positioning.
+
+<div className="d--flex">
+  <Image className="margin-right--xs" src="../assets/blocks/home_1.png" alt="Home tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/home_2.png" alt="Home block"/>
+</div>
+
+:::info Action
+
+Executes home positioning method that is configured in device settings for axis `X` on device `XYR`
+
+:::
+
+#### 5. Advanced Homing
+
+Executes home positioning with specified parameters
 
 <div className="d--flex">
   <Image className="margin-right--xs" src="../assets/blocks/homing_1.png" alt="Homing tile"/>
@@ -254,6 +292,7 @@ Sets the homing position.
   <Image className="margin-right--xs" src="../assets/blocks/homing_4.png" alt="Homing block"/>
 </div>
 
+:::note Arguments
 *Method*:
 + Current position
 
@@ -267,55 +306,115 @@ Sets the homing position.
 
   Use when home switch is needed to be set as homing position.
 
-*Direction*: [*Positive / Negative*]
+*Direction*:
++ Positive
++ Negative
 
->Works only with *`Limit switch`* and *`Home switch`* methods.
-If Limit switch method is elected, indicates that ***positive*** or ***negative*** limit switch is selected to be a homing position.
-If Home switch is selected, indicates the direction the axis should move in to get to the home switch.
+  Selects limit switch which axis moves into to set up homing position
 
-*Wait until referenced*: [*Always true*]
+  Indicates direction which axis moves in to find home switch
 
-Waits for axis completes the homing positioning.
+  Disabled when `Current position` is selected
 
-> Sets homing method to *`Current position`* or *`Limit Switch`* or *`Home Switch`*, sets direction of homing positioning to positive or negative for axis `X` on the port `XYZ`. Always waits until referenced.
+*Wait until referenced*:
+ + True
+
+  Always true. Waits for axis completes the homing positioning.
+
+:::
+:::info Action
+
+Sets homing method and direction for axis `X` on device `XYZ`. Always waits until referenced.
+
+:::
+
+#### 6. Abort motion
+
+Aborts motion
+
+<div className="d--flex">
+  <Image className="margin-right--xs" src="../assets/blocks/abort_1.png" alt="Abort tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/abort_2.png" alt="Abort block"/>
+</div>
+
+:::note Arguments
+
+*Abort deceleration*: (units: counts/sec<sup>2</sup>)
++ positive integer
+
+*Wait until done*:
++ True (checked)
++ False (unchecked)
+
+  Waits for motion completion if checked.
+
+:::
+:::info Action
+
+Aborts motion at axis `X` on device `XYR`. Motion gets slower with provided deceleration. Waits until axis stopped if `Wait until done` is checked.
+
+:::
 
 ### Time / Event Blocks
 
-#### Wait for digital input
+#### 7. Wait for digital input
 
-Waits for `High` or `Low` on selected digital input. The next block in the sequence will be executed only if expected value comes on given input.
+Waits for condition on selected digital input.
 
 <div className="d--flex">
   <Image className="margin-right--xs" src="../assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/wait_input_2.png" alt="Wait Input block"/>
 </div>
 
-*Input*: number of input or [variable] (units: positive integer)
+:::note Arguments
 
-*Wait for*: input state or [variable] (units: Hi / Lo or 1 / 0)
+*Input*: (units: positive integer)
++ number of input 
++ [variable]
 
-> Waits for *`Hi`* on input *`3`* for axis `X` on the port `XYZ`.
+*Wait for*: (units: Hi / Lo or 1 / 0)
++ input state
++ [variable]
 
-#### Listen to event
+:::
+:::info Action
 
-Listens to events. The next block in the sequence will be executed only if awaited event happens.
+Waits for `Hi` condition on input `1` on device `Seadac`. The next block in the sequence will be executed only if expected condition comes on given input.
+
+:::
+
+#### 8. Listen to event
+
+Listens to events.
 
 <div className="d--flex">
   <Image className="margin-right--xs" src="../assets/blocks/listen_event_1.png" alt="Listen to Event tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/listen_event_2.png" alt="Listen to Event block"/>
 </div>
 
+:::note Arguments
+
 *Event*:
 + Positive limit switch
 + Negative limit switch
 
-*Timeout*: [*ms*]
+*Timeout*:
++ True (checked)
++ False (unchecked)
+
+*Milliseconds*: (units: milliseconds)
++ positive integer
+
+:::
+:::info Action
+
+Awaits the `Positive limit switch` is triggered at the axis `X` on device `XYR`. The next block in the sequence will be executed only if awaited event happens.
 
 If during the specified time the event is not occurred, the error will be thrown and the further processing of the sequence of blocks will be stopped.
 
-Awaits the positive limit switch is triggered at the axis `0` on the port `USB0`.
+:::
 
-#### Delay
+#### 9. Delay
 
 Waits for specified milliseconds.
 
@@ -324,11 +423,18 @@ Waits for specified milliseconds.
   <Image className="margin-right--xs" src="../assets/blocks/delay_2.png" alt="Delay block"/>
 </div>
 
-*Time*: [*ms*]
+:::note Arguments
+*Time*: (units: milliseconds)
++ positive number
+
+:::
+:::info Action
 
 Waits for the specified time. The next block in the sequence will be executed only after the time is expired.
 
-#### Wait until done
+:::
+
+#### 10. Wait until done
 
 Waits until the motion launched by previous block is completed.
 
@@ -337,15 +443,68 @@ Waits until the motion launched by previous block is completed.
   <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_2.png" alt="Wait until done block"/>
 </div>
 
+:::note Arguments
+:::
+:::info Action
+
+Waits until axis `X` on device `XYR` completes its motion.
+
+Checks the motion at axis `X` on device `XYR`. If the motion does not exist (or the motion is ended) the next block in the sequence will be allowed to run.
+
+:::
+
 Example:
 
-<div>
-  <Image src="../assets/blocks/wait_until_done_example.png" alt="Wait until done example"/>
+<div className="d--flex">
+  <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_example.png" alt="Wait until done example 1"/>
+  <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_example_2.png" alt="Wait until done example 2"/>
+  <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_example_3.png" alt="Wait until done example 2"/>
 </div>
 
-The block **`Wait until done`** checks the motion at axis `0` on the port `USB0`. If the motion does not exist (or the motion is ended) the next block in the sequence will be allowed to run.
+#### 11. Event Listener
 
-#### Event Listener
+Listens to event and executes event handler.
+
+<div className="d--flex">
+  <Image className="margin-right--xs" src="../assets/blocks/event_listener_1.png" alt="Event Listener tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/event_listener_2.png" alt="Event Listener block"/>
+  <Image className="margin-right--xs" src="../assets/blocks/event_listener_3.png" alt="Event Listener Config block"/>
+</div>
+
+:::note Arguments
+
+*Listen to*:
+
++ Input
+
+*Device*:
+
++ I/O device
+
+*Digital input*:
+
++ number of input
+
+*Input value*:
+
++ Hi
++ Lo
+
+*Interrupt*:
+
++ True
++ False
+
+*Event handler*:
+
++ Tab
+
+:::
+:::info Action
+
+
+
+:::
 
 ### I/O Blocks
 
