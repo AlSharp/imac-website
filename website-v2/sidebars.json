@@ -9,7 +9,7 @@
     "Getting Started": [
       "imac_editor"
     ],
-    "Guides": ["guideuserblock","guideArrayXYZ"],
+    "Guides": ["guideuserblock","guideArrayXYZ", "update_software"],
     "Tutorial videos": ["tutorial_1", "tutorial_2", "tutorial_3", "tutorial_4"],
     "Ethernet Motion Server": ["motion-server-getting-started", "motion-server-sample-codes"] 
   }

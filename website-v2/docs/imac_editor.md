@@ -119,7 +119,7 @@ IMAC programs can consist of multiple sequences. Main sequence is where the prog
   <Image className="margin-right--sm" src="../assets/editor_tabs_2.png" alt="additional tab"/>
 </div>
 
-[How to use additional sequence as event handler](imac_editor.md#event-listener)
+[How to use additional sequence as event handler](imac_editor.md#11-event-listener)
 
 ## Blocks
 
@@ -146,7 +146,7 @@ Block palette contains the following command block categories:
 
 Sets the type of the motor and the mode in which motor works.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/mode_1.png" alt="Mode tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/mode_2.png" alt="Mode block"/>
 </div>
@@ -171,7 +171,7 @@ Sets the motor type to *`Stepper`* and operating mode to *`Position`* for axis `
 
 Sets motion characteristics.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/profile_1.png" alt="Profile tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/profile_2.png" alt="Profile block"/>
   <Image className="margin-right--xs" src="../assets/blocks/profile_3.png" alt="Profile block"/>
@@ -211,12 +211,18 @@ Sets motion characteristics.
 
 Execute motion with specified parameters
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/move_1.png" alt="Move tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/move_2.png" alt="Move block"/>
   <Image className="margin-right--xs" src="../assets/blocks/move_3.png" alt="Move block"/>
   <Image className="margin-right--xs" src="../assets/blocks/move_4.png" alt="Move block"/>
 </div>
+
+:::caution
+
+If `Wait until done` is checked block becomes async.
+
+:::
 
 :::note Arguments
 
@@ -270,10 +276,16 @@ Sets motion for axis `X` on device `XYZ`.
 
 Execute pre-configured (default) home positioning.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/home_1.png" alt="Home tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/home_2.png" alt="Home block"/>
 </div>
+
+:::caution
+
+Async block
+
+:::
 
 :::info Action
 
@@ -285,12 +297,18 @@ Executes home positioning method that is configured in device settings for axis 
 
 Executes home positioning with specified parameters
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/homing_1.png" alt="Homing tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/homing_2.png" alt="Homing block"/>
   <Image className="margin-right--xs" src="../assets/blocks/homing_3.png" alt="Homing block"/>
   <Image className="margin-right--xs" src="../assets/blocks/homing_4.png" alt="Homing block"/>
 </div>
+
+:::caution
+
+Async block
+
+:::
 
 :::note Arguments
 *Method*:
@@ -332,10 +350,16 @@ Sets homing method and direction for axis `X` on device `XYZ`. Always waits unti
 
 Aborts motion
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/abort_1.png" alt="Abort tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/abort_2.png" alt="Abort block"/>
 </div>
+
+:::caution
+
+If `Wait until done` is checked block becomes async.
+
+:::
 
 :::note Arguments
 
@@ -361,10 +385,16 @@ Aborts motion at axis `X` on device `XYR`. Motion gets slower with provided dece
 
 Waits for condition on selected digital input.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/wait_input_1.png" alt="Wait Input tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/wait_input_2.png" alt="Wait Input block"/>
 </div>
+
+:::caution
+
+Async block
+
+:::
 
 :::note Arguments
 
@@ -387,10 +417,16 @@ Waits for `Hi` condition on input `1` on device `Seadac`. The next block in the 
 
 Listens to events.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/listen_event_1.png" alt="Listen to Event tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/listen_event_2.png" alt="Listen to Event block"/>
 </div>
+
+:::caution
+
+Async block
+
+:::
 
 :::note Arguments
 
@@ -418,10 +454,16 @@ If during the specified time the event is not occurred, the error will be thrown
 
 Waits for specified milliseconds.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/delay_1.png" alt="Delay tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/delay_2.png" alt="Delay block"/>
 </div>
+
+:::caution
+
+Async block
+
+:::
 
 :::note Arguments
 *Time*: (units: milliseconds)
@@ -438,13 +480,17 @@ Waits for the specified time. The next block in the sequence will be executed on
 
 Waits until the motion launched by previous block is completed.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_1.png" alt="Wait until done tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_2.png" alt="Wait until done block"/>
 </div>
 
-:::note Arguments
+:::caution
+
+Async block
+
 :::
+
 :::info Action
 
 Waits until axis `X` on device `XYR` completes its motion.
@@ -455,7 +501,7 @@ Checks the motion at axis `X` on device `XYR`. If the motion does not exist (or 
 
 Example:
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_example.png" alt="Wait until done example 1"/>
   <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_example_2.png" alt="Wait until done example 2"/>
   <Image className="margin-right--xs" src="../assets/blocks/wait_until_done_example_3.png" alt="Wait until done example 2"/>
@@ -465,7 +511,7 @@ Example:
 
 Listens to event and executes event handler.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/event_listener_1.png" alt="Event Listener tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/event_listener_2.png" alt="Event Listener block"/>
   <Image className="margin-right--xs" src="../assets/blocks/event_listener_3.png" alt="Event Listener Config block"/>
@@ -499,222 +545,460 @@ Listens to event and executes event handler.
 
 + Tab
 
+*Once*:
+
++ True
++ False
+
 :::
 :::info Action
 
+Says to interpreter to listen to event in background. As soon as event happens interpreter executes event handler.
 
+If `interrupt` option is set to true, interpreter does not wait for any async blocks end to execute event handler.
+
+If `interrupt` is set to false, interpreter waits for async blocks end (like motion completion, awaiting input state change etc.).
+
+If `once` option is set to true, event listener is being unregistered (removed). It means event handler is being executed only once.
+
+If `once` option is set to false and if event happens multiple times during execution of event handler or during awaiting async action , event handlers are piled up in the queue. It means event handlers are being executed multiple times, one after another.
+
+When event happens interpreter memorized a block before executing event handler, and when there is no event handlers left in the queue interpreter returns to this memorized block and execute next block after it.
 
 :::
 
 ### I/O Blocks
 
-#### Set digital output
+#### 12. Set digital output
 
-Sets the output control register to `High` or `Low`.
+Sets state of digital output.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/set_output_1.png" alt="Set Output tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/set_output_2.png" alt="Set Output block"/>
 </div>
 
-*Output*: [*1 - 4*]
+:::note Arguments
 
-*Set to*: [*Hi / Lo*]
+*Output*: (units: positive integer)
++ number of output
++ [variable]
+
+*Set to*: (units: Hi / Lo or 1 / 0)
++ output state
++ [variable]
+
+:::
+:::info Action
 
 When output is set to *Hi* output transistor is open, conducting current to the load.
 
 When output is set *Lo* output transistor is closed, no current flows to the load.
 
-#### Read digital input
+:::
 
-Reads the value of input.
+#### 13. Read digital input
 
-<div className="d--flex">
+Reads state of input.
+
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/read_input_1.png" alt="Read Input tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/read_input_2.png" alt="Read Input block"/>
 </div>
 
-*Input*: [*1 - 12*]
+:::note Arguments
 
-Reads the value of specified input and saves this value in the program's internal memory. The value can be used in the IF-ELSE statement. Also the value can be assigned to variable name.
+*Input*: (units: positive integer)
++ number of input
++ [variable]
+
+:::
+:::info Action
+
+Reads value of specified input and saves this value in the program's internal memory. The value can be used in the IF-ELSE statement. Also the value can be assigned to variable name.
+
+:::
 
 ### Control Flow Blocks
 
-#### Repeat
+#### 14. Repeat
 
 Opens the beginning of the repeated part of the sequence of blocks.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/repeat_1.png" alt="Repeat tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/repeat_2.png" alt="Repeat block"/>
 </div>
 
-*Id*: positive integer or word without special characters
-+ should be unique. Identifies a chain of blocks that will be repeated.
+:::note Arguments
 
-*Number*: positive integer
-+ defines how many times blocks will be repeated.
+*Number*: (units: positive integer)
++ number of repeats
 
-Says to IMAC interpreter that starting from the next block there is a chain of blocks ended with *End Repeat* block with the same `Id` and that chain of blocks should be repeated `Number` times.
+:::
+:::info
 
-#### End Repeat
+Defines how many times blocks will be repeated.
+
+Says to IMAC interpreter that starting from the next block there is a chain of blocks ended with *End Repeat* that should be repeated `Number` times.
+
+:::
+
+#### 15. End Repeat
 
 Defines the end of the repeated part of the sequence of blocks.
 
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/end_repeat_1.png" alt="End Repeat tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/end_repeat_2.png" alt="End Repeat block"/>
 </div>
 
-*Id*: positive integer or word without special characters
-+ should be matched to `Id` of Repeat block.
+:::info Action
 
-Says to IMAC interpreter that here is the end of a chain of blocks started with *Repeat* block with the same `Id`.
+Says to IMAC interpreter that here is the end of a chain of blocks started with *Repeat* block.
 
-#### If
+:::
 
-Checks its boolean condition.
+#### 16. While
 
-<div className="d--flex">
+Opens the beginning of the repeated part of the sequence of blocks. Repeats are conditional and executed if boolean expression evaluated to true.
+
+<div className="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/while_1.png" alt="While tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/while_2.png" alt="While block"/>
+</div>
+
+:::note Arguments
+
+> ***First boolean expression***:
+>
+> *first operand*:
+>   + Number
+>   + [variable]
+>
+> *operator*:
+>   + Equal to `=`
+>   + Not equal to <code><span>&ne;</span></code>
+>   + Greater than <code><span>&gt;</span></code>
+>   + Greater than or equal to <code><span>&ge;</span></code>
+>   + Less than <code><span>&lt;</span></code>
+>   + Less than or equal to <code><span>&le;</span></code>
+>
+> *second operand*:
+>   + Number
+>   + [variable]
+
+> *Boolean operator*:
+> + OR
+> + AND
+
+> ***Second boolean expression***:
+>
+> *first operand*:
+>   + Number
+>   + [variable]
+>
+> *operator*:
+>   + Equal to `=`
+>   + Not equal to <code><span>&ne;</span></code>
+>   + Greater than <code><span>&gt;</span></code>
+>   + Greater than or equal to <code><span>&ge;</span></code>
+>   + Less than <code><span>&lt;</span></code>
+>   + Less than or equal to <code><span>&le;</span></code>
+>
+> *second operand*:
+>   + Number
+>   + [variable]
+
+:::
+:::info
+
+Says to IMAC interpreter that starting from the next blocks there is a chain of blocks ended with *End While* that should be repeated if boolean expression evaluates to true.
+
+:::
+
+#### 17. End While
+
+Defines the end of the repeated part of the sequence of blocks.
+
+<div className="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/end_while_1.png" alt="End While tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_while_2.png" alt="End While block"/>
+</div>
+
+:::info Action
+
+Says to IMAC interpreter that here is the end of a chain of blocks started with *While* block.
+
+:::
+
+#### 18. If and Else If
+
+Allows for conditional execution of block sequence fragment.
+
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/if_1.png" alt="If tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/if_2.png" alt="If block"/>
 </div>
+<div className="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/else_if_1.png" alt="Else If tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/else_if_2.png" alt="Else If block"/>
+</div>
 
-*Id*: positive integer or word without special characters
-+ should be unique. It is needed to find associated *Else* and *End if* blocks.
+:::note Arguments
 
-*First boolean condition*:
-+ Inputs [IN1 - IN12] [= , &ne;] [*Hi, Lo*]
-+ [*variable*] [=, &ne;, &gt;, &ge;, &lt;, &le;] [*variable*]
+> ***First boolean expression***:
+>
+> *first operand*:
+>   + Number
+>   + Numner of input
+>   + [variable]
+>
+> *operator*:
+>   + Equal to `=`
+>   + Not equal to <code><span>&ne;</span></code>
+>   + Greater than <code><span>&gt;</span></code>
+>   + Greater than or equal to <code><span>&ge;</span></code>
+>   + Less than <code><span>&lt;</span></code>
+>   + Less than or equal to <code><span>&le;</span></code>
+>
+> *second operand*:
+>   + Number
+>   + Lo / Hi
+>   + [variable]
 
-*Checkbox*: [*OR, AND*]
+> *Boolean operator*:
+> + OR
+> + AND
 
-*Second boolean condition*:
-+ Inputs [IN1 - IN12] [= , &ne;] [*Hi, Lo*]
-+ [*variable*] [=, &ne;, &gt;, &ge;, &lt;, &le;] [*variable*]
+> ***Second boolean expression***:
+>
+> *first operand*:
+>   + Number
+>   + Number of input
+>   + [variable]
+>
+> *operator*:
+>   + Equal to `=`
+>   + Not equal to <code><span>&ne;</span></code>
+>   + Greater than <code><span>&gt;</span></code>
+>   + Greater than or equal to <code><span>&ge;</span></code>
+>   + Less than <code><span>&lt;</span></code>
+>   + Less than or equal to <code><span>&le;</span></code>
+>
+> *second operand*:
+>   + Number
+>   + Lo / Hi
+>   + [variable]
 
-If the condition is true the next blocks will be executed until IMAC interpreter meets associated *Esle* block or *End If* block. If the condiction is false the next blocks will be skipped and IMAC interpreter will look for assocciated *Else* block or *End If* block to continue execution of the blocks.
+:::
+:::info Action
+
+If the boolean expression returns true the next blocks are being executed until IMAC interpreter meets next *Else If* block or associated *Esle* block or *End If* block. If the condiction is false the next blocks are being skipped and IMAC interpreter will look for next *Else If* block or assocciated *Else* block or *End If* block to continue execution of the blocks.
+
+:::
 
 ##### *Sample use case*
 
-<div className="d--flex">
-  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_1.png" alt="If-Else example"/>
-  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_2.png" alt="If-Else example"/>
-  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_3.png" alt="If-Else example"/>
+<div className="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_1.png" alt="If-Else example 1"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_2.png" alt="If-Else example 2"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_3.png" alt="If-Else example 3"/>
+  <Image className="margin-right--xs" src="../assets/blocks/if_else_example_4.png" alt="If-Else example 4"/>
+  <Image className="margin-right--xs" src="../assets/blocks/else_2.png" alt="If-Else example 5"/>
+  <Image className="margin-right--xs" src="../assets/blocks/home_2.png" alt="If-Else example 6"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_if_2.png" alt="If-Else example 7"/>
 </div>
 
-If **Input 3** is `High` then move **axis 0** `10000` counts in positive direction else move **axis 0** `10000` counts in negative direction.
+If **Input 2** is `High` and **Input 3** is `Low` then move **axis X** `25000` counts in positive direction, else if **Input 2** is `High` and **Input 3** is `Low` then move **axis X** `25000` counts in negative direction, else home **axis X**.
 
-#### Else
+#### 19. Else
 
-Says to the interpreter to start the execution of the blocks *"from here"* if the boolean condition of associated *If* block is false.
-
-<div className="d--flex">
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/else_1.png" alt="Else tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/else_2.png" alt="Else block"/>
 </div>
 
-*Id*: positive integer or word without special characters
-+ should be matched to associated *If* block.
+:::info Action
 
-#### End If
+Says to the interpreter to start the execution of the blocks from here to the next *End If* block if the boolean conditions of associated *If* of *Else If* blocks are false.
 
-Says to the interpreter that this is the end of *If* or *If-Else* statement.
+:::
 
-<div className="d--flex">
+#### 20. End If
+
+<div className="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/end_if_1.png" alt="End If tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/end_if_2.png" alt="End If block"/>
 </div>
 
-*Id*: positive integer or word without special characters
-+ should be matched to associated *If* block.
+:::info Action
 
-#### Pause
+Says to the interpreter that this is the end of *If* or *If-Else* statement.
 
-Pauses the execution of blocks until the `Resume` button is clicked.
+:::
 
-<div class="d--flex">
+#### 21. Pause
+
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/pause_1.png" alt="Pause tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/pause_2.png" alt="Pause block"/>
 </div>
 
+:::caution
+
+Async block
+
+:::
+
+:::info Action
+
+Says to the interpreter to pause the execution of blocks until the `Resume` button is clicked.
+
+:::
+
+#### 22. Exit
+
+<div class="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/exit_1.png" alt="Exit tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/exit_2.png" alt="Exit block"/>
+</div>
+
+:::info Action
+
+Says to the interpreter to stop execution of blocks and exit.
+
+:::
+
 ### Math Blocks
 
-#### Basic math
+#### 23. Basic math
 
 Performs four basic mathematical operations: addition, subtraction, multiplication and division.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/math_1.png" alt="Math tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/math_2.png" alt="Math block"/>
 </div>
 
-*Var.*: any word without special characters
+:::note Arguments
 
-*Operand 1*: variable or value
+*Var.*: (string)
++ variable name
 
-*Operator*: [*+, -, /, &times;*]
+*Operand 1*:
++ Number
++ [variable]
 
-*Operand 2*: variable or value
+*Operator*:
++ &plus;
++ &minus;
++ &divide;
++ &times;
+
+*Operand 2*:
++ Number
++ [variable]
+
+:::
+:::info Action
 
 Saves result of operation into the variable with specified name.
 
+:::
+
 ### Variable Blocks
 
-#### Value to Variable
+#### 24. Value to Variable
 
 Assigns value to the variable.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/var_value_1.png" alt="Variable Value tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/var_value_2.png" alt="Variable Value block"/>
 </div>
 
-*Name*: word without special characters
+:::note Arguments
 
-*Value*: any number
+*Name*:
++ string without special characters
 
-#### Varibale to Variable
+*Value*:
++ Number
+
+:::
+:::info Action
+
+Creates a variable in the local variable scope and assigns value to it.
+
+:::
+
+#### 25. Varibale to Variable
 
 Assigns variable to another variable.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/var_var_1.png" alt="Variable Value tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/var_var_2.png" alt="Variable Value block"/>
 </div>
 
-*Name*: word without special characters
+:::note Arguments
 
-*Name*: variable name
+*Name*: 
++ string without special characters
 
-#### Parameter to Variable
+*Name*:
++ variable name
+
+:::
+:::info Action
+
+Creates a variable in the local variable scope and assigns value of another variable to it. If another variable does not exist in the local scope, it is being looking for in the outer scopes and global scope. If it does not exist then error is being thrown.
+
+:::
+
+#### 26. Parameter to Variable
 
 Assigns value of input / output / register to the variable.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/var_param_1.png" alt="Variable Parameter tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/var_param_2.png" alt="Variable Parameter block"/>
 </div>
 
-*Name*: word without special characters
+:::note Arguments
 
-*Parameter*: [*input, output, register*]
-+ *Input*: [*IN1 - IN12*]
-+ *Output*: [*OUT1 - OUT4*]
-+ *Register*: any register
+*Name*: 
++ string without special characters
+
+*Parameter*:
++ Number of input
++ Number of output
++ Register address (for motor controller only)
+
+:::
+:::info Action
+
+Creates a variable in the local variable scope. Requests value of parameter from device and assings it to variable. If it's unable to receive value of parameter, throws error.
+
+:::
 
 ### Mics. Blocks
 
-#### Comment
+#### 27. Comment
 
-Adds comment to the block sequence.
+Adds comment to the block sequence. User adds comments by clicking on the icon inside the block.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/comment_1.png" alt="Comment tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/comment_2.png" alt="Comment block"/>
 </div>
 
-Allows user to add comments by clicking on the icon inside the block.
+:::info Action
+
+Does nothing
+
+:::
 
 ### User Blocks
 
@@ -722,20 +1006,20 @@ The User blocks are the blocks created by user from standard blocks or/and anoth
 
 Here is created user block which moves the gantry system to the reference point.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/user_block_1.png" alt="User Block tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/user_block_2.png" alt="User block block"/>
 </div>
 
 To see the inner blocks and edit them click `Unfold` in the dropdown menu.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/user_block_3.png" alt="User Block tile"/>
 </div>
 
 To fold the user block back click `Fold`.
 
-<div class="d--flex">
+<div class="d--flex flex-wrap--wrap">
   <Image className="margin-right--xs" src="../assets/blocks/user_block_4.png" alt="User Block tile"/>
   <Image className="margin-right--xs" src="../assets/blocks/user_block_5.png" alt="User block block"/>
   <Image className="margin-right--xs" src="../assets/blocks/user_block_6.png" alt="User block block"/>
@@ -743,27 +1027,9 @@ To fold the user block back click `Fold`.
 
 To learn more about User blocks please see [The User Block Guide](guideUserblock.md).
 
-## Updating IMAC Software
-
-IMAC applications are under the active development. Improvements and new features are being added. Users ask to add new blocks with custom functionality. When the new IMAC software version is available, user can update the application. There are two way to update application:
-
-1. Over the Internet
-
-The link of updated version will be provided. Go to _Main Menu_ => _Update_ and click _Online_. The dialog box will be displayed.
-
-![IMAC Update Online](//assets/update_online.png "IMAC Update Online")
-
-Insert provided URL into the text field and click Update. The progress of installation can be observed in the terminal. When the installation is completed application will be reloaded. Type `version` into the terminal and press Enter to verify that application is updated successfully.
-
-2.	From the zipped file on the user hard drive. User will be provided with link to new version for downloading. Downloaded zip file can be saved on local PC. Go to _Main Menu_ => _Update_ and click Offline. The dialog box will be displayed.
-
-![IMAC Update Offline](//assets/update_offline.png "IMAC Update Offline")
-
-Click _Choose File_. The standard Windows File Explorer window will be displayed. Navigate to the saved zip file and open it. Click Update. The progress of installation can be observed in the terminal. When the installation is completed application will be reloaded. Type `version` into the terminal and press Enter to verify that application is updated successfully.
-
 ## Sending ASCII commands through the terminal
 
-User has a full control over the **IDRIVES** through the Terminal. Refer to the _ASCII Programmer’s Guide_ for available commands and syntax. The syntax of IMAC ASCII message is:
+User has a full control over the motor drives through the Terminal. Refer to the _ASCII Programmer’s Guide_ for available commands and syntax. The syntax of IMAC ASCII message is:
 
 [_usb port_]:[_axis letter_][_command code_][_command parameters_]
 
@@ -773,7 +1039,7 @@ Examples:
 usb0: 1 g r0x70
 ```
 
-Get the value of register `0x70` at axis `1` of **IDRIVE** connected to USB port 0.
+Get the value of register `0x70` at axis `1` of motor drive connected to USB port 0.
 
 ```js
 usb0: 0 s r0xc8 0
