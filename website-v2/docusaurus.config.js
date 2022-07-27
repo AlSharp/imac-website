@@ -1,7 +1,7 @@
 module.exports={
   "title": "IMAC",
   "tagline": "IntelLiDrives Multi-Axis Motion and Automation Controller with Visual Programming",
-  "url": "https://AlSharp.github.io/imac-website/",
+  "url": "https://imac.intellidrives.com",
   "baseUrl": "/",
   "staticDirectories": ['static'],
   "organizationName": "AlSharp",

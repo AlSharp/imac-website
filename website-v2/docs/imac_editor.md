@@ -983,9 +983,98 @@ Creates a variable in the local variable scope. Requests value of parameter from
 
 :::
 
+#### 27. Array
+
+Creates an array of elements (ex. points) and executes following blocks once for each array element.
+
+<div class="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/array_1.png" alt="Array tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/array_2.png" alt="Array block"/>
+</div>
+
+:::note Arguments
+
+*Array*: 
++ string without special characters (name of array)
+
+*Element*:
++ string without special characters (name of array element)
+
+*Elements*:
++ Array
+
+Ways to create array:
+
+1. Manually using `add row` and `add column` buttons.
+2. Importing from csv file.
+    <div class="d--flex flex-wrap--wrap">
+      <Image className="margin-right--xs" src="../assets/blocks/array_3.png" alt="Array block dialog"/>
+    </div>
+3. Using Array Wizard to create csv file and then importing it. Main menu -> Tools -> Array wizard
+    <div class="d--flex flex-wrap--wrap">
+      <Image className="margin-right--xs" src="../assets/blocks/array_4.png" alt="Array wizard"/>
+    </div>
+
+:::
+:::info Action
+
+Says to interpreter to execute following blocks once for each array element.
+
+:::
+
+#### 28. End Array
+
+Indicates the end of sequence of blocks executed by array block.
+
+<div class="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/end_array_1.png" alt="End Array tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/end_array_2.png" alt="End Array block"/>
+</div>
+
+:::note Arguments
+:::
+:::info Action
+
+Indicates the end of sequence of blocks executed by array block.
+
+:::
+
 ### Mics. Blocks
 
-#### 27. Comment
+#### 29. Print
+
+Outputs a message to the terminal.
+
+<div class="d--flex flex-wrap--wrap">
+  <Image className="margin-right--xs" src="../assets/blocks/print_1.png" alt="Print tile"/>
+  <Image className="margin-right--xs" src="../assets/blocks/print_2.png" alt="Print block"/>
+</div>
+
+:::note Arguments
+
+*Source*: 
++ variable
++ input
++ ouput
++ register
+
+*Name/Input/Output/Register*:
++ Variable name
++ Number of input
++ Number of output
++ Register address (for motor controller only)
+
+*Text*:
++ string
+
+:::
+:::info Action
+
+Outputs a message to the terminal. Message can consist a `text` with a value of `variable/input/output/register`.
+
+:::
+
+#### 30. Comment
 
 Adds comment to the block sequence. User adds comments by clicking on the icon inside the block.
 
