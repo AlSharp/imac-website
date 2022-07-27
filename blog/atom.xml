@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://AlSharp.github.io/imac-website/blog</id>
+    <id>https://imac.intellidrives.com/blog</id>
     <title>IMAC Blog</title>
     <updated>2019-02-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://AlSharp.github.io/imac-website/blog"/>
+    <link rel="alternate" href="https://imac.intellidrives.com/blog"/>
     <subtitle>IMAC Blog</subtitle>
-    <icon>https://AlSharp.github.io/imac-website/img/favicon.png</icon>
+    <icon>https://imac.intellidrives.com/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part IV.]]></title>
         <id>/2019/02/28/intro2</id>
-        <link href="https://AlSharp.github.io/imac-website/blog/2019/02/28/intro2"/>
+        <link href="https://imac.intellidrives.com/blog/2019/02/28/intro2"/>
         <updated>2019-02-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[In this tutorial video we talk about Array block. Array block allows user to automate sequencing through elements of array as coordinate points. We show how Array block can be used in the applications like pick and place assembly and pipepetting in lab automation.]]></summary>
         <content type="html"><![CDATA[<p>In this tutorial video we talk about Array block. Array block allows user to automate sequencing through elements of array as coordinate points. We show how Array block can be used in the applications like pick and place assembly and pipepetting in lab automation.</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/w7soyK0SRGU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
@@ -22,7 +22,7 @@
     <entry>
         <title type="html"><![CDATA[Introduction to IMAC visual programming application. Tutorial videos. Part I, II, III.]]></title>
         <id>/2019/02/21/intro1</id>
-        <link href="https://AlSharp.github.io/imac-website/blog/2019/02/21/intro1"/>
+        <link href="https://imac.intellidrives.com/blog/2019/02/21/intro1"/>
         <updated>2019-02-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Hello! In this tutorials we covered mode, profile, homing, move, wait digital input, delay, repeat and user blocks.]]></summary>
         <content type="html"><![CDATA[<p>Hello! In this tutorials we covered mode, profile, homing, move, wait digital input, delay, repeat and user blocks.</p><p></p><p>Part 1. Mode, Profile, Move and Homing</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/q8J_58GvuGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><p></p><p>Part 2. Wait digital input, Delay, Repeat and End Repeat</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/xO0w3vmkdn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><p></p><p>Part 3. How to create user blocks</p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cqb3JvvJYyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
@@ -34,10 +34,10 @@
     <entry>
         <title type="html"><![CDATA[Hello World!]]></title>
         <id>/2018/12/28/hello_world</id>
-        <link href="https://AlSharp.github.io/imac-website/blog/2018/12/28/hello_world"/>
+        <link href="https://imac.intellidrives.com/blog/2018/12/28/hello_world"/>
         <updated>2018-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Blocks]]></summary>
-        <content type="html"><![CDATA[<p><img loading="lazy" alt="Blocks" src="/assets/images/cubs-line-up-832a9ff63a76146492b251bf8b2ae201.jpg" title="Blocks" width="792" height="236"></p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cnlVry2UYLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
+        <content type="html"><![CDATA[<p><img loading="lazy" alt="Blocks" src="/assets/images/cubs-line-up-832a9ff63a76146492b251bf8b2ae201.jpg" title="Blocks" width="792" height="236" class="img_ev3q"></p><iframe class="tutorial-video" width="560" height="315" src="https://www.youtube.com/embed/cnlVry2UYLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
         <author>
             <name>Albert Sharapov</name>
             <uri>https://github.com/AlSharp</uri>
