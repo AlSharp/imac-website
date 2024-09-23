@@ -1,0 +1,27 @@
+{
+  "id": "supported_devices",
+  "title": "Supported devices",
+  "description": "Motion control",
+  "source": "@site/docs/supported_devices.md",
+  "sourceDirName": ".",
+  "slug": "/supported_devices",
+  "permalink": "/docs/supported_devices",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "supported_devices",
+    "title": "Supported devices",
+    "sidebar_label": "Supported devices"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Network configuration",
+    "permalink": "/docs/net_config"
+  }
+}

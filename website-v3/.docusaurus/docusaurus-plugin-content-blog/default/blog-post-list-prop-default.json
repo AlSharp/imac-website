@@ -1,0 +1,23 @@
+{
+  "title": "Recent posts",
+  "items": [
+    {
+      "title": "Introduction to IMAC visual programming application. Tutorial videos. Part IV.",
+      "permalink": "/blog/2019/02/28/intro2",
+      "unlisted": false,
+      "date": "2019-02-28T00:00:00.000Z"
+    },
+    {
+      "title": "Introduction to IMAC visual programming application. Tutorial videos. Part I, II, III.",
+      "permalink": "/blog/2019/02/21/intro1",
+      "unlisted": false,
+      "date": "2019-02-21T00:00:00.000Z"
+    },
+    {
+      "title": "Hello World!",
+      "permalink": "/blog/2018/12/28/hello_world",
+      "unlisted": false,
+      "date": "2018-12-28T00:00:00.000Z"
+    }
+  ]
+}
