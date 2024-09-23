@@ -17,22 +17,22 @@ website/yarn-error.log
 
 #v-2
 # dependencies
-website-v2/node_modules
+website-v3/node_modules
 
 # production
-website-v2/build
+website-v3/build
 
 # generated files
-website-v2/.docusaurus
-website-v2/.cache-loader
+website-v3/.docusaurus
+website-v3/.cache-loader
 
 # misc
-website-v2/.env.local
-website-v2/.env.development.local
-website-v2/.env.test.local
-website-v2/.env.production.local
+website-v3/.env.local
+website-v3/.env.development.local
+website-v3/.env.test.local
+website-v3/.env.production.local
 
-website-v2/npm-debug.log*
-website-v2/yarn-debug.log*
-website-v2/yarn-error.log*
-website-v2/yarn.lock
+website-v3/npm-debug.log*
+website-v3/yarn-debug.log*
+website-v3/yarn-error.log*
+website-v3/yarn.lock

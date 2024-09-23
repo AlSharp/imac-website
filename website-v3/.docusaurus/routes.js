@@ -29,97 +29,97 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'd6c'),
+    component: ComponentCreator('/docs', '397'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '519'),
+        component: ComponentCreator('/docs', 'cd0'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '681'),
+            component: ComponentCreator('/docs', '3f4'),
             routes: [
               {
                 path: '/docs/guideArrayXYZ',
-                component: ComponentCreator('/docs/guideArrayXYZ', '541'),
+                component: ComponentCreator('/docs/guideArrayXYZ', 'f65'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/guideuserblock',
-                component: ComponentCreator('/docs/guideuserblock', '16d'),
+                component: ComponentCreator('/docs/guideuserblock', '29e'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/imac_dac',
-                component: ComponentCreator('/docs/imac_dac', '28c'),
+                component: ComponentCreator('/docs/imac_dac', 'bb2'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/imac_editor',
-                component: ComponentCreator('/docs/imac_editor', 'afc'),
+                component: ComponentCreator('/docs/imac_editor', '31b'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/intro',
-                component: ComponentCreator('/docs/intro', 'a6e'),
+                component: ComponentCreator('/docs/intro', 'a5a'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/motion-server-getting-started',
-                component: ComponentCreator('/docs/motion-server-getting-started', 'ea1'),
+                component: ComponentCreator('/docs/motion-server-getting-started', '00e'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/motion-server-sample-codes',
-                component: ComponentCreator('/docs/motion-server-sample-codes', '517'),
+                component: ComponentCreator('/docs/motion-server-sample-codes', 'a61'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/net_config',
-                component: ComponentCreator('/docs/net_config', '32b'),
+                component: ComponentCreator('/docs/net_config', '854'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/supported_devices',
-                component: ComponentCreator('/docs/supported_devices', '858'),
+                component: ComponentCreator('/docs/supported_devices', 'bd9'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/tutorial_1',
-                component: ComponentCreator('/docs/tutorial_1', 'e3a'),
+                component: ComponentCreator('/docs/tutorial_1', 'cf9'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/tutorial_2',
-                component: ComponentCreator('/docs/tutorial_2', '92e'),
+                component: ComponentCreator('/docs/tutorial_2', 'd87'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/tutorial_3',
-                component: ComponentCreator('/docs/tutorial_3', 'c58'),
+                component: ComponentCreator('/docs/tutorial_3', 'ff3'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/tutorial_4',
-                component: ComponentCreator('/docs/tutorial_4', 'd1c'),
+                component: ComponentCreator('/docs/tutorial_4', 'f43'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/update_software',
-                component: ComponentCreator('/docs/update_software', 'ca6'),
+                component: ComponentCreator('/docs/update_software', 'b68'),
                 exact: true,
                 sidebar: "docs"
               }
