@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Introduction",
+  "description": "IMAC or INTELLIDRIVES MULTI-AXIS MOTION and AUTOMATION CONTROLLER is a network based general purpose motion/automation controller with embedded intuitive visual programming capability.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Introduction",
+    "sidebar_label": "Introduction"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Supported devices",
+    "permalink": "/docs/supported_devices"
+  }
+}

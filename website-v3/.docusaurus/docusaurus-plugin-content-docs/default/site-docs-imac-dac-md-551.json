@@ -1,0 +1,27 @@
+{
+  "id": "imac_dac",
+  "title": "IMAC Data Acquisition",
+  "description": "Intro",
+  "source": "@site/docs/imac_dac.md",
+  "sourceDirName": ".",
+  "slug": "/imac_dac",
+  "permalink": "/docs/imac_dac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "imac_dac",
+    "title": "IMAC Data Acquisition",
+    "sidebar_label": "Data Acquisition"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Network configuration",
+    "permalink": "/docs/net_config"
+  },
+  "next": {
+    "title": "IMAC Editor",
+    "permalink": "/docs/imac_editor"
+  }
+}

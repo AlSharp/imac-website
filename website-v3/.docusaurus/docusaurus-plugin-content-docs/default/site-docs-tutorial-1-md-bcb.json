@@ -1,0 +1,27 @@
+{
+  "id": "tutorial_1",
+  "title": "Intoduction. Motion Blocks",
+  "description": "",
+  "source": "@site/docs/tutorial_1.md",
+  "sourceDirName": ".",
+  "slug": "/tutorial_1",
+  "permalink": "/docs/tutorial_1",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "tutorial_1",
+    "title": "Intoduction. Motion Blocks",
+    "sidebar_label": "Intoduction. Part I. Motion Blocks."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Update software",
+    "permalink": "/docs/update_software"
+  },
+  "next": {
+    "title": "Intoduction. Part II. Wait digital input and delay blocks.",
+    "permalink": "/docs/tutorial_2"
+  }
+}

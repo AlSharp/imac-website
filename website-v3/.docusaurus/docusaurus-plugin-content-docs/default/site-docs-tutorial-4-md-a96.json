@@ -1,0 +1,27 @@
+{
+  "id": "tutorial_4",
+  "title": "Intoduction. Array block.",
+  "description": "",
+  "source": "@site/docs/tutorial_4.md",
+  "sourceDirName": ".",
+  "slug": "/tutorial_4",
+  "permalink": "/docs/tutorial_4",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "tutorial_4",
+    "title": "Intoduction. Array block.",
+    "sidebar_label": "Intoduction. Part IV. Array block."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Intoduction. Part III. User blocks.",
+    "permalink": "/docs/tutorial_3"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/docs/motion-server-getting-started"
+  }
+}

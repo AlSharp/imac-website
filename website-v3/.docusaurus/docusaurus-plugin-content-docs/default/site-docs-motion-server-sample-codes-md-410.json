@@ -1,0 +1,23 @@
+{
+  "id": "motion-server-sample-codes",
+  "title": "Ethernet Motion Server Sample Codes",
+  "description": "Sending multiple ASCII commands to motor drives",
+  "source": "@site/docs/motion-server-sample-codes.md",
+  "sourceDirName": ".",
+  "slug": "/motion-server-sample-codes",
+  "permalink": "/docs/motion-server-sample-codes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "motion-server-sample-codes",
+    "title": "Ethernet Motion Server Sample Codes",
+    "sidebar_label": "Sample Codes"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/motion-server-getting-started"
+  }
+}
